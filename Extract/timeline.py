@@ -4,12 +4,7 @@ import re
 import pandas as pd
 import random
 import plotly.express as px
-
-
 from datetime import datetime, timedelta
-
-
-
 
 
 def convert_to_datetime(x, delta=0):
@@ -52,16 +47,14 @@ def draw_timeline(df, attribute_name = "Location"):
     _df.columns = ["Attribute", "Start", "Finish"]
     
     _df["Start"] = _df["Start"].apply(convert_to_datetime)
-    _df["Finish"] = _df["Finish"].apply(convert_to_datetime, delta=1)
+    _df["Finish"] = _df["Finish"].apply(convert_to_datetime, delta=1) # 1列だけの要素を表示するため
 
     fig_location = px.timeline(_df, x_start="Start", x_end="Finish", y="Attribute", color="Attribute")
 
     # calc min and max for x-range
     min = _df["Start"].min()
     max = _df["Finish"].max()
-    print((min, max))
-    print(_df)
-    print(len(_df))
+
 
     shared_layout = {
     "margin": {"l": 30, "r": 30, "t": 5, "b": 5},  # 左右の余白を固定
@@ -75,10 +68,8 @@ def draw_timeline(df, attribute_name = "Location"):
 
     "plot_bgcolor": "white",  # 背景色を統一
     
-
 }
     fig_location.update_layout(**shared_layout)
-
     fig_location.show()
 
 if __name__ == "__main__":

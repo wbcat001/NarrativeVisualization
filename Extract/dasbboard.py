@@ -20,7 +20,7 @@ df = pd.read_csv(file_path, index_col=0)
 x_range = [0, len(df)-1]
 sentiment_calculator = SentimentCalculator()
 df = pd.read_csv(file_path, index_col=0)
-df["Sentiment"] = df["Content"].apply(sentiment_calculator.calculate_labMT)
+df["Sentiment"] = df["Content"].apply(sentiment_calculator.calculate_valence)
 #### Figureの作成用　
 ## draw timeline
 
