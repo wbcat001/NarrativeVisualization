@@ -1,0 +1,322 @@
+tag,content,name
+LOCATION,EXT. HEATH - THUNDERING NIGHT,
+STATEMENT,"Three Witches enter amidst thunder and lightning, their eerie presence commanding the scene.",
+DIALOGUE,"All: Padock calls anon: fair is foul, and foul is fair, Hover through the fog and filthy air.",
+STATEMENT,"The Witches exit, leaving an ominous atmosphere.",
+LOCATION,EXT. BATTLEFIELD - DAY,
+STATEMENT,"An alarm sounds as the King, Malcolm, Donalbain, and Lennox enter with attendants, encountering a bleeding Captain.",
+DIALOGUE,"What bloody man is that? He can report, as seems by his plight, of the Revolt the newest state.",KING
+DIALOGUE,"This is the Sergeant, who like a good and hardy Soldier fought against my Captivity. Hail brave friend; say to the King, the knowledge of the Broil, as thou didst leave it.",MALCOLM
+DIALOGUE,"Doubtful it stood, as two spent Swimmers, that do cling together, and choke their Art...",CAPTAIN
+STATEMENT,"The Captain recounts the ferocity of battle, detailing Macbeth's valor and the gruesome fate of the enemy.",
+DIALOGUE,"O valiant Cousin, worthy Gentleman!",KING
+STATEMENT,"The King listens intently, his face a mixture of admiration and concern.",
+LOCATION,EXT. KING'S CAMP - DAY,
+STATEMENT,The atmosphere is tense as the Captain describes the renewed assault by the Norwegians.,
+DIALOGUE,"Dismayed not this our Captains, Macbeth and Banquo?",KING
+DIALOGUE,"Yes, as Sparrows, Eagles; or the Hare, the Lion...",CAPTAIN
+LOCATION,EXT. SCOTTISH COUNTRYSIDE - DAY,
+STATEMENT,"Ross and Angus approach, their expressions grave.",
+DIALOGUE,God save the King.,ROSSE
+DIALOGUE,"Whence cam'st thou, worthy Thane?",KING
+DIALOGUE,"From Fife, great King, where the Norwegan banners float the sky...",ROSSE
+LOCATION,EXT. BLASTED HEATH - DAY,
+STATEMENT,Thunder rumbles as the three Witches reappear.,
+STATEMENT,"The Witches prepare a spell, their sinister intentions palpable.",
+LOCATION,EXT. BLASTED HEATH - LATER,
+STATEMENT,"The Witches chant and dance, calling forth the arrival of Macbeth and Banquo.",
+DIALOGUE,So foul and fair a day I have not seen.,MACBETH
+DIALOGUE,"How far is't called to Soris? What are these, so withered and so wild in their attire?",BANQUO
+STATEMENT,"The witches vanish, leaving Macbeth and Banquo in shock.",
+LOCATION,EXT. BLASTED HEATH - MOMENTS LATER,
+DIALOGUE,"Were such things here, as we do speak about? Or have we eaten on the insane Root, that takes the Reason Prisoner?",BANQUO
+DIALOGUE,Your Children shall be Kings.,MACBETH
+DIALOGUE,You shall be King.,BANQUO
+LOCATION,EXT. FOREST NEAR THE KING'S CAMP - DAY,
+STATEMENT,Ross and Angus approach Macbeth with news of his promotion.,
+DIALOGUE,"The King hath happily received, Macbeth, the news of thy success...",ROSSE
+DIALOGUE,We are sent to give thee from our Royal Master thanks...,ANGUS
+DIALOGUE,The Thane of Cawdor lives: why do you dress me in borrowed robes?,MACBETH
+STATEMENT,"Macbeth contemplates the prophecies and their implications, his ambition stirring within him.",
+LOCATION,EXT. KING'S CAMP - DAY,
+STATEMENT,"The King and his attendants prepare to meet Macbeth, the air thick with anticipation.",
+LOCATION,INT. CASTLE - DAY,
+STATEMENT,"Flourish. Enter King, Lenox, Malcolme, Donalbaine, and Attendants.",
+DIALOGUE,Is execution done on Cawdor? Or not those in Commission yet return'd? ,KING
+DIALOGUE,"My Liege, they are not yet come back. But I have spoke with one that saw him die: Who did report, that very frankly he Confess'd his Treasons, implor'd your Highness' Pardon, And set forth a deep Repentance: Nothing in his Life became him, Like the leaving it.",MALCOLM
+DIALOGUE,"There's no Art, To find the Mind's construction in the Face. He was a Gentleman, on whom I built An absolute Trust.",KING
+STATEMENT,"Enter Macbeth, Banquo, Rosse, and Angus.",
+DIALOGUE,"O worthyest Cousin, The sin of my Ingratitude even now Was heavy on me. Thou art so far before, That swiftest Wing of Recompence is slow, To overtake thee.",KING
+DIALOGUE,"The service, and the loyalty I owe, In doing it, pays itself. Your Highness' part, is to receive our Duties.",MACBETH
+DIALOGUE,"Welcome hither: I have begun to plant thee, and will labor To make thee full of growing.",KING
+DIALOGUE,"There if I grow, The Harvest is your own.",BANQUO
+DIALOGUE,"My plenteous Joys, Wanton in fulness, seek to hide themselves In drops of sorrow.",KING
+STATEMENT,The King announces Malcolme as the Prince of Cumberland.,
+DIALOGUE,"The Rest is Labor, which is not us'd for you: I'll be myself the Herbenger, and make joyful The hearing of my Wife, with your approach.",MACBETH
+DIALOGUE,My worthy Cawdor.,KING
+DIALOGUE,"The Prince of Cumberland: that is a step, On which I must fall down, or else o'er-leap.",MACBETH
+STATEMENT,Macbeth contemplates his dark desires.,
+DIALOGUE,"True worthy Banquo: he is full so valiant, And in his commendations, I am fed: It is a Banquet to me.",KING
+STATEMENT,Flourish. Exeunt.,
+LOCATION,INT. LADY MACBETH'S CHAMBER - NIGHT,
+STATEMENT,Enter Macbeth's Wife alone with a Letter.,
+DIALOGUE,"They met me in the day of success: and I have learn'd by the perfect'st report, they have more in them, than mortal knowledge.",LADY
+DIALOGUE,"This have I thought good to deliver thee, that thou might'st not lose the dues of rejoicing by being ignorant of what Greatness is promised thee.",LADY
+DIALOGUE,"Glamys thou art, and Cawdor, and shalt be What thou art promised: yet do I fear thy Nature, It is too full of the Milk of human kindness, To catch the nearest way.",LADY
+DIALOGUE,"Come you Spirits, That tend on mortal thoughts, unsex me here, And fill me from the Crown to the Toe, top-full Of direst Cruelty.",LADY
+STATEMENT,Lady Macbeth calls upon dark forces to aid her ambitions.,
+DIALOGUE,"The Raven himself is hoarse, That croaks the fatal entrance of Duncan Under my Battlements.",LADY
+STATEMENT,Enter Messenger.,
+DIALOGUE,What is your tidings?,LADY
+DIALOGUE,The King comes here tonight.,MESSENGER
+DIALOGUE,Thou'rt mad to say it. Is not thy Master with him?,LADY
+DIALOGUE,"So please you, it is true: our Thane is coming.",MESSENGER
+DIALOGUE,"Give him tending, He brings great news.",LADY
+STATEMENT,The Lady's ambition grows as she prepares for Duncan's arrival.,
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"Hoboys, and Torches. Enter King, Malcolme, Donalbaine, Banquo, Lenox, Macduff, Rosse, Angus, and Attendants.",
+DIALOGUE,"This Castle hath a pleasant seat, The air nimbly and sweetly recommends itself Unto our gentle senses.",KING
+DIALOGUE,The air is delicate.,BANQUO
+DIALOGUE,Where's the Thane of Cawdor? ,KING
+DIALOGUE,"All our service, In every point twice done, were poor, and single Business, to contend Against those Honors deep, and broad.",LADY
+DIALOGUE,"Give me your hand: Conduct me to mine Host we love him highly, And shall continue, our Graces towards him.",KING
+STATEMENT,Exeunt.,
+LOCATION,INT. CASTLE KITCHEN - NIGHT,
+STATEMENT,"Hoboys. Torches. Enter a Sewer, and various Servants with Dishes and Service over the Stage. Then enter Macbeth.",
+DIALOGUE,"If it were done, when 'tis done, then 'twere well, It were done quickly.",MACBETH
+DIALOGUE,"Here, But here, upon this Banke and Schoole of time, We'ld jump the life to come.",MACBETH
+DIALOGUE,He has almost supt: why have you left the chamber?,LADY
+DIALOGUE,We will proceed no further in this Business: He hath Honoured me of late.,MACBETH
+DIALOGUE,"Was the hope drunk, Wherein you dress'd yourself? Hath it slept since?",LADY
+DIALOGUE,"Art thou afraid To be the same in thine own Act, and Valour, As thou art in desire?",LADY
+DIALOGUE,"When you durst do it, then you were a man: And to be more than what you were, you would Be so much more the man.",LADY
+STATEMENT,Macbeth is torn between ambition and morality as Lady Macbeth pushes him.,
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"Macbeth and Lady Macbeth stand in a dimly lit chamber, plotting Duncan's murder. The atmosphere is tense.",
+DIALOGUE,If we should fail?,MACBETH
+STATEMENT,Lady Macbeth details their plan to ensure Duncan's death while he sleeps.,
+DIALOGUE,Bring forth men-children only; for thy undaunted mettle should compose nothing but males.,MACBETH
+DIALOGUE,"I am settled, and bend up each corporal agent to this terrible feat.",MACBETH
+STATEMENT,"They exit the chamber, determined to execute their dark plan.",
+LOCATION,INT. CASTLE HALLWAY - NIGHT,
+STATEMENT,"Banquo and Fleance enter with a torch, casting shadows on the stone walls.",
+DIALOGUE,"How goes the night, boy?",BANQUO
+DIALOGUE,The moon is down; I have not heard the clock.,FLEANCE
+DIALOGUE,And she goes down at twelve.,BANQUO
+STATEMENT,Banquo feels an unsettling weight upon him. He hands Fleance his sword.,
+DIALOGUE,There’s husbandry in heaven; their candles are all out.,BANQUO
+DIALOGUE,A friend.,MACBETH
+DIALOGUE,"What, sir, not yet at rest? The King’s a-bed.",BANQUO
+STATEMENT,Macbeth and Banquo exchange pleasantries amidst the tension of the night.,
+LOCATION,INT. CASTLE - MACBETH'S CHAMBER - NIGHT,
+STATEMENT,"Macbeth stands alone, grappling with his thoughts as he sees a dagger before him.",
+DIALOGUE,"Is this a dagger which I see before me, the handle toward my hand?",MACBETH
+STATEMENT,"He reaches for the dagger, contemplating the bloody deed he is about to commit.",
+DIALOGUE,"I go, and it is done: the bell invites me.",MACBETH
+STATEMENT,"A bell rings, echoing through the halls as Macbeth steels himself.",
+LOCATION,INT. CASTLE - LADY MACBETH'S CHAMBER - NIGHT,
+STATEMENT,"Lady Macbeth waits anxiously, her heart racing as she prepares for the outcome of their plan.",
+DIALOGUE,"Who's there? What, ho?",MACBETH
+STATEMENT,Lady Macbeth tries to calm Macbeth as he becomes increasingly agitated.,
+DIALOGUE,I have done the deed: didst thou not hear a noise?,MACBETH
+STATEMENT,The tension mounts as they realize the gravity of their actions.,
+LOCATION,INT. CASTLE - PORTER'S ROOM - MORNING,
+STATEMENT,"A porter stumbles sleepily to the door, not fully aware of the chaos inside.",
+DIALOGUE,"Here's a knocking indeed: if a man were Porter of Hell Gate, he should have old turning the key.",PORTER
+DIALOGUE,Is thy master stirring? Our knocking has awaked him.,MACDUFF
+DIALOGUE,Not yet.,MACBETH
+STATEMENT,"Macbeth greets Macduff and Lenox, hiding the turmoil within him.",
+LOCATION,INT. CASTLE - DAY,
+STATEMENT,"Macduff exits the scene, leaving Lenox and Macbeth in conversation.",
+DIALOGUE,Goes the King hence today?,LENNOX
+DIALOGUE,He does: he did appoint so.,MACBETH
+DIALOGUE,"The night has been unruly: our chimneys were blown down, and strange screams of death were heard in the air.",LENNOX
+DIALOGUE,'Twas a rough night.,MACBETH
+DIALOGUE,My young remembrance cannot parallel a fellow to it.,LENNOX
+LOCATION,INT. CASTLE - LATER,
+STATEMENT,"Macduff enters, visibly horrified.",
+DIALOGUE,"O horror, horror, horror! Tongue nor heart cannot conceive, nor name thee!",MACDUFF
+DIALOGUE,Confusion now hath made his masterpiece: most sacrilegious murder hath broke ope the Lord's anointed temple.,MACDUFF
+LOCATION,INT. CASTLE - KING'S CHAMBER,
+STATEMENT,Macduff urges them to see the horror for themselves.,
+DIALOGUE,"Approach the chamber, and destroy your sight with a new gorgon.",MACDUFF
+LOCATION,INT. CASTLE - HALLWAY,
+STATEMENT,"An alarm bell rings in the background, signaling chaos.",
+DIALOGUE,"Murder, and treason! Malcolm, awake! Shake off this downy sleep!",MACDUFF
+LOCATION,INT. CASTLE - LATER,
+STATEMENT,"Lady Macbeth enters, concerned by the commotion.",
+DIALOGUE,What's the business? That such a hideous trumpet calls to parley the sleepers of the house?,LADY
+DIALOGUE,"O gentle lady, 'tis not for you to hear what I can speak.",MACDUFF
+LOCATION,INT. CASTLE - THRONE ROOM,
+STATEMENT,"Macbeth and the others gather, the atmosphere heavy with tension.",
+DIALOGUE,"Had I but died an hour before this chance, I had lived a blessed time.",MACBETH
+DIALOGUE,Your royal father's murdered.,MACDUFF
+DIALOGUE,"Oh, by whom?",MALCOLM
+LOCATION,INT. CASTLE - CONTINUING,
+STATEMENT,"The characters express their shock and grief over Duncan's death, confusion reigns.",
+DIALOGUE,"I do repent me of my fury, that I did kill them.",MACBETH
+DIALOGUE,Wherefore did you so?,MACDUFF
+LOCATION,INT. CASTLE - HALL,
+STATEMENT,The group debates their next move amidst the chaos.,
+DIALOGUE,"Why do we hold our tongues, that most may claim this argument for ours?",MALCOLM
+DIALOGUE,"Let's away, our tears are not yet brewed.",DONALBAIN
+LOCATION,INT. CASTLE - ANOTHER ROOM,
+STATEMENT,Banquo reflects on Macbeth's rise to power.,
+DIALOGUE,"Thou hast it now, King, Cawdor, Glamis, all.",BANQUO
+LOCATION,INT. CASTLE - DINING HALL,
+STATEMENT,"Macbeth prepares for a solemn supper, his demeanor controlling yet anxious.",
+DIALOGUE,"Tonight we hold a solemn supper, sir, and I request your presence.",MACBETH
+DIALOGUE,I will not fail your feast.,BANQUO
+LOCATION,INT. CASTLE - BACK ROOM,
+STATEMENT,Macbeth reveals his fears about Banquo's potential threat.,
+DIALOGUE,"Our fears in Banquo stick deep, and in his royalty of nature reigns that which would be feared.",MACBETH
+LOCATION,INT. CASTLE - THRONE ROOM,
+STATEMENT,"Macbeth converses with murderers, plotting against Banquo.",
+DIALOGUE,"Now go to the door, and stay there till we call.",MACBETH
+LOCATION,INT. CASTLE - DARK CORNER,
+STATEMENT,Tension builds as Macbeth reveals his plans of treachery.,
+DIALOGUE,"You are men, my liege! Are you so gospel'd, to pray for this good man, and for his issue?",MACBETH
+LOCATION,INT. CASTLE - ANOTHER ROOM,
+STATEMENT,"The murderers prepare to execute Macbeth's plan, their resolve strengthening.",
+DIALOGUE,"Now, if you have a station in the file, say it, and I will put that business in your bosoms.",MACBETH
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"Macbeth stands in a dimly lit room, deep in thought, surrounded by his conspirators, Murth and Murth. The tension is palpable as they plot against Banquo.",
+DIALOGUE,"""In the Catalogue ye go for men, as hounds, and greyhounds, mongrels, spaniels, curres... So is he mine: and in such bloody distance.""",MACBETH
+DIALOGUE,"""True, my Lord.""",MURTH
+DIALOGUE,"""Now, if you have a station in the file, say it, and I will put that business in your bosoms.""",MACBETH
+STATEMENT,"The two Murth brothers exchange glances, their resolve strengthening as Macbeth reveals his intentions.",
+DIALOGUE,"""Your spirits shine through you. Within this hour, at most, I will advise you where to plant yourselves.""",MACBETH
+LOCATION,INT. LADY MACBETH’S CHAMBER - NIGHT,
+STATEMENT,"Lady Macbeth is pacing anxiously, awaiting news from her husband. The atmosphere is thick with anxiety.",
+DIALOGUE,"""Yes, Madame, but returns again tonight.""",SERVANT
+STATEMENT,"Lady Macbeth sighs, realizing the weight of her ambitions. She glances at the door as Macbeth enters.",
+DIALOGUE,"""We have scorch'd the snake, not kill'd it: she'll close, and be herself...""",MACBETH
+LOCATION,INT. CASTLE - MACBETH'S STUDY - NIGHT,
+STATEMENT,"The atmosphere grows darker as Macbeth expresses his turmoil over their deeds. Shadows dance on the walls, reflecting his inner conflict.",
+DIALOGUE,"""O, full of scorpions is my mind, dear wife: thou know'st that Banquo and his Fleance live.""",MACBETH
+DIALOGUE,"""There's comfort yet; they are assailable.""",MACBETH
+DIALOGUE,"""Be innocent of the knowledge, dearest chuck, till thou applaud the deed.""",MACBETH
+LOCATION,INT. DARK ALLEY - NIGHT,
+STATEMENT,"The three murderers gather, cloaked in darkness, plotting Banquo's demise.",
+STATEMENT,They hear Banquo approaching and ready themselves for the ambush.,
+LOCATION,INT. BANQUET HALL - NIGHT,
+STATEMENT,"The banquet is in full swing. Macbeth and Lady Macbeth greet their guests, but tension looms over them.",
+DIALOGUE,"""You know your own degrees, sit down: at first and last, the hearty welcome.""",MACBETH
+STATEMENT,"A murderer enters, bloodied and shaken, delivering news to Macbeth. The atmosphere thickens with dread.",
+DIALOGUE,"""'Tis Banquo's then.""",MURDERER
+DIALOGUE,"""Is he Dispatch'd?""",MACBETH
+DIALOGUE,"""My Lord, his throat is cut.""",MURDERER
+STATEMENT,"Macbeth struggles to maintain his composure as the ghost of Banquo appears, sitting in his place at the table.",
+DIALOGUE,"""Which of you have done this?""",MACBETH
+DIALOGUE,"""If I stand here, I saw him.""",MACBETH
+STATEMENT,The guests look on in confusion and concern as Macbeth's mental state deteriorates.,
+DIALOGUE,"""I drink to th' general joy o'th' whole table, and to our dear friend Banquo, whom we miss.""",MACBETH
+DIALOGUE,"""Avant, and quit my sight, let the earth hide thee: Thy bones are marrowless, thy blood is cold.""",MACBETH
+STATEMENT,"Macbeth's outburst leaves the guests in shock, and the weight of his guilt hangs heavily over the banquet.",
+LOCATION,INT. MACBETH'S CHAMBER - NIGHT,
+STATEMENT,"Macbeth stands in a dimly lit chamber, grappling with fear and the weight of his actions. Lady Macbeth watches him anxiously as the tension builds between them.",
+DIALOGUE,"""Mac. Auant, & quit my sight, let the earth hide thee...""",MACBETH
+DIALOGUE,"""What man dare, I dare: Approach thou like the rugged Russian Beare...""",MACBETH
+STATEMENT,"Macbeth's resolve strengthens as he dismisses the haunting specter before him, reclaiming his sense of identity.",
+DIALOGUE,"""Can such things be, And ouercome vs like a Summers Clowd...""",MACBETH
+DIALOGUE,"""What sights, my Lord?""",ROSS
+DIALOGUE,"""Good night, and better health Attend his Maiesty.""",LENNOX
+STATEMENT,"The lords exit, leaving Macbeth and Lady Macbeth in a heavy silence.",
+DIALOGUE,"""It will haue blood they say: Blood will haue Blood...""",MACBETH
+DIALOGUE,"""How say'st thou that Macduff denies his person At our great bidding?""",MACBETH
+DIALOGUE,"""I hear it by the way: But I will send...""",MACBETH
+STATEMENT,"Macbeth's determination grows as he contemplates his next move, aware of the dark forces at play.",
+DIALOGUE,"""Come, wee'll to sleepe: My strange & self-abuse...""",MACBETH
+STATEMENT,"They exit the chamber together, the weight of their deeds hanging heavily in the air.",
+LOCATION,EXT. WITCHES' COVEN - NIGHT,
+STATEMENT,Thunder rumbles as the three witches gather around a bubbling cauldron. They chant and prepare their dark potion.,
+DIALOGUE,"""Haue I not reason (Beldams) as you are?""",HECATE
+DIALOGUE,"""Double, double, toile and trouble; Fire burne, and Cauldron bubble.""",ALL
+STATEMENT,"The witches continue their incantations, growing more sinister as they prepare for Macbeth's arrival.",
+LOCATION,INT. WITCHES' COVEN - CONTINUOUS,
+STATEMENT,"Macbeth enters, demanding answers from the witches, his fear palpable.",
+DIALOGUE,"""How now you secret, black, & midnight Hags? What is't you do?""",MACBETH
+DIALOGUE,"""A deed without a name.""",ALL
+DIALOGUE,"""I conjure you, by that which you Professe...""",MACBETH
+STATEMENT,The atmosphere thickens with tension as the witches respond to Macbeth's demands.,
+STATEMENT,"Macbeth listens intently, his ambition driving him forward despite the ominous warnings.",
+LOCATION,EXT. THE ENGLISH COURT - DAY,
+STATEMENT,"Lenox and another Lord converse, discussing the troubling events surrounding Macbeth's reign and the fate of the kingdom.",
+DIALOGUE,"""My former Speeches, Haue but hit your Thoughts Which can interpret farther...""",LENNOX
+DIALOGUE,"""The Sonnes of Duncane (From whom this Tyrant holds the due of Birth)...""",LORD
+DIALOGUE,"""Sent he to Macduffe?""",LENNOX
+DIALOGUE,"""He did: and with an absolute Sir, not I...""",LORD
+STATEMENT,The tension and uncertainty of the kingdom's future loom large as they plot their next move against Macbeth.,
+LOCATION,INT. WITCHES' COVEN - NIGHT,
+STATEMENT,"The witches continue their dark rituals, preparing a potion that will bring forth chaos.",
+DIALOGUE,"""Double, double, toyle and trouble; Fire burne, and Cauldron bubble.""",ALL
+STATEMENT,"Their laughter echoes as they weave their dark magic, a foreboding sign of the turmoil to come.",
+LOCATION,INT. WITCHES' CAVERN - NIGHT,
+STATEMENT,"The eerie atmosphere pulses with dark magic as the witches dance around a cauldron, their voices echoing incantations. Macbeth stands before them, haunted by visions of Banquo's spirit.",
+DIALOGUE,Thou art too like the Spirit of Banquo: Thy Crown do's seare mine Eye-bals. ,MACBETH
+DIALOGUE,"Filthy Hagges, Why do you shew me this? ",MACBETH
+STATEMENT,"The apparitions appear, one after another, each more terrifying than the last. Macbeth's anxiety grows as he is confronted by visions of his fate.",
+DIALOGUE,"Horrible sight: Now I see 'tis true, For the Blood-bolter'd Banquo smiles vpon me.",MACBETH
+DIALOGUE,"I Sir, all this is so. But why Stands Macbeth thus amazedly?",WITCHES
+STATEMENT,"The witches begin to chant, enchanting the air with their magic, while Macbeth watches in a mix of fear and anticipation.",
+DIALOGUE,"Come Sisters, cheere we vp his sprights.",WITCHES
+LOCATION,INT. MACBETH'S CASTLE - NIGHT,
+STATEMENT,"Macbeth is now pacing in his dimly lit castle, agitated after the witches' prophecies. He calls for his servant.",
+DIALOGUE,Where are they? Gone? Let this pernicious hour Stand aye accursed in the Kalender.,MACBETH
+DIALOGUE,What's your Graces will?,LENNOX
+DIALOGUE,Saw you the Weyard Sisters?,MACBETH
+DIALOGUE,No my Lord.,LENNOX
+LOCATION,INT. MACDUFF'S HOUSE - DAY,
+STATEMENT,"Lady Macduff stands anxiously in her home with her son, worried for her husband's safety.",
+DIALOGUE,"You must have patience, Madam.",ROSSE
+LOCATION,INT. MACDUFF'S HOUSE - CONTINUOUS,
+STATEMENT,"The atmosphere grows tense as a messenger rushes in, warning Lady Macduff of impending danger.",
+DIALOGUE,"Heaven preserve you, I dare abide no longer.",MESSENGER
+LOCATION,INT. MACDUFF'S HOUSE - MOMENTS LATER,
+STATEMENT,"The murderers enter, their intentions clear as they confront Lady Macduff and her son.",
+DIALOGUE,Where is your Husband?,MURDERER
+DIALOGUE,Thou ly'st thou shagge-ear'd Villain!,SON
+STATEMENT,"Chaos erupts as the murderers attack, leaving Lady Macduff and her son in despair.",
+LOCATION,INT. A DESOLATE SHADE - DAY,
+STATEMENT,"Malcolm and Macduff seek refuge, grappling with their grief and the weight of their country's suffering.",
+DIALOGUE,"Let us seek out some desolate shade, and there Weep our sad bosoms empty.",MALCOLM
+DIALOGUE,"Let us rather Hold fast the mortal Sword: and like good men, Bestride our downfall Birthdome.",MACDUFF
+DIALOGUE,"This Tyrant, whose sole name blisters our tongues, Was once thought honest.",MALCOLM
+DIALOGUE,"Bleed, bleed poor Country, Great Tyranny, lay thou thy basis sure.",MACDUFF
+LOCATION,INT. MALCOLM'S CAMP - NIGHT,
+STATEMENT,"Malcolm reveals his doubts about himself as a leader, while Macduff vows to fight for their country.",
+DIALOGUE,"If such a one be fit to govern, speak: I am as I have spoken.",MALCOLM
+DIALOGUE,Fit to govern? No not to live. O Nation miserable!,MACDUFF
+STATEMENT,"The two men unite, determined to reclaim Scotland from Macbeth's tyrannical grip.",
+LOCATION,INT. SCOTLAND - DAY,
+STATEMENT,"Macduff stands in despair, lamenting the state of his nation under a tyrant's rule. His feelings of hopelessness echo throughout the empty halls.",
+DIALOGUE,"""Fit to govern? No, not to live. O Nation miserable! With an untitled Tyrant, bloody-sceptered, when shalt thou see thy wholesome days again?""",MACDUFF
+STATEMENT,"Malcom approaches, with a sense of noble passion, ready to reconcile his thoughts against Macbeth's tyranny.",
+DIALOGUE,"""Macduff, this noble passion, child of integrity, hath from my soul wiped the black scruples.""",MALCOLM
+STATEMENT,"A doctor enters, bringing news of the suffering in the kingdom. The atmosphere thickens with tension as they discuss the king's miraculous healing powers.",
+DIALOGUE,"""There are a crew of wretched souls that stay his cure; their malady convinces the great assay of art.""",DOCTOR
+LOCATION,INT. ROSS'S HOUSE - DAY,
+STATEMENT,"Ross, a nobleman, arrives, visibly distressed. The weight of his message hangs heavy in the air as Macduff inquires about his family.",
+DIALOGUE,"""How do's my wife? And all my children?""",MACDUFF
+DIALOGUE,"""Why well.""",ROSS
+STATEMENT,Ross's face darkens as he prepares to deliver the tragic news. Macduff's heart races with dread.,
+DIALOGUE,"""The tyrant has not battered at their peace?""",MACDUFF
+DIALOGUE,"""No, they were well at peace when I did leave them.""",ROSS
+STATEMENT,"Macduff leans in, desperate to know more, as Ross hesitates to reveal the horrific truth.",
+DIALOGUE,"""Your castle is surprised; your wife and babes savagely slaughtered.""",ROSS
+STATEMENT,"Macduff is struck with grief, his world shattering as he processes the loss of his family.",
+DIALOGUE,"""All my pretty ones? Did you say all? Oh Hell-Kite! All?""",MACDUFF
+LOCATION,INT. LADY MACBETH'S CHAMBER - NIGHT,
+STATEMENT,"A doctor and a gentlewoman stand watch as Lady Macbeth sleepwalks, tormented by her guilt.",
+DIALOGUE,"""A great perturbation in nature, to receive at once the benefit of sleep, and do the effects of watching.""",DOCTOR
+DIALOGUE,"""Since his Majesty went into the field, I have seen her rise from her bed, throw her nightgown upon her.""",GENTLEWOMAN
+STATEMENT,"The doctor observes Lady Macbeth washing her hands, her mind trapped in a world of blood and remorse.",
+STATEMENT,"The doctor notes her agitation, realizing the depth of her mental turmoil as she struggles with her conscience.",
+DIALOGUE,"""This disease is beyond my practice.""",DOCTOR
+LOCATION,INT. SCOTLAND - OUTSIDE DUNSINANE - DAY,
+STATEMENT,"Menteth, Cathness, Angus, and Lennox gather, preparing for an impending battle against Macbeth.",
+DIALOGUE,"""The English power is near, led on by Malcolm, his uncle Seyward, and the good Macduff.""",MENTETH
+DIALOGUE,"""Near Birnam Wood shall we well meet them.""",ANGUS
+STATEMENT,Tension rises as they discuss Macbeth's defenses and his deteriorating mental state.,
+DIALOGUE,"""Great Dunsinane he strongly fortifies; some say he's mad.""",CATHNESS
+DIALOGUE,"""Now does he feel his secret murders sticking on his hands.""",ANGUS

@@ -1,0 +1,212 @@
+tag,content,name
+LOCATION,EXT. HEATH - THUNDERING STORM - DAY,
+STATEMENT,"Three Witches enter amidst thunder and lightning, their presence ominous and unsettling.",
+DIALOGUE,"Padock calls anon: fair is foul, and foul is fair, hover through the fog and filthy air.",ALL
+STATEMENT,"The Witches exit, leaving an eerie silence in their wake.",
+LOCATION,INT. KING'S CAMP - DAY,
+STATEMENT,"The scene shifts to a tense atmosphere as the King, Malcom, Donalbain, and Lennox meet a wounded Captain.",
+DIALOGUE,"What bloody man is that? He can report, as seems by his plight, of the revolt the newest state.",KING
+DIALOGUE,"This is the Sergeant, who like a good and hardy soldier fought against my captivity.",MALCOLM
+DIALOGUE,"Doubtful it stood, as two spent swimmers, that do cling together and choke their art...",CAPTAIN
+STATEMENT,"The Captain recounts the fierce battle with Macdonwald, praising Macbeth for his valor as a warrior.",
+DIALOGUE,"O valiant cousin, worthy gentleman!",KING
+DIALOGUE,"As whence the sun begins his reflection, shipwracking storms and direful thunders...",CAPTAIN
+DIALOGUE,"Dismayed not this our captains, Macbeth and Banquo?",KING
+DIALOGUE,"Yes, as sparrows, eagles; or the hare, the lion...",CAPTAIN
+DIALOGUE,"So well thy words become thee, as thy wounds; they smack of honor both. Go get him surgeons.",KING
+LOCATION,EXT. HEATH - DAY,
+STATEMENT,"Thunder rolls as the three Witches reconvene, their intentions mysterious.",
+STATEMENT,"They chant together, invoking dark powers as Macbeth and Banquo approach.",
+LOCATION,EXT. HEATH - DAY,
+STATEMENT,"Macbeth and Banquo arrive, puzzled by the Witches' appearance.",
+DIALOGUE,So foul and fair a day I have not seen.,MACBETH
+DIALOGUE,"How far is't call'd to Soris? What are these, so withered and so wild in their attire?",BANQUO
+DIALOGUE,Speak if you can: what are you?,MACBETH
+DIALOGUE,"Good sir, why do you start, and seem to fear things that do sound so fair?",BANQUO
+DIALOGUE,"If you can look into the seeds of time, and say which grain will grow, and which will not, speak then to me!",BANQUO
+LOCATION,EXT. BLASTED HEATH - DAY,
+STATEMENT,"The eerie landscape of the blasted heath is shrouded in mist. Three witches, with wild and disheveled appearances, gather in a circle, their eyes glinting with supernatural knowledge.",
+DIALOGUE,"All hail, Macbeth, and Banquo!",WITCHES
+DIALOGUE,So foul and fair a day I have not seen.,MACBETH
+DIALOGUE,"How far is't call'd to Soris? What are these, so withered and so wild in their attire?",BANQUO
+DIALOGUE,Speak if you can: what are you?,MACBETH
+DIALOGUE,"Good sir, why do you start, and seem to fear things that do sound so fair?",BANQUO
+DIALOGUE,"If you can look into the seeds of time, and say which grain will grow, and which will not, speak then to me!",BANQUO
+STATEMENT,"The witches cackle and chant, their voices intertwining as they prophesy the fates of Macbeth and Banquo.",
+DIALOGUE,"Lesser than Macbeth, and greater. Not so happy, yet much happier. Thou shalt get kings, though thou be none!",WITCHES
+STATEMENT,"The witches begin to dissipate into the mist, leaving Macbeth and Banquo in stunned silence.",
+LOCATION,EXT. BLASTED HEATH - MOMENTS LATER,
+STATEMENT,"Macbeth and Banquo exchange bewildered glances, grappling with the weight of the witches' words.",
+DIALOGUE,"Stay you imperfect speakers, tell me more: By Sinel's death, I know I am Thane of Glamis. But how of Cawdor? The Thane of Cawdor lives a prosperous gentleman.",MACBETH
+DIALOGUE,"The earth hath bubbles, as the water has, and these are of them: whither are they vanished?",BANQUO
+DIALOGUE,"Into the air: and what seemed corporeal, melted, as breath into the wind. Would they had stayed!",MACBETH
+STATEMENT,"As they ponder the witches' words, Rosse and Angus approach, urgency in their steps.",
+DIALOGUE,"The King hath happily received, Macbeth, the news of thy success...",ROSSE
+STATEMENT,"Macbeth listens intently, his mind racing with possibilities as the gravity of his new title sinks in.",
+DIALOGUE,"We are sent to give thee from our royal master thanks, only to herald thee into his sight.",ANGUS
+DIALOGUE,"And for an earnest of a greater honor, he bade me from him call thee Thane of Cawdor!",ROSSE
+DIALOGUE,"What, can the devil speak true?",BANQUO
+STATEMENT,Confusion mixes with ambition as Macbeth contemplates his new fate.,
+DIALOGUE,The Thane of Cawdor lives. Why do you dress me in borrowed robes?,MACBETH
+STATEMENT,The weight of ambition begins to take hold of Macbeth as he grapples with the implications of the witches' prophecies.,
+DIALOGUE,That trusted home might yet enkindle you unto the crown.,BANQUO
+DIALOGUE,"If chance will have me king, why, chance may crown me without my stir.",MACBETH
+STATEMENT,"The two men share a moment of silent contemplation, the air thick with unspoken thoughts of power and destiny.",
+LOCATION,EXT. KING'S COURT - DAY,
+STATEMENT,"The scene shifts to the King's court, where King Duncan, accompanied by Malcolm and Donalbain, awaits news of Cawdor's execution.",
+DIALOGUE,Is execution done on Cawdor? Or not those in commission yet returned?,KING
+DIALOGUE,"My Liege, they are not yet come back. But I have spoke with one that saw him die...",MALCOLM
+STATEMENT,"The atmosphere is tense as the King reflects on the trust he placed in the Thane of Cawdor, unaware of the treachery that has unfolded.",
+DIALOGUE,"There's no art to find the mind's construction in the face. He was a gentleman, on whom I built an absolute trust.",KING
+STATEMENT,The scene is set for the unfolding drama of ambition and betrayal as Macbeth and Banquo approach the court.,
+LOCATION,INT. KING'S COURT - DAY,
+DIALOGUE,"Is execution done on Cawdor? Or not those in commission yet returned?, Name: KING",
+DIALOGUE,"My Liege, they are not yet come back. But I have spoke with one that saw him die..., Name: MALCOLM",
+STATEMENT,"The atmosphere is tense as the King reflects on the trust he placed in the Thane of Cawdor, unaware of the treachery that has unfolded.",
+DIALOGUE,"There's no art to find the mind's construction in the face. He was a gentleman, on whom I built an absolute trust., Name: KING",
+STATEMENT,The scene is set for the unfolding drama of ambition and betrayal as Macbeth and Banquo approach the court.,
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"The great hall of the castle is adorned with torches and the sound of hoboys fills the air. The King, Malcolm, Donalbaine, Banquo, Lenox, Macduff, Rosse, Angus, and their attendants enter, enveloped in an atmosphere of anticipation and grandeur.",
+DIALOGUE,"This Castle hath a pleasant seat, The ayre nimbly and sweetly recommends it selfe Vnto our gentle senses.",KING
+DIALOGUE,"This Guest of Summer, The Temple-haunting Barlet does approve, By his loved Mansonry, that the Heavens breath Smells wooingly here: no Iutty frieze, Buttrice, nor Coigne of Vantage, but this Bird Hath made his pendant Bed, and procreant Cradle, Where they must breed, and haunt: I have observed The ayre is delicate.",BANQUO
+STATEMENT,"Lady Macbeth enters, her presence commanding attention. The King acknowledges her with warmth.",
+DIALOGUE,"See, see our honored Hostesse: The Love that follows us, sometimes is our trouble, Which still we thank as Love.",KING
+DIALOGUE,"All our service, In every point twice done, and then done double, Were poor, and single Business, to contend Against those Honors deep, and broad, Wherewith your Majesty loads our House: For those of old, and the late Dignities, Heap'd up to them, we rest your Ermites.",LADY
+DIALOGUE,"Where's the Thane of Cawdor? We courted him at the heels, and had a purpose To be his Purveyor: But he rides well, And his great Love hath holp him To his home before us: Fair and Noble Hostesse, We are your guests tonight.",KING
+DIALOGUE,"Your Servants ever, Have theirs, themselves, and what is theirs in compt, To make their Audit at your Highness' pleasure, Still to return your own.",LADY
+DIALOGUE,"Give me your hand: Conduct me to mine Host we love him highly, And shall continue, our Graces towards him. By your leave Hostesse.",KING
+STATEMENT,"The King gestures for Lady Macbeth to lead him to Macbeth as they exit together, the atmosphere thick with expectation.",
+LOCATION,INT. BANQUET HALL - NIGHT,
+STATEMENT,"Hoboys and torches illuminate the scene as servants enter, carrying dishes and setting the stage for a grand banquet. Macbeth enters, his mind racing with thoughts.",
+DIALOGUE,"If it were done, when 'tis done, then 'twere well, It were done quickly: If th' Assassination Could trammel up the Consequence, and catch With his surcease, Success: that but this blow Might be the be all, and the end all. ",MACBETH
+STATEMENT,"Macbeth paces, wrestling with his ambition and the moral weight of the act he contemplates. ",
+DIALOGUE,He has almost supt: why have you left the chamber?,LADY
+DIALOGUE,Hath he ask'd for me?,MACBETH
+DIALOGUE,"Know you not, he has?",LADY
+DIALOGUE,"We will proceed no further in this Business: He hath honored me of late, and I have bought Golden Opinions from all sorts of people, Which would be worn now in their newest gloss, Not cast aside so soon.",MACBETH
+DIALOGUE,"Was the hope drunk, Wherein you dress'd yourself? Hath it slept since? ",LADY
+STATEMENT,"The tension escalates as Lady Macbeth confronts Macbeth's wavering resolve, pushing him to seize the opportunity that lies ahead.",
+DIALOGUE,"I would, while it was smiling in my Face, Have pluck'd my Nipple from his Boneless Gums, And dash'd the Brains out, had I so sworn As you have done to this.",LADY
+DIALOGUE,If we should fail?,MACBETH
+DIALOGUE,"We fail? But screw your courage to the sticking place, And we'll not fail.",LADY
+STATEMENT,"The stakes rise as Lady Macbeth lays out the plan, her determination igniting Macbeth's ambition.",
+DIALOGUE,Bring forth Men-Children only: For thy undaunted Mettle should compose Nothing but Males.,MACBETH
+DIALOGUE,"Who dares receive it other, As we shall make our Griefs and Clamor roar, Upon his Death?",LADY
+DIALOGUE,"I am settled, and bend up Each corporal Agent to this terrible Feat. Away, and mock the time with fairest show, False Face must hide what the false Heart doth know.",MACBETH
+LOCATION,INT. MACBETH'S CASTLE - NIGHT,
+STATEMENT,"Lady Macbeth and Macbeth stand in a dimly lit chamber, tension thick in the air as they discuss their dark intentions.",
+DIALOGUE,"We fail? But screw your courage to the sticking place, And we'll not fail.",LADY
+STATEMENT,"The stakes rise as Lady Macbeth lays out the plan, her determination igniting Macbeth's ambition.",
+DIALOGUE,Bring forth Men-Children only: For thy undaunted Mettle should compose Nothing but Males.,MACBETH
+DIALOGUE,"Who dares receive it other, As we shall make our Griefs and Clamor roar, Upon his Death?",LADY
+DIALOGUE,"I am settled, and bend up Each corporal Agent to this terrible Feat. Away, and mock the time with fairest show, False Face must hide what the false Heart doth know.",MACBETH
+LOCATION,INT. MACBETH'S CASTLE - NIGHT,
+STATEMENT,"The atmosphere is thick with tension as Lady Macbeth and Macbeth stand together in the dim light, the weight of their intentions heavy in the air.",
+DIALOGUE,"We fail? But screw your courage to the sticking place, and we'll not fail.",LADY
+STATEMENT,"The stakes rise as Lady Macbeth lays out the plan, her determination igniting Macbeth's ambition.",
+DIALOGUE,Bring forth Men-Children only: For thy undaunted Mettle should compose Nothing but Males.,MACBETH
+DIALOGUE,"Who dares receive it other, As we shall make our Griefs and Clamor roar, Upon his Death?",LADY
+DIALOGUE,"I am settled, and bend up Each corporal Agent to this terrible Feat. Away, and mock the time with fairest show, False Face must hide what the false Heart doth know.",MACBETH
+STATEMENT,"With a shared resolve, they prepare to embark on their dark path, united in ambition and treachery.",
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"The stakes rise as Lady Macbeth lays out the plan, her determination igniting Macbeth's ambition.",
+DIALOGUE,Bring forth Men-Children only: For thy undaunted Mettle should compose Nothing but Males.,MACBETH
+DIALOGUE,"I am settled, and bend up Each corporal Agent to this terrible Feat. Away, and mock the time with fairest show, False Face must hide what the false Heart doth know.",MACBETH
+STATEMENT,"With a shared resolve, they prepare to embark on their dark path, united in ambition and treachery.",
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"The atmosphere is thick with tension as Banquo enters, contemplating the weight of the prophecies. He glances around, wary of the looming shadows.",
+DIALOGUE,"Thou hast it now, King, Cawdor, Glamis, all, As the weyard Women promis'd, and I feare Thou play'd'st most fowly for't.",BANQUO
+STATEMENT,Banquo's expression darkens with suspicion as he considers his own lineage and the implications of Macbeth's rise to power.,
+DIALOGUE,"If there come truth from them, As vpon thee Macbeth, their Speeches shine, Why by the verities on thee made good, May they not be my Oracles as well?",BANQUO
+STATEMENT,"The sound of a fanfare interrupts his thoughts as Macbeth enters, flanked by Lady Lennox, Ross, and other lords.",
+DIALOGUE,Heere's our chiefe Guest.,MACBETH
+STATEMENT,"The room fills with laughter and conversation as the guests take their places, but Banquo's unease remains palpable.",
+DIALOGUE,"To night we hold a solemne Supper sir, And I'll request your presence.",MACBETH
+DIALOGUE,"Let your Highnesse Command vpon me, to the which my duties Are with a most indissoluble tye For euer knit.",BANQUO
+STATEMENT,"Banquo nods respectfully, his mind racing as he considers the implications of Macbeth's invitation.",
+DIALOGUE,Ride you this afternoone?,MACBETH
+DIALOGUE,"I, my good Lord.",BANQUO
+STATEMENT,"Macbeth feigns casualness, concealing his ulterior motives as he converses with Banquo.",
+DIALOGUE,We should haue else desir'd your good aduice... Is't farre you ride?,MACBETH
+DIALOGUE,"As farre, my Lord, as will fill vp the time 'Twixt this, and Supper.",BANQUO
+STATEMENT,"The tension rises as Macbeth secretly plots, aware of the danger Banquo poses to his throne.",
+DIALOGUE,"We heare our bloody Cozens are bestow'd In England, and in Ireland... Hye you to Horse: Adieu, till you returne at Night.",MACBETH
+STATEMENT,"Banquo exits, leaving Macbeth alone with his dark thoughts and ambition.",
+DIALOGUE,"Let euery man be master of his time, Till seuen at Night, to make societie The sweeter welcome.",MACBETH
+STATEMENT,"Macbeth watches Banquo leave, the shadows creeping closer as he contemplates his next move.",
+DIALOGUE,"To be thus, is nothing, but to be safely thus.",MACBETH
+STATEMENT,"As he speaks, the weight of his fears and ambitions bears down on him, driving him to desperation.",
+DIALOGUE,"Our feares in Banquo sticke deepe, And in his Royaltie of Nature reignes that Which would be fear'd.",MACBETH
+STATEMENT,Macbeth's mind races with paranoia and dread as he conjures the image of Banquo's descendants inheriting the throne.,
+DIALOGUE,"For Banquo's Issue have I fil'd my Minde... Come Fate into the Lyst, And champion me to th' vtterance.",MACBETH
+STATEMENT,"The dark resolve solidifies within him as he prepares to summon the murderers, plotting Banquo's demise.",
+LOCATION,INT. CASTLE - LATER,
+STATEMENT,"Macbeth stands alone, the flickering candlelight casting eerie shadows as he contemplates his next actions.",
+DIALOGUE,"Now goe to the Doore, and stay there till we call.",MACBETH
+STATEMENT,"The tension mounts as the Murderers enter, each man driven by their own motives and desperation.",
+DIALOGUE,"Know, that it was he, in the times past, Which held you so vnder fortune.",MACBETH
+STATEMENT,"Macbeth's manipulation begins as he lays the groundwork for their dark task, appealing to their grievances.",
+DIALOGUE,"I did so: And went further... Are you so Gospell'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition.",
+STATEMENT,The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task.,
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact.",
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"Macbeth's manipulation begins as he lays the groundwork for their dark task, appealing to their grievances.",
+DIALOGUE,"I did so: And went further... Are you so Gospell'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition.",
+STATEMENT,The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task.,
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact.",
+LOCATION,INT. MACBETH'S CASTLE - NIGHT,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.",
+DIALOGUE,"I did so: And went further... Are you so Gospell'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. MACBETH'S CHAMBER - NIGHT,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.",
+DIALOGUE,"I did so: And went further... Are you so Gospell'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. DARK ROOM - NIGHT,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.",
+DIALOGUE,"I did so: And went further... Are you so Gospell'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. MACBETH'S CASTLE - NIGHT  ,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.  ",
+DIALOGUE,"I did so: And went further... Are you so Gospel'd, to pray for this good man?  ",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.  ",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.  ",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. DIMLY LIT ROOM - NIGHT  ,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.  ",
+DIALOGUE,"I did so: And went further... Are you so Gospel'd, to pray for this good man?  ",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.  ",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.  ",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. CASTLE - NIGHT  ,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.  ",
+DIALOGUE,"I did so: And went further... Are you so Gospel'd, to pray for this good man?  ",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.  ",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.  ",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. CASTLE - NIGHT,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury. ",
+DIALOGUE,"I did so: And went further... Are you so Gospel'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them. ",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances. ",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. DUNSINANE CASTLE - NIGHT,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.",
+DIALOGUE,"I did so: And went further... Are you so Gospel'd, to pray for this good man?",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
+LOCATION,INT. CASTLE - NIGHT  ,
+STATEMENT,"Macbeth paces slowly, the flickering candlelight casting shadows on his troubled face. He prepares to address the Murderers, their eyes filled with a mix of doubt and fury.  ",
+DIALOGUE,"I did so: And went further... Are you so Gospel'd, to pray for this good man?  ",MACBETH
+STATEMENT,"The Murderers exchange glances, their resolve wavering as Macbeth's words stir their anger and ambition. Each man weighs the gravity of the decision before them.  ",
+STATEMENT,"The atmosphere thickens with an unspoken agreement as they prepare to undertake their grim task. A dark bond forms among them, driven by their shared grievances.  ",
+STATEMENT,"Macbeth stands resolute, his ambition blinding him to the moral implications of their dark pact. The weight of destiny hangs heavy in the air as they move closer to their fateful decision.",
