@@ -7,8 +7,8 @@ import plotly.graph_objects as go
 
 from datetime import datetime, timedelta
 import dash
-from dash import html, dcc
-from dash.dependencies import Input, Output, State,ClientsideFunction
+from dash import html, dcc, Input, Output, State
+
 import dash_bootstrap_components as dbc
 
 from sentiment import SentimentCalculator
@@ -56,16 +56,26 @@ def draw_timeline(df, attribute_name = "Location"):
     
     return fig
 
-def arrange_layout(fig, x_range):
+def arrange_layout(fig, x_range, x_type=None):
+
+    if x_type == "datetime":
+        x_range = list(map(convert_to_datetime, x_range))
     shared_layout = {
-    "margin": {"l": 30, "r": 30, "t": 5, "b": 5},  # 左右の余白を固定
-    "legend": {"x": 1.1, "y": 1.02, "xanchor":"left", "yanchor": "bottom","orientation" : "h"},  # 凡例を右揃え
+    #　マージン
+    "margin": {"l": 0, "r": 0, "t": 0, "b": 0}, 
+    # 凡例
+    "legend": {"x": 1.1, "y": 1.02, "xanchor":"left", "yanchor": "bottom","orientation" : "h"}, 
     # "xaxis": {"title": "Time", "tickangle": -45, "tickfont": {"size": 12}},  # x軸設定
-    # "yaxis": {"title": "Location / Arousal", "tickfont": {"size": 12}},  # y軸設定
-    "xaxis": {"domain": [0.1, 0.6], "showline": True, "linewidth": 2, "linecolor":"black", "range":x_range}, # datetime or index
+    # "yaxis": {"title": "Location / Arousal", "tickfont": {"size": 12}},  
+    # x-axis
+    "xaxis": {"domain": [0.1, 0.95], "showline": True, "linewidth": 2, "linecolor":"black", "range":x_range}, # datetime or index
+
+    # y-axis
     "yaxis": {"showline": True, "linewidth": 2, "linecolor":"black"},
     "showlegend": False,
-    # "xaxis": {"domain": [0.1, 0.9]},
+
+    "height": 200,
+    
 
     "plot_bgcolor": "white",  # 背景色を統一
     }
@@ -94,12 +104,70 @@ def draw_character(df, selected=None):
 
 def draw_setting(df, selected=None):
     _df = df.copy()
-
+    if selected:
+        _df = _df[_df["Location"].isin(selected)]
     fig_location, fig_time, fig_locationtype = draw_timeline(_df, "Location"), draw_timeline(_df, "Time"), draw_timeline(_df, "LocationType")
     
     return fig_location, fig_time, fig_locationtype
-## Event
+# Location
+def draw_location(df, selected=None):
+    _df = df.copy()
+    if selected:
+        _df = _df[_df["Location"].isin(selected)]
+    fig = draw_timeline(_df, "Location")
+    return fig
 
+# Time
+def draw_time(df, selected=None):
+    _df = df.copy()
+    if selected:
+        _df = _df[_df["Time"].isin(selected)]
+    fig = draw_timeline(_df, "Time")
+    return fig
+
+# Location Type
+def draw_locationtype(df, selected=None):
+    _df = df.copy()
+    if selected:
+        _df = _df[_df["LocationType"].isin(selected)]
+    fig = draw_timeline(_df, attribute_name="LocationType")
+    return fig
+
+## Event
+def draw_event(df, selected=None):
+    _df = df.copy()
+    _df = _df.dropna(subset=["Event", "EImportance"])
+
+    if selected:
+        pass
+    _df["Group"] = (_df["Event"] != _df["Event"].shift()).cumsum()  # 連続する値をグループ化
+    grouped_df = (
+        _df.groupby("Group")
+        .agg(
+            Start=("Index", "min"),
+            Finish=("Index", "max"),
+            Event=("Event", "first"),
+            EImportance=("EImportance", "max")  # 最大の重要度を使用
+        )
+        .reset_index(drop=True)
+    )
+    print(grouped_df)
+    fig = go.Figure()
+    for _, row in grouped_df.iterrows():
+        fig.add_trace(
+            go.Bar(
+                x=[row["Start"]],  # イベント名をX軸に
+                y=[row["EImportance"]],  # 重要度をY軸に
+                width=  [(row["Finish"] - row["Start"])/3],  # 棒の幅をインデックス範囲に基づいて設定
+                name=f"{row['Event']} ({row['Start']}-{row['Finish']})",  # 凡例に範囲を表示
+                marker=dict(
+                    color="blue" if row["Event"] == "A" else "green" if row["Event"] == "B" else "red",
+                    opacity=0.7
+                )
+            )
+        )
+    fig.update_layout(yaxis=dict(visible=False))
+    return fig
 
 
 ## PoV
@@ -108,49 +176,105 @@ def draw_Pov(df):
 
 def draw_Tone(df, selected=None):
     _df = df.copy()
-    _df["Sentiment_mean"] =  df["Sentiment"].dropna().rolling(window=50, min_periods=1).mean()
-    df["customdata"] = df["Event"]
+    _df["Sentiment_mean"] =  df["Sentiment"].dropna().rolling(window=20, min_periods=1).mean()
+    _df["customdata"] = _df["Event"]
     
     fig = px.line(_df, y="Sentiment_mean", hover_data=["Event"])
     return fig
 
     
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.layout = html.Div([
+app.layout = dbc.Container(
+    fluid=True,
+    children=[
+    dbc.Row(children=[
+        dbc.Col(
+            width=2,
+            children=[
+                html.H5("facet bar"),
+                html.Label("Character"),
+                dcc.Checklist(
+                    id="character-filter",
+                    options=[{"label": char, "value": char} for char in set(sublist for sublist in df["Character"].dropna()) ],
+                    value=[],
+                    inline=True,),
+                html.Label("Time Range"),
+                dcc.RangeSlider(
+                    id="index-filter",
+                    min=df["Index"].min(),
+                    max=df["Index"].max(),
+                    step=1,
+                    marks={i: str(i) for i in range(df["Index"].min(), df["Index"].max() + 1, 50)},
+                    value=[df["Index"].min(), df["Index"].max()],
+                ),
+                html.Label("Location"),
+                dcc.Checklist(
+                    id="location-filter",
+                    options=[{"label": loc, "value": loc} for loc in df["Location"].dropna().unique()],
+                    value=[],
+                    inline=True,
+                ),
+                html.Label("LocationType"),
+                dcc.Checklist(
+                    id="locationtype-filter",
+                    options=[{"label": loc, "value": loc} for loc in df["LocationType"].dropna().unique()],
+                    value=[],
+                    inline=True,
+                ),
+                html.Label("Time"),
+                dcc.Checklist(
+                    id="time-filter",
+                    options=[{"label": loc, "value": loc} for loc in df["Time"].dropna().unique()],
+                    value=[],
+                    inline=True,
+                ),
+                # html.Label("Day/Night"),
+                # dcc.RadioItems(
+                #     id="day-night-filter",
+                #     options=[
+                #         {"label": "Day", "value": "day"},
+                #         {"label": "Night", "value": "night"},
+                #         {"label": "Both", "value": "both"},
+                #     ],
+                #     value="both",
+                # ),
+                html.Label("Sentiment Threshold"),
+                dcc.RangeSlider(
+                    id="sentiment-filter",
+                    min=df["Sentiment"].min(),
+                    max=df["Sentiment"].max(),
+                    step=1,
+                    marks={i: str(i) for i in range(int(df["Sentiment"].min()), int(df["Sentiment"].max()) + 1, 5)},
+                    value=[df["Sentiment"].min(), df["Sentiment"].max()],
+                ),
+           ],
+       ),
+        ## main view
+        dbc.Col(
+            width = 10,
+            children=[
+                html.H3("visalization", className="text-center"),
+                dcc.Graph(id="event"),
+                dcc.Graph(id="tone"),
+                dcc.Graph(id="location"),
+                dcc.Graph(id="time"),
+                dcc.Graph(id="location-type"),
+            ]
+        )
+       
 
-    dbc.Container([
-        dbc.Row([
-            dbc.Col(dbc.Button(id="tone-btn"), width=2), 
-            dbc.Col(dbc.Button(id="character-btn")), 
-            dbc.Col(dbc.Button(id="location-btn")), 
-            dbc.Col(dbc.Button(id="time-btn")), 
-            dbc.Col(dbc.Button(id="location-type-btn")), 
-            
-        ]),
-        dbc.Row([dbc.Col(dcc.RangeSlider(0,100, 1, value=[0, 100], id='range-slider')),]),
-        dbc.Row([
-            dbc.Col(dcc.Graph(id="tone")),           
-        ]),
-        dbc.Row([
-            dbc.Col(dcc.Graph(id="character")),
-        ]),
-        dbc.Row([
-            dbc.Col(dcc.Graph(id="location")),
-        ]),
-        dbc.Row([
-            dbc.Col(dcc.Graph(id="time")),
-        ]),
-        dbc.Row([
-            dbc.Col(dcc.Graph(id="location-type")),
-        ]),
-    ])
+
+   ])
 ])
 
+## Time
+
+## Character
 @app.callback(
     Output("character", "figure"),
-    [Input("character-btn","n_clicks")],
+    [Input("character-filter","value")],
     State("range-slider", "value")
 )
 def udpate_character(click, value):
@@ -158,30 +282,69 @@ def udpate_character(click, value):
     
     return go.Figure()
 
+## Location callback
 @app.callback(
     Output("location", "figure"),
-    Output("time", "figure"),
-    Output("location-type", "figure"),
-    [Input("location-btn","n_clicks")],
-    State("range-slider", "value")
+    [Input("location-filter","value"),
+    Input("index-filter", "value")],
+   
 )
-def udpate_setting(vlick, value):
-    fig_list = draw_setting(df)
-  
-    # for fig in fig_list:
-    #     arrange_layout(fig, value)
-    return fig_list
-
-@app.callback(
-    Output("tone", "figure"),
-    [Input("tone-btn","n_clicks")],
-    State("range-slider", "value")
-)
-def udpate_tone(click, value):
-    # fig_list = draw_character(df)
-    fig = draw_Tone(df)
+def udpate_location(filter, index_filter):
+    fig = draw_location(df, filter)
+    arrange_layout(fig, index_filter, x_type="datetime")
+    fig.update_layout({"height": 350})
     return fig
 
+## Time callback
+@app.callback(
+    Output("time", "figure"),
+    [Input("time-filter", "value"),
+    Input("index-filter", "value")],
+    
+)
+def udpate_time(filter, index_filter):
+    
+    fig = draw_time(df, filter)
+    arrange_layout(fig, index_filter, x_type="datetime")
+    return fig
+
+## LocationType callback
+@app.callback(
+    Output("location-type", "figure"),
+    [Input("locationtype-filter", "value"),
+    Input("index-filter", "value")],
+   
+)
+def update_locationtype(filter, index_filter):
+    fig = draw_locationtype(df, filter)
+    arrange_layout(fig, index_filter, x_type="datetime")
+
+    return fig
+
+## Sentiment/Tone
+@app.callback(
+    Output("tone", "figure"),
+    [Input("sentiment-filter","value"),
+      Input("index-filter", "value")],
+   
+)
+def udpate_tone(filter, index_filter):
+    # fig_list = draw_character(df)
+    fig = draw_Tone(df)
+    arrange_layout(fig, index_filter)
+    return fig
+
+@app.callback(
+    Output("event", "figure"),
+    [
+      Input("index-filter", "value")],
+   
+)
+def udpate_event( index_filter):
+    
+    fig = draw_event(df)
+    arrange_layout(fig, index_filter)
+    return fig
 
 # @app.callback(
 #     Output("facet-plot", "figure"),

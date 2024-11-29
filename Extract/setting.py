@@ -70,24 +70,25 @@ if __name__ == "__main__":
     df.assign(LocationType = "")
     df.assign(Time="")
 
-    text = ""
-    for index, row in df[df["Chapter"] == 1].iterrows():
-        text += str(row["Index"]) + " " + row["Content"] + "\n"
-    result = extract_event(text, prompt)
-   
-    result = json.loads(result.replace("json", "").replace("```", ""))
+    for i in range(1, 13):
+        text = ""
+        for index, row in df[df["Chapter"] == i].iterrows():
+            text += str(row["Index"]) + " " + row["Content"] + "\n"
+        result = extract_event(text, prompt)
+    
+        result = json.loads(result.replace("json", "").replace("```", ""))
 
-    for scene in result:
-        location = scene["location"]["general"]
-        location_type = scene["locationtype"]
-        time = scene["time"]
-        range = scene["range"] # eval(scene["range"])
-       
-        start, end = range[0], range[1]
+        for scene in result:
+            location = scene["location"]["general"]
+            location_type = scene["locationtype"]
+            time = scene["time"]
+            range = scene["range"] # eval(scene["range"])
+        
+            start, end = range[0], range[1]
 
-        df.loc[start:end, "Location"] = location
-        df.loc[start:end, "LocationType"] = location_type
-        df.loc[start:end, "Time"] = time        
+            df.loc[start:end, "Location"] = location
+            df.loc[start:end, "LocationType"] = location_type
+            df.loc[start:end, "Time"] = time        
 
     df.to_csv(file_path)
 
