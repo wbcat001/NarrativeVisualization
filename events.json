@@ -1,0 +1,554 @@
+[
+    [
+        {
+            "event_name": "Alice's boredom with reality",
+            "prompt": "A serene scene on a sunny day by a riverbank, where a young girl named Alice sits next to her older sister, looking bored and tired. Alice has light brown hair and wears a simple blue dress, peering into a book filled with blank pages, expressing her frustration over the lack of pictures and conversations. The atmosphere is calm and tranquil, with lush grass and flowers surrounding them."
+        },
+        {
+            "event_name": "Alice sees the White Rabbit",
+            "prompt": "A curious and whimsical forest scene where Alice, looking intrigued, spots a White Rabbit with pink eyes wearing a waistcoat and carrying a pocket watch. The rabbit is hurriedly glancing at its watch with a distressed expression. Alice's eyes widen in excitement, and the sunlight dappled through the trees creates a magical ambiance."
+        },
+        {
+            "event_name": "Alice follows the White Rabbit down the rabbit-hole",
+            "prompt": "A fantastical scene of a large, swirling rabbit-hole framed by green grass and flowering plants. Alice is halfway down, her expression a mixture of curiosity and determination as she follows the White Rabbit. The tunnel is dark and mysterious with hints of light illuminating her path, suggesting adventure."
+        },
+        {
+            "event_name": "Alice's contemplative descent",
+            "prompt": "Inside a vast, dark rabbit-hole, Alice floats gracefully down, surrounded by floating objects like shelves filled with books, maps, and jars. She has a pensive look on her face as she contemplates the unusual surroundings. Soft glowing lights create a dreamy atmosphere, highlighting her deep thoughts and vibrant imagination."
+        },
+        {
+            "event_name": "Alice lands in a dark hall",
+            "prompt": "A dimly lit hall filled with tall, locked doors that cast long shadows. Alice stands at the center, looking around with a sense of frustration and wonder, her body slightly slumped in disappointment. The hall is illuminated by hanging lamps, adding a mysterious ambiance to her explorative mood."
+        },
+        {
+            "event_name": "Alice discovers the key",
+            "prompt": "A delicate glass table in the center of a dark hall, with a tiny golden key sitting proudly atop it. Alice, with her hand raised in excitement, leans down to examine the key, her face lit up by hope. The table sparkles under the soft light, symbolizing discovery and potential escape."
+        },
+        {
+            "event_name": "Alice finds the small door to the garden",
+            "prompt": "A tiny, enchanting door set within a wall, leading to a breathtaking garden beyond. Alice kneels excitedly before the door, peering inside with wide eyes filled with longing. Colorful flowers and vibrant greenery are visible through the door, creating an inviting and magical atmosphere."
+        },
+        {
+            "event_name": "Alice drinks from the 'Drink Me' bottle",
+            "prompt": "A curious scene of Alice holding a bottle labeled ‘DRINK ME’ in a beautiful typographic style. She gazes at it with an inquisitive expression, set in a colorful, fantastical kitchen filled with bizarre items. The bottle glows slightly, hinting at the enchantment within, while Alice nervously contemplates drinking it."
+        },
+        {
+            "event_name": "Alice's conflicting emotions about her size",
+            "prompt": "A whimsical scene where Alice looks apprehensive, seated on the floor of the dim hall, her eyes darting between her small stature and the key on the table. Shadows play on her curious face, and there’s a sense of tension as she worries about her changing size, the atmosphere charged with uncertainty."
+        },
+        {
+            "event_name": "Alice's struggle to get the key",
+            "prompt": "Alice stands frustrated, reaching up towards a glass table that seems impossibly high to her now. Her face shows determination mixed with despair, and the keys’ shimmering glow taunts her. The scene is filled with a sense of entrapment within the enchanting hall."
+        },
+        {
+            "event_name": "Alice finds the 'EAT ME' cake",
+            "prompt": "Alice is curiously examining a small cake with the words ‘EAT ME’ written in currants, delight and hope on her face. The scene is set on the glass table, decorated with whimsical items surrounding it. The ambiance is colorful and inviting, filled with the potential for adventure."
+        },
+        {
+            "event_name": "Alice's anticlimactic result from the cake",
+            "prompt": "Alice sits with a disappointed expression, looking up at the unchanged view after eating the cake. The colorful hall now feels dull to her, and her body language conveys frustration. The surroundings are filled with whimsical objects that contrast with her growing dissatisfaction."
+        }
+    ],
+    [
+        {
+            "event_name": "Alice expresses her confusion about her size",
+            "prompt": "A whimsical interior of a hall with Alice, a young girl with a blue dress and white apron, looking down in dismay at her growing feet, which are disappearing into the distance. Surroundings include oversized furniture. The scene is filled with a dreamy, surreal atmosphere, highlighting her confusion and thoughts."
+        },
+        {
+            "event_name": "Alice discovers she cannot enter the garden",
+            "prompt": "Alice stands at a tiny garden door, towering over it, her face showing frustration and sadness. The lush, colorful garden is visible through the door, contrasting with Alice’s large figure. The setting is bright and enchanting, symbolizing her longing."
+        },
+        {
+            "event_name": "Alice meets the White Rabbit",
+            "prompt": "A startled White Rabbit in a formal outfit with a waistcoat and pocket watch drops a fan and white gloves in shock as Alice, looking curious and desperate, reaches out. The background features a fantastical garden with vibrant colors, enhancing the whimsical feel."
+        },
+        {
+            "event_name": "Alice reflects on her identity",
+            "prompt": "Alice, pensively floating in the pool of tears, surrounded by abstract representations of her memories — houses, toys, and numbers. Her expression is troubled as she questions her identity. The atmosphere is surreal and introspective."
+        },
+        {
+            "event_name": "Alice shrinks due to the rabbit's glove",
+            "prompt": "Alice looks alarmed and confused as she notices the transformative Rabbit’s glove on her hand, rapidly shrinking in size. The background shows a chaotic, oversized environment as she panics. Emphasis is on her facial expressions of astonishment."
+        },
+        {
+            "event_name": "Alice finds herself in a pool of tears",
+            "prompt": "An underwater scene depicting Alice submerged in a pool of tears, surrounded by reflective droplets and waves. Her expression is one of sorrow and confusion as she swims, with hints of despair. The underwater world is filled with vibrant colors and a sense of endlessness."
+        },
+        {
+            "event_name": "Alice meets the Mouse",
+            "prompt": "Alice, swimming in the pool of tears, encounters a small, curious Mouse who looks slightly alarmed. The water reflects their faces, symbolizing the whimsical yet strained interaction. The atmosphere is quirky and filled with curiosity."
+        },
+        {
+            "event_name": "Alice accidentally offends the Mouse",
+            "prompt": "Alice speaking animatedly to the Mouse, who has a shocked expression while swimming away frantically. The background captures the humorous and awkward moment, with splashes of water highlighting their misunderstandings. The mood is whimsical yet tense."
+        },
+        {
+            "event_name": "The animals overcrowd the pool",
+            "prompt": "Alice leading a motley crew of animals — a Duck, Dodo, and other strange creatures — swimming towards the shore of the chaotic pool of tears. The scene is vibrant and crowded, emphasizing the surreal adventure. Alice's expression shows determination amid the chaos."
+        }
+    ],
+    [
+        {
+            "event_name": "Assembly of the wet party",
+            "prompt": "A whimsical scene depicting a group of miserable-looking birds and animals gathered on a riverbank. They are drenched, with draggled feathers and wet fur. Alice stands among them, looking comfortable as she engages in conversation with the quirky characters. The background features a lush, vibrant landscape of Wonderland, with colorful flowers and a sparkling river."
+        },
+        {
+            "event_name": "Alice Engages in Argument with the Lory",
+            "prompt": "Alice, a curious young girl, is depicted animatedly arguing with a sulky Lory bird, both standing near the riverbank. The Lory has a puffed-up chest and an irritated expression, while Alice looks determined and inquisitive. Around them, other animals and birds watch with various expressions of amusement and confusion. The scene is bright and cheerful, capturing the bizarre charm of Wonderland."
+        },
+        {
+            "event_name": "Mouse's attempt to dry the group",
+            "prompt": "The Mouse stands confidently in the center of a ring formed by wet animals and birds, preparing to give a dry historical lesson. Alice watches attentively, her expression anxious and hoping to get dry. The animals surrounding her display a mix of curiosity and disinterest, such as the Lory shivering. The background is filled with whimsical trees and colorful flowers typical of Wonderland."
+        },
+        {
+            "event_name": "The Mouse's Boring Tale",
+            "prompt": "The Mouse, with a serious expression, is reciting a tedious story to the group of wet animals and birds, who look disinterested and distracted. Some creatures are yawning, while others whisper amongst themselves. The vibrant Wonderland backdrop contrasts with the dreary mood created by the Mouse's monotone storytelling."
+        },
+        {
+            "event_name": "Introduction of the Caucus-race",
+            "prompt": "The Dodo stands proudly, explaining the concept of a Caucus-race to the curious animals gathered around. The group, a quirky mix of birds and animals, looks puzzled and intrigued, with some gesturing animatedly. The background features a whimsical circular racetrack marked out in the grass, under a bright Wonderland sky."
+        },
+        {
+            "event_name": "Caucus-race takes place",
+            "prompt": "A chaotic scene of the Caucus-race unfolds, with animals and birds running in all directions without any set starting line. Some are sprinting energetically while others are standing still or walking lazily. Alice watches with a mix of amusement and confusion, surrounded by the colorful characters of Wonderland in a vibrant landscape."
+        },
+        {
+            "event_name": "Distribution of prizes",
+            "prompt": "The Dodo is presenting prizes to the group after the Caucus-race, with Alice looking bewildered as she distributes comfits to the excited crowd of animals and birds. Each character has an exaggerated expression of joy and anticipation. The background is lively and colorful, reflecting the whimsical essence of Wonderland."
+        },
+        {
+            "event_name": "The Mouse's tale begins",
+            "prompt": "The Mouse, looking somewhat regal, prepares to share its story with Alice and the curious party around them. Alice appears eager but distracted, leading to the tension in the setting. The background showcases a whimsical landscape with enchanting flora, further emphasizing the surreal nature of Wonderland."
+        },
+        {
+            "event_name": "The Mouse's Anger",
+            "prompt": "The Mouse is depicted with an angry expression, turning away from Alice who looks disappointed and confused. The surrounding animals look concerned, highlighting the tension in the scene. The Wonderland backdrop features exaggerated, colorful elements that amplify the whimsical tone of the narrative."
+        },
+        {
+            "event_name": "Alice's mention of Dinah",
+            "prompt": "Alice is depicted passionately talking about her cat, Dinah, while surrounding birds show expressions of alarm and surprise, leading them to flee. The scene captures a moment of comedic chaos against the lively backdrop of Wonderland, filled with bright flowers and exaggerated greenery."
+        },
+        {
+            "event_name": "Alice's lament for Dinah",
+            "prompt": "Alice sits forlornly on the riverbank, looking melancholic and teary as she thinks about her cat, Dinah. The absence of the other animals creates a sense of isolation. The vivid Wonderland landscape around her enhances her sadness, with a gentle breeze rustling the colorful flowers."
+        }
+    ],
+    [
+        {
+            "event_name": "The White Rabbit's Panic",
+            "prompt": "A whimsical scene set in a lush, vibrant forest, where the White Rabbit, looking frantically worried, is trotting with wide eyes and a fetching outfit, holding a pocket watch. In the background, various colorful flowers bloom and trees sway gently. The atmosphere is filled with a sense of urgency as the Rabbit mutters to itself, surrounded by a soft glow of magic that hints at the chaos to come."
+        },
+        {
+            "event_name": "Alice encounters the White Rabbit again",
+            "prompt": "In a fantastical garden filled with oversized mushrooms and bizarre plants, Alice spots the anxious White Rabbit rushing past with a worried expression. She looks curious yet concerned, her dress flowing in the gentle breeze. The scene conveys a sense of bewilderment and urgency, with vibrant colors and surreal elements, emphasizing the enchanting yet confusing world of Wonderland."
+        },
+        {
+            "event_name": "Rabbit mistakes Alice for Mary Ann",
+            "prompt": "Inside the whimsical abode of the White Rabbit, Alice stands surprised as the Rabbit, looking frantic in a waistcoat, mistakenly calls her 'Mary Ann.' The room is cluttered with eccentric furniture and peculiar decor. Alice wears a confused expression, highlighting her unintentional role in the chaos around her, with warm hues illuminating the scene."
+        },
+        {
+            "event_name": "Alice enters the Rabbit's house",
+            "prompt": "A charming yet chaotic scene outside the White Rabbit's quaint house, where Alice, with a curious determination, pushes open the whimsical door adorned with intricate designs. Inside, the room is full of scattered items depicting the frenetic energy of the Rabbit's life, while strange shadows flicker in the background, hinting at the transformations to come."
+        },
+        {
+            "event_name": "Alice's Indecision",
+            "prompt": "Alice stands amid a colorful garden with vibrant flowers and animated creatures, pondering theatrically about the absurdity of running errands for a rabbit. She has a whimsical expression, contemplating her cat Dinah's possible commands. The setting feels surreal, highlighting Alice's growing confusion and amusement, with magical sparkles in the air."
+        },
+        {
+            "event_name": "Alice drinks from the magic bottle",
+            "prompt": "In a brilliantly lit room, Alice stands with a glimmering bottle in hand, her face radiating curiosity and excitement. The atmosphere is filled with enchanting sparkles and glowing orbs as she hesitates before taking a sip. The walls around her seem to curve in a fanciful manner, enhancing the fantastical essence of wonder and surprise."
+        },
+        {
+            "event_name": "Alice struggles with her size",
+            "prompt": "Alice, now towering in a quirky room filled with mismatched furniture, looks distressed as she tries to navigate her large size. Her expression mixes panic and determination, with whimsical items floating around her. The decor seems to warp and twist, emphasizing the surreal nature of her predicament as she contemplates the impossibility of escaping."
+        },
+        {
+            "event_name": "Contemplating Growth and Age",
+            "prompt": "Alice, sitting uncomfortably in the dimly lit room, reflects on her feelings about growing up. Around her, whimsical objects float, and the atmosphere is tinged with a mix of melancholy and wonder. Her face displays a pensive expression, as she grapples with the complexities of her size and identity, surrounded by surreal imagery that represents her thoughts."
+        },
+        {
+            "event_name": "The Rabbit's Search for Mary Ann",
+            "prompt": "Back in the Rabbit's house, a comical scene unfolds as the Rabbit, looking flustered, calls out for Mary Ann. The background is filled with whimsical chaos, with animals scurrying about and items scattered everywhere. The tone is humorous, suggesting a blend of confusion and urgency, while vibrant colors bring the scene to life."
+        },
+        {
+            "event_name": "Attempted Entry by the Rabbit",
+            "prompt": "The White Rabbit, appearing frustrated and slightly out of breath, stands at a whimsical door, trying to push it open. Alice’s gigantic elbow blocks the entrance, creating a humorous contrast between her size and the Rabbit's attempt. The scene is playful, filled with colors and quirky decorations that portray the chaotic charm of Wonderland."
+        },
+        {
+            "event_name": "The Arrival of Bill",
+            "prompt": "In a humorous and chaotic scene unfolding in the Rabbit's house, several animals frantically discuss how to deal with the situation involving Alice. Bill the Lizard is mentioned with a funny expression while surrounded by animated characters, each with exaggerated emotions that portray both confusion and comedy amid the surreal background."
+        },
+        {
+            "event_name": "Alice's Defiance",
+            "prompt": "Amid the chaos of the Rabbit's house, Alice, adopting a defiant stance, kicks towards Bill in the chimney, while a cacophony of confused voices fills the air. The scene is dynamic, showcasing whimsical expressions on the animals’ faces, with broken glass and chairs tumbling around, encapsulating the humorous pandemonium of the moment."
+        },
+        {
+            "event_name": "Rabbit and other creatures attempt to rescue Bill",
+            "prompt": "A comedic action scene where the Rabbit and his friends, with puzzled expressions, are absurdly trying to rescue Bill from the chimney. The atmosphere is filled with whimsical details as they fumble with various tools, their bodies exaggeratedly contorted. The background features the enchanting clutter of the Rabbit’s house, emphasizing the delightful chaos."
+        },
+        {
+            "event_name": "The Pebbles Turn to Cakes",
+            "prompt": "A whimsical and magical moment inside the Rabbit's house as pebbles are tossed toward Alice and miraculously transform into charming little cakes upon landing. The scene is vibrant, showcasing colorful cakes and excited expressions on the faces of the animals, enveloped in a magical aura that indicates the strange happenings of Wonderland."
+        },
+        {
+            "event_name": "Alice eats a cake and shrinks",
+            "prompt": "A pivotal moment as Alice triumphantly takes a bite from a magical cake in a whimsical setting. The colors around her swirl and shimmer, depicting her shrinking form with delight on her face. The background lights up with swirling magic symbols, symbolizing transformation and the excitement of newfound possibilities."
+        },
+        {
+            "event_name": "Alice encounters the large puppy",
+            "prompt": "In a lively forest scene, Alice looks up in awe and fear at an enormous puppy, while holding a stick. The puppy's playful demeanor contrasts the tension in Alice's expression, surrounded by whimsical trees and flowers. The atmosphere is a mix of joy and anxiety, highlighting the dynamic nature of Wonderland as it unfolds around her."
+        },
+        {
+            "event_name": "Alice contemplates her next steps",
+            "prompt": "Alice, seated against a vibrant buttercup in a wooded area, reflects thoughtfully about her next steps. She fans herself with leaves, bathed in dappled sunlight. The lush background is rich and colorful, filled with flowers and fantastical elements that echo her inner conflict and determination to grow back to her right size."
+        },
+        {
+            "event_name": "Alice discovers the Caterpillar",
+            "prompt": "Atop a large mushroom, Alice curiously gazes up at a large, blue Caterpillar, who is languidly smoking a hookah amidst a lush and surreal landscape. The scene is enchanting with towering flowers and whimsical details that draw the viewer's eye, creating a magical atmosphere. The interaction hints at guidance and transformation in Alice's journey."
+        }
+    ],
+    [
+        {
+            "event_name": "Alice meets the Caterpillar",
+            "prompt": "A whimsical scene set in a vibrant, enchanted forest, featuring a large, colorful mushroom. In the foreground, a curious young girl, Alice, with blonde hair wearing a blue dress, is engaged in conversation with a languid, anthropomorphic caterpillar sitting casually on the mushroom. The Caterpillar is smoking a hookah, surrounded by swirling smoke, with a perplexed expression. The atmosphere is dreamy and mystical, reflecting the surreal nature of Wonderland."
+        },
+        {
+            "event_name": "Caterpillar questions Alice's identity",
+            "prompt": "A close-up of Alice looking puzzled, standing amidst lush greenery in Wonderland. The Caterpillar, with its bright colors and intricate patterns, looms nearby, its hookah in hand as it questions Alice about her identity. Alice appears hesitant and confused, her expression conveying uncertainty. The mood is introspective, highlighting themes of self-discovery in a whimsical background filled with oversized flowers and magical foliage."
+        },
+        {
+            "event_name": "Recitation of 'You are old, Father William'",
+            "prompt": "An imaginative scene where Alice is attempting to recite a poem in front of the Caterpillar, who sits unimpressed on the mushroom. Alice, with a furrowed brow and slightly open mouth, looks troubled as she struggles to recall the words. The Caterpillar is partially slumped, observing her with critical eyes. Surround them are vivid, oversized flora, creating a surreal atmosphere that emphasizes the themes of memory and identity."
+        },
+        {
+            "event_name": "Caterpillar asks Alice about her size",
+            "prompt": "A scene showcasing the Caterpillar questioning Alice about her desired size, with Alice appearing contemplative. The background consists of towering mushrooms and whimsical trees, framing the action. Alice expresses her frustration at her current height, while the Caterpillar, with an indifferent expression, seems dismissive. The mood is one of frustration and inquiry, embodying the theme of choice in self-identity."
+        },
+        {
+            "event_name": "Caterpillar's advice on changing size",
+            "prompt": "A poignant moment where the Caterpillar imparts wisdom to Alice about the magical mushroom that can alter her size. Alice listens intently, her expression one of hope and curiosity. The setting features a vibrant, enchanted landscape filled with fantastical plants and kaleidoscopic colors. The atmosphere is filled with potential and wonder, highlighting the pivotal advice that will guide Alice on her journey through Wonderland."
+        },
+        {
+            "event_name": "Alice transforms in size",
+            "prompt": "A dynamic scene captured mid-transformation, showing Alice munching on pieces of the mushroom. Her body is in the process of changing size, with her neck elongating and her features expressing surprise and trepidation. The environment is a swirling blend of colors and shapes, reflecting the chaos of her transformation. The mood is a mix of confusion and excitement, emphasizing her struggle with physicality in the whimsical world."
+        },
+        {
+            "event_name": "Encounter with the Pigeon",
+            "prompt": "An animated encounter between Alice and a large, agitated pigeon in a mystical forest. The Pigeon, feathers ruffled and wings flapping, looks furious as it accuses Alice of being a serpent. Alice stands her ground, nervous but defiant, with her long neck creating a comical contrast with the Pigeon's smaller frame. The playful yet tense atmosphere showcases the themes of misinterpretation and identity chaos in Wonderland."
+        },
+        {
+            "event_name": "Alice's return to normal size",
+            "prompt": "A triumphant scene where Alice has successfully returned to her normal size, standing tall and determined among the oversized plants of Wonderland. She appears relieved and confident, with a look of accomplishment on her face. The vibrant, lush background emphasizes her surroundings, filled with whimsical flora that towers above her. The mood is celebratory, representing her resilience and readiness to continue her adventure."
+        }
+    ],
+    [
+        {
+            "event_name": "Alice observes the footmen",
+            "prompt": "A whimsical scene set in a magical forest with lush green trees and dappled sunlight. Alice, a curious young girl in a blue dress, stands at the edge of the woods, peeking out. In front of her, two footmen in livery: one resembling a fish with scales and fins, the other a frog with bulging eyes and powdered hair. They are bowing to each other, with a large letter in the Fish-Footman's hands, creating a surreal atmosphere."
+        },
+        {
+            "event_name": "Alice approaches the door",
+            "prompt": "Alice, looking slightly confused, stands before a grand, colorful door in a whimsical style. The Frog Footman, a frog-like creature with exaggerated features, gestures toward Alice with disinterest, while a playful expression hints at his idle demeanor. The background is filled with vibrant flowers and peculiar greenery, enhancing the fairy tale quality of the scene."
+        },
+        {
+            "event_name": "Alice enters the chaotic kitchen",
+            "prompt": "Inside a large, smoke-filled kitchen, chaos reigns. The Duchess, a stout woman with a mischievous grin, sits on a three-legged stool, nursing a toddler. The room is cluttered, with smoke billowing from a large cauldron where a cook in a frenzied state tosses kitchenware. The atmosphere is frenetic, full of odd sounds and chaotic energy, while Alice stands uncertainly in the doorway, her face reflecting bewilderment."
+        },
+        {
+            "event_name": "The Duchess and Alice converse",
+            "prompt": "In the chaotic kitchen, Alice stands nervously next to the Duchess, who is cradling a baby. The Duchess, with a crooked smile and wild hair, gestures wildly during their perplexing conversation about the Cheshire Cat. The background is filled with a mix of cooking utensils flying and the baby howling, creating an absurd yet humorous atmosphere."
+        },
+        {
+            "event_name": "Duchess sings a nonsensical lullaby",
+            "prompt": "The Duchess, with an eccentric flair, sings a nonsensical lullaby to the baby she is roughly handling. The kitchen is filled with an array of flying kitchen items, and the baby is being jostled up and down. The atmosphere is chaotic and whimsical, with a hint of absurdity reflected in both the Duchess's expression and the unusual items around them."
+        },
+        {
+            "event_name": "Alice is thrown the baby",
+            "prompt": "The Duchess carelessly flings a peculiar baby towards Alice, who awkwardly catches it. The kitchen chaos continues, with the cook throwing saucepans and plates in the background. Alice’s expression is one of surprise and uncertainty, while the baby, an oddly-shaped creature, wriggles in her arms, adding to the absurdity of the scene."
+        },
+        {
+            "event_name": "The baby turns into a pig",
+            "prompt": "Alice stands bewildered as the peculiar baby she was holding transforms into a small pig right before her eyes. The scene is set in the chaotic kitchen, with remnants of the tumultuous atmosphere around her. The pig, a cute yet odd creature, trots away into the woods, leaving Alice reflecting on the surreal nature of her adventure."
+        },
+        {
+            "event_name": "Alice meets the Cheshire Cat",
+            "prompt": "Alice encounters the Cheshire Cat sitting casually on a branch of a whimsical tree with a vibrant landscape behind. The cat grins widely, its long claws and teeth visible, creating a curious yet friendly atmosphere. Alice looks both fascinated and slightly apprehensive, as the cat cryptically speaks about the madness of Wonderland and offers her guidance."
+        },
+        {
+            "event_name": "Alice decides to visit the March Hare",
+            "prompt": "Alice, surrounded by a colorful and whimsical environment, contemplates her next move, having just interacted with the Cheshire Cat. In the background, the house of the March Hare is visible, with chimneys shaped like ears and fur-like roofing. Alice's expression shows determination and curiosity as she sets off towards the unknown, pondering the nature of madness in Wonderland."
+        }
+    ],
+    [
+        {
+            "event_name": "The Mad Tea-Party Begins",
+            "prompt": "A whimsical outdoor scene under a large tree, where a long, cluttered table is set with mismatched teapots and cups. The March Hare and the Mad Hatter are animatedly engaged in conversation, with a sleepy Dormouse nestled between them, being used as a cushion. Alice sits in a large armchair with a curious expression, looking at the chaotic tea party. The atmosphere is colorful and lively, emphasizing the absurdity of the event."
+        },
+        {
+            "event_name": "The debate over civility",
+            "prompt": "The scene at the tea table intensifies as Alice looks incredulously at the March Hare, who is holding a teacup with an innocent grin. The Hatter is looking at Alice with amusement, while the Dormouse remains asleep, oblivious to the tension. Tea leaves and crumbs are scattered across the table, adding to the chaotic feel. The atmosphere is playful yet tense, highlighting the debate about manners and invitations."
+        },
+        {
+            "event_name": "The Riddle Discussion",
+            "prompt": "A surreal moment at the tea party where the Hatter poses the riddle 'Why is a raven like a writing-desk?' Alice, intrigued and puzzled, leans forward with a determined look. The March Hare gestures animatedly, and the Dormouse stirs restlessly in its sleep. The background is filled with colorful teacups and nonsensical decorations that enhance the dreamlike atmosphere."
+        },
+        {
+            "event_name": "Time's influence on the tea party",
+            "prompt": "The Hatter, holding an oversized, quirky watch and looking distressed, discusses his troubled relationship with Time while surrounded by Alice and the March Hare. The setting is filled with peculiar clocks and timepieces, all frozen at six o'clock. The light is soft, adding a melancholic touch to the whimsical chaos of the tea party."
+        },
+        {
+            "event_name": "The Time Conundrum",
+            "prompt": "A whimsical scene capturing the Hatter’s despair as he explains to Alice the absurdity of their endless tea time. The March Hare sits beside him, nodding in agreement, while twisting a teacup in frustration. The background is filled with mismatched teapots and a wall clock showing the same time. The mood is both comical and perplexing, highlighting the nonsensical nature of Wonderland."
+        },
+        {
+            "event_name": "The Dormouse's Tale",
+            "prompt": "A cozy, yet chaotic scene at the tea party where the Dormouse, now awake, begins its feeble tale about three little sisters. Alice listens intently, a mix of confusion and curiosity on her face, while the Hatter and March Hare appear skeptical. The table is cluttered with whimsical tea items, and the mood combines anticipation with absurdity, illustrating the unlikely story being told."
+        },
+        {
+            "event_name": "Alice grows frustrated",
+            "prompt": "A moment of tension at the tea party where Alice, clearly annoyed, stands up with her arms crossed. The Hatter and March Hare remain seated, laughing carelessly, while the Dormouse is seen dozing off again. The atmosphere is filled with colorful teacups, plates, and a general sense of absurdity, highlighting Alice's growing frustration with the ridiculousness of the situation."
+        },
+        {
+            "event_name": "Alice Leaves the Tea Party",
+            "prompt": "Alice walking away from the chaotic tea party, her expression a mixture of exasperation and determination. The Hatter and March Hare are still seated, absorbed in their conversation, completely ignoring her departure. The background reveals the whimsical setting of the tea party with vibrant colors, emphasizing Alice's desire to find more meaningful experiences."
+        },
+        {
+            "event_name": "Alice Enters the Garden",
+            "prompt": "A magical moment as Alice discovers a door in the trunk of a curious tree. She stands before the door, a small golden key in hand, her face lighting up with excitement and longing. The garden is visible beyond the door, filled with vibrant flowers and shimmering fountains. The atmosphere is enchanting, signalling a new adventure awaits as she prepares to step into the beautiful garden."
+        }
+    ],
+    [
+        {
+            "event_name": "Alice witnesses the gardeners painting roses",
+            "prompt": "In a whimsical garden filled with vibrant flowers under a sunny sky, three comical gardeners are frantically painting white roses bright red, looking worried and covered in splashes of paint. One gardener appears sulky while another points blame at his companion. In the foreground, a curious girl named Alice watches them intently, her expression a mix of confusion and amusement, capturing the absurdity of the scene."
+        },
+        {
+            "event_name": "The Queen's procession arrives",
+            "prompt": "A grand and colorful procession enters a lush garden. The imposing figure of the Queen of Hearts is at the forefront, wearing her regal attire and a crown, radiating authority. Soldiers and courtiers follow, adorned with diamonds, creating a spectacle. Alice stands at the side, her expression filled with awe and trepidation, while the vibrant greenery of the garden provides a striking background to this royal display."
+        },
+        {
+            "event_name": "The Queen confronts Alice",
+            "prompt": "In a tense garden setting, the Queen of Hearts, furious and commanding, stands confrontationally before Alice, who stands confidently despite the pressure. The Queen’s expression is severe, while Alice’s demeanor is brave and unwavering. Gardeners lie flat on the ground, adding to the chaotic atmosphere. The vivid colors of the roses around them enhance the tension in the air, highlighting the clash of authority and confidence."
+        },
+        {
+            "event_name": "The gardeners seek protection",
+            "prompt": "In a dramatic moment, three frightened gardeners rush towards Alice for protection, their faces expressing desperation and fear as the Queen’s shadow looms nearby. Alice stands her ground, looking determined and protective. The whimsical garden serves as the backdrop, with colorful flowers contrasting the gloomy threat of the Queen’s wrath, capturing the themes of mercy and authority."
+        },
+        {
+            "event_name": "The Queen challenges Alice to croquet",
+            "prompt": "The Queen of Hearts, with a mischievous grin, challenges Alice to a chaotic game of croquet in a bizarre landscape filled with ridges and furrows. The players are an assortment of strange characters, with live hedgehogs as balls and flamingos as mallets. Alice appears both perplexed and intrigued, surrounded by oddities and bright colors that encapsulate the absurdity of Wonderland."
+        },
+        {
+            "event_name": "Game chaos and the Queen's fury",
+            "prompt": "A chaotic scene unfolds on the croquet ground, where players of all types engage in a frenzied match, wildly scrambling for their hedgehogs while the Queen of Hearts storms about in a fit of rage, yelling decrees of execution. The vibrant colors of the garden clash with the tension of the moment, illustrating the absurdity of the rules and the dangers Alice faces amid the confusion."
+        },
+        {
+            "event_name": "The Cheshire Cat appears",
+            "prompt": "The mischievous Cheshire Cat appears in a tree, its iconic grin capturing Alice's attention. The garden below is filled with colorful flowers and chaotic croquet action, highlighting the blend of whimsy and confusion. Alice stands nearby, her expression transforming from concern to curiosity as she engages in conversation with the enigmatic Cat, signaling a pivotal moment in her journey."
+        },
+        {
+            "event_name": "The Queen demands the Cheshire Cat's removal",
+            "prompt": "In a frantic moment, the Queen of Hearts orders the Cheshire Cat be removed while the King stands hesitantly beside Alice, caught between authority and absurdity. The background features the chaotic game in progress, emphasizing the tension of the moment. Alice's expression reflects her disbelief at the Queen's command, showcasing the whimsical turmoil of Wonderland."
+        },
+        {
+            "event_name": "Alice mediates between the King, Queen, and executioner",
+            "prompt": "In a humorous and chaotic cluster, Alice finds herself mediating a baffling argument involving the Queen of Hearts, the King, and the executioner. The characters appear animated and exaggerated, each expressing their absurd viewpoints, with Alice at the center looking increasingly amused. The vibrant garden surrounds them, symbolizing the whimsical yet tumultuous nature of her adventures."
+        },
+        {
+            "event_name": "The return of the Duchess",
+            "prompt": "The quarrelsome chaos continues as the Queen demands the execution of the Cheshire Cat while the King hastily fetches the Duchess. The backdrop is tumultuous with colorful characters and contrasting emotions, showcasing Alice's growing entanglement in Wonderland's absurdities. Alice stands uncertain, watching the scene unfold as the vibrant garden encapsulates the madness around her."
+        }
+    ],
+    [
+        {
+            "event_name": "Alice reunites with the Duchess",
+            "prompt": "A whimsical Wonderland setting filled with colorful flowers, where Alice joyfully embraces the Duchess, who appears cheerful and affectionate. The Duchess is a round figure with an exaggeratedly large head and a friendly smile, while Alice looks delighted. The background features sunlit trees and fantastical creatures peeking out, conveying a sense of warmth and transformation."
+        },
+        {
+            "event_name": "Discussion of morals",
+            "prompt": "Alice and the Duchess are walking in a surreal garden filled with strange plants and smiling fruits. The Duchess, with a thoughtful expression, gestures animatedly as she talks about the morals of flavors, while Alice listens attentively with curiosity. The atmosphere is playful and philosophical, with vibrant colors and whimsical details that symbolize emotions."
+        },
+        {
+            "event_name": "Queen's arrival and decision",
+            "prompt": "A dark, tense scene as the Queen of Hearts storms into the whimsical garden, her arms folded and a menacing glare directed at the Duchess. The sky is overcast, casting an ominous shadow, and royal cards gather nervously in the background. The moment is charged with danger, highlighting the Queen's tyrannical nature."
+        },
+        {
+            "event_name": "The Duchess's execution",
+            "prompt": "A dramatic scene where the Duchess, looking resigned, stands before the Queen, who fiercely points her finger, ready to deliver the execution. The background is filled with frightened spectators, and the mood is one of chaos and arbitrary cruelty, with playing cards scattered about, symbolizing the randomness of justice."
+        },
+        {
+            "event_name": "Alice is taken to see the Mock Turtle",
+            "prompt": "A serene yet surreal setting where Alice walks alongside the Queen, who looks impatient. The path is lined with bizarre trees and flowers, leading them to the Mock Turtle, who is hunched over in the distance. The atmosphere suggests a shift in Alice's adventure, filled with anticipation and whimsy."
+        },
+        {
+            "event_name": "Encounter with the Gryphon",
+            "prompt": "A sunlit scene featuring the Gryphon, a majestic creature with the body of a lion and the wings of an eagle, lounging lazily. Alice stands nearby, looking intrigued yet cautious. The background is filled with whimsical clouds and golden sunlight, highlighting the Gryphon's light-hearted demeanor."
+        },
+        {
+            "event_name": "Introduction of the Mock Turtle",
+            "prompt": "A poignant moment as Alice approaches the Mock Turtle, who sits on a rocky ledge, looking forlorn with large, tear-filled eyes. The surrounding landscape is filled with whimsical shapes and subdued colors, enhancing the Mock Turtle's melancholy while inviting curiosity about his story."
+        },
+        {
+            "event_name": "Mock Turtle begins his history",
+            "prompt": "The Mock Turtle, with a deep, hollow expression, begins to narrate his story to Alice and the Gryphon, who sits beside him, looking supportive. The background features a whimsical, dreamlike sea, with surreal elements like floating books and musical notes to symbolize his tale."
+        },
+        {
+            "event_name": "Mock Turtle's school days",
+            "prompt": "A playful and absurd classroom set underwater, with young Turtles learning various subjects from an old Turtle teacher. The Mock Turtle recounts hilarious details of his 'school days' to Alice, who looks astonished. The environment is colorful and whimsical, filled with sea creatures and humorous learning tools."
+        },
+        {
+            "event_name": "Curriculum of the Mock Turtle's school",
+            "prompt": "An imaginative depiction of a bizarre classroom with a chalkboard showcasing absurd subjects like 'Reeling and Writhing.' The Mock Turtle passionately explains the curriculum to a fascinated Alice, with the Gryphon chiming in. The setting is whimsical, with quirky decorations and playful details."
+        },
+        {
+            "event_name": "Discussion of subjects learned",
+            "prompt": "A lively conversation setting where Alice and the Mock Turtle sit on rock formations, with the Gryphon nearby. The Mock Turtle animatedly describes 'Uglification' and other subjects, creating expressions of wonder and humor on Alice's face. The background is dynamic and colorful, reflecting the nonsensical nature of their discussion."
+        },
+        {
+            "event_name": "The Gryphon's commentary",
+            "prompt": "The Gryphon playfully teases Alice about her questions while the Mock Turtle looks on, half-smiling through his tears. The background features whimsical elements like floating question marks and musical notes that symbolize the playful banter, all set in a colorful, dreamlike Wonderland."
+        },
+        {
+            "event_name": "Discussion of lessons",
+            "prompt": "Alice and the Mock Turtle engage in a lighthearted discussion about lessons, with the Gryphon interrupting occasionally. The scene is vibrant and whimsical, showcasing the charm and silliness of Wonderland's education system, with exaggerated educational tools and quirky characters in the background."
+        },
+        {
+            "event_name": "Lessons and their peculiarities",
+            "prompt": "A whimsical classroom filled with absurd educational tools as Alice talks eagerly about the peculiar lesson plans. The Mock Turtle looks animated while the Gryphon seems amused, with the scene reflecting the playful, nonsensical atmosphere of Wonderland, surrounded by fantastical sea creatures and objects."
+        }
+    ],
+    [
+        {
+            "event_name": "Mock Turtle's Sorrow",
+            "prompt": "A sad Mock Turtle with tears rolling down his cheeks, standing on a whimsical sea shore decorated with colorful shells and seaweed. The Gryphon is beside him, trying to comfort him by shaking and punching his back. The atmosphere is melancholic yet comical, capturing the playful essence of the scene."
+        },
+        {
+            "event_name": "Introduction of the Lobster Quadrille",
+            "prompt": "The Mock Turtle excitedly explaining the Lobster Quadrille to an intrigued Alice, surrounded by a fantastical beach filled with playful sea creatures like seals, turtles, and lobsters. The setting is bright and vibrant, showcasing the whimsical nature of this underwater dance, while Alice looks curious and engaged."
+        },
+        {
+            "event_name": "Description of the Dance Steps",
+            "prompt": "The Gruff Gryphon and the enthralled Mock Turtle enthusiastically demonstrating the steps of the Lobster Quadrille on a sandy beach, with whimsical jellyfish floating gently in the background. The atmosphere is lively and silly, capturing the absurdity and humor of their dance instructions, while Alice watches with fascination."
+        },
+        {
+            "event_name": "Alice's Curiosity about the Dance",
+            "prompt": "Alice excitedly asking about the Lobster Quadrille, surrounded by the colorful chaos of dancing sea creatures. The Mock Turtle and Gryphon are animatedly discussing the dance while mock dancing around, creating a hilarious yet charming spectacle against a whimsical backdrop of the enchanted sea."
+        },
+        {
+            "event_name": "Mock Turtle's Dance",
+            "prompt": "The Mock Turtle and Gryphon attempting to dance around a bemused Alice, with the Mock Turtle singing a slow, melancholic song about joining a dance. The beach setting is filled with swirling colors and whimsical sea life, creating a playful yet slightly melancholic atmosphere."
+        },
+        {
+            "event_name": "Discussion about Whiting",
+            "prompt": "Alice, the Gryphon, and the Mock Turtle engaged in a comical conversation about whiting, illustrated with exaggerated expressions of confusion and amusement. The backdrop features whimsical underwater elements, emphasizing the absurdity of their dialogue, with curious sea creatures listening in."
+        },
+        {
+            "event_name": "Alice Shares Her Adventures",
+            "prompt": "Alice animatedly recounting her adventures, flanked by the attentive Gryphon and Mock Turtle, both showing wide-eyed curiosity. The setting is whimsical and colorful, with hints of the fantastical elements of Wonderland around them, reflecting Alice's growing confidence and connection with her companions."
+        },
+        {
+            "event_name": "Alice's Recitation Challenge",
+            "prompt": "Alice standing confidently but nervously attempting to recite a poem, with the Gryphon and Mock Turtle eagerly watching her. The atmosphere is filled with anticipation and humor as she jumbles the words, with a colorful Wonderland backdrop adding to the playful absurdity of the scene."
+        },
+        {
+            "event_name": "Mock Turtle's Song Request",
+            "prompt": "The Mock Turtle joyfully singing 'Beautiful Soup' with a deep, melodramatic tone, while the Gryphon bounces excitedly beside him and Alice listens eagerly, smiling. The beach setting is whimsical and enchanting, filled with vivid colors, enhancing the playful nature of the song."
+        },
+        {
+            "event_name": "The Trial Call",
+            "prompt": "A distant call announcing the beginning of a trial, with the Gryphon urgently pulling Alice along an imaginative landscape that hints at upcoming adventures. The atmosphere is filled with suspense and excitement, contrasting the chaos of the previous scenes with a sense of movement towards the unknown."
+        }
+    ],
+    [
+        {
+            "event_name": "The court convenes",
+            "prompt": "A grand courtroom setting with the King and Queen of Hearts seated on an ornate throne, surrounded by a diverse crowd of animals and playing cards. The Knave of Hearts stands in chains before them, looking anxious. The White Rabbit, holding a trumpet and a scroll, stands ready to announce proceedings. The atmosphere is one of anticipation and whimsy, underscored by vibrant colors and fantastical elements. The court is bustling with a mix of little birds and beasts, adding to the chaotic but magical ambiance."
+        },
+        {
+            "event_name": "Alice observes the court",
+            "prompt": "Alice, a curious young girl with a blue dress, sits on the edge of her seat in the courtroom, observing intently. She identifies the King as the judge, adorned with a crown and wig, looking uncomfortable. Around her, twelve mixed creatures form the jury, writing on slates. The mood is a blend of confusion and excitement, highlighting Alice's curiosity and innocence as she tries to make sense of the absurd court proceedings."
+        },
+        {
+            "event_name": "The accusation is read",
+            "prompt": "In a dramatic moment, the White Rabbit stands before the court with a parchment scroll, preparing to read the accusation. The King, with an air of authority, emphasizes the importance of the moment. The background includes the Queen of Hearts with a stern expression, while the audience, a mixture of whimsical creatures, watches closely. The scene is filled with an air of tension and absurdity, capturing the essence of a nonsensical trial."
+        },
+        {
+            "event_name": "Hatter takes the stand",
+            "prompt": "The Hatter enters the courtroom, nervously clutching a teacup and a piece of bread-and-butter. He looks bewildered, glancing around at the court with wide eyes. The King watches him with an annoyed expression. The scene combines humor and chaos as the surreal nature of the trial unfolds, with colorful details like mismatched hats and whimsical decorations in the court surroundings."
+        },
+        {
+            "event_name": "Queen’s interruption",
+            "prompt": "The Queen of Hearts, with a commanding presence, interrupts the Hatter mid-testimony, her face a mix of authority and anger. The Hatter appears flustered, caught off guard. The courtroom is filled with tension, with various court members reacting with surprise and concern. The background features colorful banners and intricate designs, emphasizing the absurdity of the courtroom drama."
+        },
+        {
+            "event_name": "Chaos in the courtroom",
+            "prompt": "A chaotic courtroom scene unfolds as various characters argue and interrupt each other. The King appears flustered while the Queen shouts orders, creating a comedic atmosphere. The jury scribbles furiously on slates, trying to keep up with the nonsensical proceedings. The audience, a mix of animals and cards, adds to the disorder with their reactions. The vibrant colors and exaggerated expressions illustrate the farcical nature of the trial."
+        },
+        {
+            "event_name": "The Duchess’s cook appears",
+            "prompt": "The Duchess’s cook enters the courtroom carrying a large pepper-box, causing a commotion as the audience begins to sneeze. The cook has a defiant look, refusing to answer the King’s questions. The atmosphere is chaotic and humorous, filled with sneezing onlookers and confused expressions. The detail of the pepper-box adds a touch of whimsy to the scene, surrounded by a colorful mix of characters in the courtroom."
+        },
+        {
+            "event_name": "Alice is called as a witness",
+            "prompt": "Alice looks surprised and bewildered as the White Rabbit announces her as the next witness in the trial. The courtroom falls silent in anticipation, with all eyes on her. The scene captures the unexpected turn of events, highlighting Alice's mixed emotions of shock and confusion. The whimsical atmosphere contrasts with the seriousness of the court, filled with vibrant colors and exaggerated characters observing the pivotal moment."
+        }
+    ],
+    [
+        {
+            "event_name": "Alice tips over the jury-box",
+            "prompt": "In a whimsical courtroom filled with peculiar characters, Alice in a colorful dress with a flurry of excitement accidentally tips over a large jury-box with her skirt. The jurymen, resembling various quirky animals, tumble out and spread across the floor. The background features a chaotic crowd, laughing and gasping, with vivid decorations indicative of Wonderland, like oversized flowers and playing cards."
+        },
+        {
+            "event_name": "Alice assists the jurymen",
+            "prompt": "A worried Alice, looking flustered in her colorful outfit, bends down to help the jurymen who have sprawled across the courtroom floor after being tipped out of the jury-box. She hurriedly picks them up, determined to restore order. The courtroom is filled with a mix of curious onlookers and frustrated characters, captured in a moment of chaotic yet amusing ambiance."
+        },
+        {
+            "event_name": "The King’s ruling",
+            "prompt": "The King of Hearts, dressed in regal but comical attire, stands authoritatively in the courtroom with a serious expression on his face, declaring that the trial cannot proceed until all the jurymen are back in their places. The setting is whimsical, with a jury made up of various animals looking puzzled and a backdrop of elaborate court decorations, emphasizing the absurdity of the situation."
+        },
+        {
+            "event_name": "Discussion about evidence",
+            "prompt": "Alice stands confidently in the whimsical courtroom, surrounded by a bustling jury box and an assortment of quirky characters, as she answers the King's probing questions. The King, appearing both stubborn and silly, leans in inquisitively. The scene captures the humorous tension of the trial, filled with bizarre props and confused expressions from the jurymen who are frantically writing on their slates."
+        },
+        {
+            "event_name": "The reading of Rule Forty-two",
+            "prompt": "In the fantastical setting of Wonderland, the King reads Rule Forty-two to a perplexed courtroom filled with diverse characters. Alice, visibly unimpressed, stands defiantly, arguing against the nonsensical rule. The atmosphere is charged with tension and humor, with colorful illustrations of the royal court and characters reacting dramatically to the absurdity of the situation."
+        },
+        {
+            "event_name": "The White Rabbit presents new evidence",
+            "prompt": "The White Rabbit, dressed in his signature waistcoat and clutching a piece of paper, stands excitedly in front of the King and the jury, ready to present new evidence. The courtroom is filled with anticipation and bewilderment as the jurymen lean in, curious about the contents. The vibrant decor of Wonderland surrounds them, highlighting the whimsical nature of the trial."
+        },
+        {
+            "event_name": "The reading of the verse",
+            "prompt": "In a quirky courtroom scene, the White Rabbit, wearing spectacles, reads a perplexing set of verses aloud to the audience. Alice watches with skepticism while the jurymen scratch their heads and look puzzled. The illustration captures the whimsy of Wonderland, filled with playful colors and fantastical elements as characters display a mix of amusement and confusion."
+        },
+        {
+            "event_name": "Alice questions the meaning of the verses",
+            "prompt": "Alice, now much larger than before, interrupts the royal court with a determined look, challenging the significance of the verses that the White Rabbit read. The setting captures the bewildered faces of the jury and the astonished expressions of the King and Queen, with Wonderland's vibrant colors and whimsical details providing a rich backdrop to her bold stance."
+        },
+        {
+            "event_name": "The King’s frustrated attempts to interpret",
+            "prompt": "The King of Hearts, appearing flustered, sits at a grand table in a colorful courtroom, surrounded by confused jurymen as he mutters to himself while trying to make sense of the ambiguous verses. His expression is one of determination mixed with confusion, and the whimsical courtroom is filled with eclectic decorations that enhance the absurdity of the situation."
+        },
+        {
+            "event_name": "Alice disputes the trial's logic",
+            "prompt": "Alice stands firm in the chaotic courtroom, arguing passionately against the erratic proceedings of the trial, her face determined and bold. The King and Queen, looking frustrated, react dramatically. The backdrop is filled with whimsical details from Wonderland, contrasting Alice's clarity against the nonsensical atmosphere of the court."
+        },
+        {
+            "event_name": "The Queen demands punishment",
+            "prompt": "The Queen of Hearts, her face twisted in fury, points accusingly at Alice while shouting for her head to be taken off. The courtroom is filled with gasps and shock from the jurymen and onlookers, emphasizing the chaotic nature of the trial. Alice stands resolute amidst the turmoil, surrounded by the whimsical but menacing atmosphere of Wonderland."
+        },
+        {
+            "event_name": "Alice stands up to the court",
+            "prompt": "Alice, now fully confident and assertive, boldly declares that the court is merely a 'pack of cards.' The background features cards swirling around her in an uproar, while the King and Queen look helpless. The scene captures the whimsical nature of Wonderland with bright colors and fantastical creatures, showcasing Alice's empowerment."
+        },
+        {
+            "event_name": "Alice awakens from her dream",
+            "prompt": "Alice, lying in a serene meadow with trees around her, wakes up with a gentle expression on her face. Her sister leans over her, brushing away the leaves. The peaceful setting transitions from a vivid Wonderland to a soft, dreamy quality. The sun is setting, creating a warm glow as Alice recounts her adventures."
+        },
+        {
+            "event_name": "Sister’s contemplative dream",
+            "prompt": "Alice’s sister sits quietly in the meadow, lost in thought as she imagines her sister’s adventures in Wonderland. The scene is dreamy and nostalgic, with soft colors and whimsical elements corresponding to the memories of Alice's experiences, like the White Rabbit and other characters, creating an atmosphere of imagination and reflection."
+        }
+    ]
+]
