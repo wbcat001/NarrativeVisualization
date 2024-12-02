@@ -5,13 +5,14 @@ prompt = """
 # 概要
 この文章から、起こった主要な出来事を列挙してください。
 出来事のリストを見れば、この章の概要を理解できるようにしてください。
-出来事には、説明を加える必要があります。
+出来事には、説明を加える必要があります。出来事が全体のプロット上でどのような役割をしているのかの分類をしてもらいます。
 
 # 出力形式
 1. イベント名
 2. イベントの概要: 内容を説明を含んで記述してください
 3. 対応するインデックス範囲: 一つの場合は[10,10]のように記述してください
-3. 重要度: 1-7で評価してみて
+4. プロット上での役割: Setup, Inciting Incident, Turning Point, Climax, Resolutionから選択してください。
+5. 重要度: 1-7で評価してみて
 
 # Example
 text:
@@ -25,24 +26,28 @@ output:
     "name": "Alice encounters the White Rabbit",
     "summary": "Alice notices a peculiar White Rabbit wearing a red jacket and holding a pocket watch. The rabbit appears in a hurry and mumbling about being late.",
     "range": [1, 2],
+    "role": "Setup"
     "importance": 6
   },
   {
     "name": "Alice follows the White Rabbit",
     "summary": "Fascinated by the White Rabbit, Alice decides to follow him, which leads her to a rabbit hole.",
     "range": [4, 7],
+    "role": "Setup"
     "importance": 7
   },
   {
     "name": "Alice falls into the rabbit hole",
     "summary": "Alice tumbles down a deep rabbit hole, experiencing a strange and surreal descent, marking the beginning of her journey in Wonderland.",
     "range": [10, 15],
+    "role": "Turning Point"
     "importance": 7
   },
   {
     "name": "Alice discovers the tiny door",
     "summary": "Alice finds herself in a room with a tiny door. She peeks through it and sees a beautiful garden that she cannot enter due to her size.",
     "range": [16, 20],
+    "role": "Inciting Insident"
     "importance": 5
   }
 ]
@@ -74,6 +79,7 @@ if __name__ == "__main__":
     df.assign(Event = "")
     df.assign(ESummary = "")
     df.assign(EImportance=0)
+    df.assign(ERole= "")
     for i in range(1, 13):
       text = ""
       for index, row in df[df["Chapter"] == i].iterrows():
@@ -87,10 +93,13 @@ if __name__ == "__main__":
           importance = int(scene["importance"])
           range = scene["range"]
           start, end = range[0], range[1]
+          role = scene["role"]
 
           df.loc[start:end, "Event"] = name
           df.loc[start:end, "ESummary"] = summary
           df.loc[start:end, "EImportance"] = importance        
+          df.loc[start:end, "ERole"] = role     
+      
 
       df.to_csv(file_path)
 

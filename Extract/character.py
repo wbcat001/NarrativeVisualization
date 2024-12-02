@@ -14,7 +14,7 @@ json形式で返してください
 3. 記述: そのキャラクターに関する行動や記述を列挙してください。
     - インデックス番号
     - tag: "Action"または"Statement"
-    - content: 記述に関して要約してください
+    - summary: 記述に関して要約してください
 
 # 注意事項
 
@@ -36,17 +36,17 @@ output:
       {
         "index": 0,
         "tag": "Action",
-        "text": "Alice chased the White Rabbit."
+        "summary": "Alice chased the White Rabbit."
       },
       {
         "index": 28,
         "tag": "Statement",
-        "text": "'This is such a strange place,' Alice said to herself."
+        "summary": "'This is such a strange place,' Alice said to herself."
       },
       {
         "index": 60,
         "tag": "Action",
-        "text": "Alice peeked through the tiny door into a beautiful garden."
+        "summary": "Alice peeked through the tiny door into a beautiful garden."
       }
     ]
   },
@@ -60,17 +60,17 @@ output:
       {
         "index": 15,
         "tag": "Action",
-        "text": "The White Rabbit ran past Alice, mumbling to himself."
+        "summary": "The White Rabbit ran past Alice, mumbling to himself."
       },
       {
         "index": 43,
         "tag": "Statement",
-        "text": "'Oh dear! I shall be too late!' exclaimed the White Rabbit."
+        "summary": "'Oh dear! I shall be too late!' exclaimed the White Rabbit."
       },
       {
         "index": 75,
         "tag": "Action",
-        "text": "The White Rabbit disappeared down the rabbit hole."
+        "summary": "The White Rabbit disappeared down the rabbit hole."
       }
     ]
   }
@@ -103,26 +103,27 @@ if __name__ == "__main__":
     df.assign(CText = "")
     df.assign(Character="") # rowが作られない: [[] for _ in range(len(df))]
 
-    text = ""
-    for index, row in df[df["Chapter"] == 1].iterrows():
-        text += str(row["Index"]) + " " + row["Content"] + "\n"
-    result = extract_character(text, prompt)
+    for i in range(1, 13):
+      text = ""
+      for index, row in df[df["Chapter"] == i].iterrows():
+          text += str(row["Index"]) + " " + row["Content"] + "\n"
+      result = extract_character(text, prompt)
 
-    result = json.loads(result.replace("json", "").replace("```", ""))
+      result = json.loads(result.replace("json", "").replace("```", ""))
 
-    for scene in result:
-        name = scene["name"]
-        attributes = scene["attributes"]
-        
-        descriptions = scene["descriptions"]
-        print(descriptions)
-        for d in descriptions:
-            index = int(d["index"])
-            df.loc[index, "CTag"] = d["tag"]
-            df.loc[index, "CText"] = d["text"]
-        
-            df.loc[index, "Character"] = name
-        
+      for scene in result:
+          name = scene["name"]
+          attributes = scene["attributes"]
+          
+          descriptions = scene["descriptions"]
+          print(descriptions)
+          for d in descriptions:
+              index = int(d["index"])
+              df.loc[index, "CTag"] = d["tag"]
+              df.loc[index, "CText"] = d["summary"]
+          
+              df.loc[index, "Character"] = name
+          
 
     df.to_csv(file_path)
 

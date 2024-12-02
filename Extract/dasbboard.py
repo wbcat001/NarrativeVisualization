@@ -21,17 +21,46 @@ x_range = [0, len(df)-1]
 sentiment_calculator = SentimentCalculator()
 df = pd.read_csv(file_path, index_col=0)
 df["Sentiment"] = df["Content"].apply(sentiment_calculator.calculate_valence)
-#### Figureの作成用　
-## draw timeline
 
+## Colormap
+def generate_colormap(df, attribute_name, default_colormap=None):
+    if default_colormap:
 
+        colormap = {value: default_colormap[value] if value in default_colormap else f"#{random.randint(0, 0xFFFFFF):06x}" for value in df[attribute_name].unique() }
+    else:
+        colormap = {value: f"#{random.randint(0, 0xFFFFFF):06x}" for value in df[attribute_name].unique()}
+    return colormap
+# Default Colormap
+colormap_character = generate_colormap(df, "Character")
+colormap_location = generate_colormap(df, "Location")
+colormap_locationtype = {"INT": "red", "EXT":"blue"}
+colormap_time = {"day": "red", "night": "blue"}
+colormap_event =  {"Setup": "skyblue",
+                   "Inciting Incident": "green",
+                   "Turning Point": "orange",
+                   "Climax": "red",
+                   "Resolution": "purple",
+                #    "Development": "yellow",
+}
+                   
+    
+## Generate Colormap
+colormap = {"Character":generate_colormap(df, "Character", default_colormap=colormap_character),
+            "Location": generate_colormap(df, "Location", default_colormap=colormap_location),
+            "LocationType": {"INT": "red", "EXT":"blue"},
+            "Time": {"day": "red", "night": "blue"},
+            "ERole": generate_colormap(df, "ERole", default_colormap=colormap_event)
+}
 
+#### Figureの作成用関数
+# index -> datetime
 def convert_to_datetime(x, delta=0):
   result = datetime(1971, 1, 1) + timedelta(days=int(x)) + timedelta(days=delta)
 
   return result.strftime("%Y-%m-%d")
 
-def draw_timeline(df, attribute_name = "Location"): 
+# TimeLine chart
+def draw_timeline(df, attribute_name = "Location", color={}): 
 
     _df = df.copy()
     _df["Attribute"] = _df[attribute_name]
@@ -46,16 +75,20 @@ def draw_timeline(df, attribute_name = "Location"):
     "Attribute": "first",            
     "Index": ["first", "last"]
     }).reset_index(drop=True)
-
     _df.columns = ["Attribute", "Start", "Finish"]
     
     _df["Start"] = _df["Start"].apply(convert_to_datetime)
     _df["Finish"] = _df["Finish"].apply(convert_to_datetime, delta=1) # 1列だけの要素を表示するため
     print(_df)
-    fig = px.timeline(_df, x_start="Start", x_end="Finish", y="Attribute", color="Attribute")
+
+    # set colormap
+    
+
+    fig = px.timeline(_df, x_start="Start", x_end="Finish", y="Attribute", color="Attribute", color_discrete_map=color)
     
     return fig
 
+# Set Range of figure
 def arrange_layout(fig, x_range, x_type=None):
 
     if x_type == "datetime":
@@ -84,57 +117,44 @@ def arrange_layout(fig, x_range, x_type=None):
 
 
 ## Character
-
-def draw_character(df, selected=None):
+def draw_character(df, selected=None, color=None):
     _df = df.copy()
     if selected:
-        pass
-    
-    unique_values = set(val for sublist in _df["Character"] for val in sublist)
+        _df = _df[_df["Character"].isin(selected)]
+    fig = draw_timeline(_df, "Character", color=color)
 
-    for value in unique_values:
-        _df[value] = _df["Character"].apply(lambda x: value in x)
-    fig_list = []
-    for value in unique_values:
-        fig_list(draw_timeline(_df, attribute_name=value))
-
-    return fig_list
+    return fig
 
 ## Setting(Location, Time, )
-
-def draw_setting(df, selected=None):
-    _df = df.copy()
-    if selected:
-        _df = _df[_df["Location"].isin(selected)]
-    fig_location, fig_time, fig_locationtype = draw_timeline(_df, "Location"), draw_timeline(_df, "Time"), draw_timeline(_df, "LocationType")
-    
-    return fig_location, fig_time, fig_locationtype
 # Location
-def draw_location(df, selected=None):
+def draw_location(df, selected=None, color=None):
     _df = df.copy()
     if selected:
         _df = _df[_df["Location"].isin(selected)]
-    fig = draw_timeline(_df, "Location")
+    fig = draw_timeline(_df, "Location", color=color)
     return fig
 
 # Time
-def draw_time(df, selected=None):
+def draw_time(df, selected=None, color=None):
     _df = df.copy()
     if selected:
         _df = _df[_df["Time"].isin(selected)]
-    fig = draw_timeline(_df, "Time")
+    fig = draw_timeline(_df, "Time", color=color)
+    fig.update_layout({"height": 100})
     return fig
 
 # Location Type
-def draw_locationtype(df, selected=None):
+def draw_locationtype(df, selected=None, color=None):
     _df = df.copy()
     if selected:
         _df = _df[_df["LocationType"].isin(selected)]
-    fig = draw_timeline(_df, attribute_name="LocationType")
+    fig = draw_timeline(_df, attribute_name="LocationType", color=color)
+    fig.update_layout({"height": 100})
+
     return fig
 
 ## Event
-def draw_event(df, selected=None):
+def draw_event(df, selected=None, color=None):
     _df = df.copy()
     _df = _df.dropna(subset=["Event", "EImportance"])
 
@@ -163,7 +183,15 @@ def draw_event(df, selected=None):
                 marker=dict(
                     color="blue" if row["Event"] == "A" else "green" if row["Event"] == "B" else "red",
                     opacity=0.7
-                )
+                ),
+                hovertemplate=(
+                    "<b>Event:</b> %{customdata[0]}<br>"
+                    "<b>Importance:</b> %{customdata[1]}<br>"
+                    "<extra></extra>"
+                ),
+                customdata=[[row["Event"], row["EImportance"]]]
+            
+                
             )
         )
     fig.update_layout(yaxis=dict(visible=False))
@@ -174,12 +202,40 @@ def draw_event(df, selected=None):
 def draw_Pov(df):
     pass
 
-def draw_Tone(df, selected=None):
+## Tone(Sentiment)
+def draw_Tone(df, selected=None, annotation_attribute="Character"):
     _df = df.copy()
     _df["Sentiment_mean"] =  df["Sentiment"].dropna().rolling(window=20, min_periods=1).mean()
     _df["customdata"] = _df["Event"]
     
-    fig = px.line(_df, y="Sentiment_mean", hover_data=["Event"])
+    # fig = px.line(_df, y="Sentiment_mean", hover_data=["Event"])
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=_df["Index"],
+        y=_df["Sentiment_mean"],
+        mode="lines",
+        # name="Value",
+        line=dict(color="black", width=1)
+        ))
+    
+    for category in colormap[annotation_attribute].keys():
+        filtered = _df[_df[annotation_attribute]== category]
+        fig.add_trace(go.Scatter(
+            x=filtered["Index"],
+            y=filtered["Sentiment_mean"],
+            mode="markers",
+            marker=dict(color=colormap[annotation_attribute][category], size=10),
+            hovertemplate=(
+                    "<b>Role:</b> %{customdata[2]}<br>"
+                    "<b>Event:</b> %{customdata[0]}<br>"
+                    "<b>Importance:</b> %{customdata[1]}<br>"
+                    "<b>Summary:</b> %{customdata[3]}<br>"
+                    "<extra></extra>"
+                ),
+            customdata=filtered[["Event","EImportance","ERole","ESummary"]].values
+        ))
+    fig.update_layout(hoverlabel=dict(font_size=16))
+
     return fig
 
     
@@ -200,6 +256,7 @@ app.layout = dbc.Container(
                     options=[{"label": char, "value": char} for char in set(sublist for sublist in df["Character"].dropna()) ],
                     value=[],
                     inline=True,),
+                html.Br(),
                 html.Label("Time Range"),
                 dcc.RangeSlider(
                     id="index-filter",
@@ -209,6 +266,7 @@ app.layout = dbc.Container(
                     marks={i: str(i) for i in range(df["Index"].min(), df["Index"].max() + 1, 50)},
                     value=[df["Index"].min(), df["Index"].max()],
                 ),
+                html.Br(),
                 html.Label("Location"),
                 dcc.Checklist(
                     id="location-filter",
@@ -216,6 +274,7 @@ app.layout = dbc.Container(
                     value=[],
                     inline=True,
                 ),
+                html.Br(),
                 html.Label("LocationType"),
                 dcc.Checklist(
                     id="locationtype-filter",
@@ -223,6 +282,7 @@ app.layout = dbc.Container(
                     value=[],
                     inline=True,
                 ),
+                html.Br(),
                 html.Label("Time"),
                 dcc.Checklist(
                     id="time-filter",
@@ -230,6 +290,11 @@ app.layout = dbc.Container(
                     value=[],
                     inline=True,
                 ),
+
+                html.Br(),
+                html.Label("Annotation"),
+                dcc.Dropdown(["Character", "Location", "ERole", "LocationType", "Time"], "ERole", id="annotation-dropdown"),
+
                 # html.Label("Day/Night"),
                 # dcc.RadioItems(
                 #     id="day-night-filter",
@@ -258,6 +323,8 @@ app.layout = dbc.Container(
                 html.H3("visalization", className="text-center"),
                 dcc.Graph(id="event"),
                 dcc.Graph(id="tone"),
+                dcc.Graph(id="character"),
+
                 dcc.Graph(id="location"),
                 dcc.Graph(id="time"),
                 dcc.Graph(id="location-type"),
@@ -271,16 +338,7 @@ app.layout = dbc.Container(
 
 ## Time
 
-## Character
-@app.callback(
-    Output("character", "figure"),
-    [Input("character-filter","value")],
-    State("range-slider", "value")
-)
-def udpate_character(click, value):
-    # fig_list = draw_character(df)
-    
-    return go.Figure()
+
 
 ## Location callback
 @app.callback(
@@ -290,7 +348,7 @@ def udpate_character(click, value):
    
 )
 def udpate_location(filter, index_filter):
-    fig = draw_location(df, filter)
+    fig = draw_location(df, filter, color=colormap_location)
     arrange_layout(fig, index_filter, x_type="datetime")
     fig.update_layout({"height": 350})
     return fig
@@ -304,8 +362,10 @@ def udpate_location(filter, index_filter):
 )
 def udpate_time(filter, index_filter):
     
-    fig = draw_time(df, filter)
+    fig = draw_time(df, filter, color=colormap_time)
     arrange_layout(fig, index_filter, x_type="datetime")
+    fig.update_layout({"height": 100})
+
     return fig
 
 ## LocationType callback
@@ -316,8 +376,9 @@ def udpate_time(filter, index_filter):
    
 )
 def update_locationtype(filter, index_filter):
-    fig = draw_locationtype(df, filter)
+    fig = draw_locationtype(df, filter, color=colormap_locationtype)
     arrange_layout(fig, index_filter, x_type="datetime")
+    fig.update_layout({"height": 100})
 
     return fig
 
@@ -325,13 +386,28 @@ def update_locationtype(filter, index_filter):
 @app.callback(
     Output("tone", "figure"),
     [Input("sentiment-filter","value"),
+      Input("index-filter", "value"),
+      Input("annotation-dropdown", "value")],
+   
+)
+def udpate_tone(filter, index_filter, annotation):
+    # fig_list = draw_character(df)
+    fig = draw_Tone(df,annotation_attribute=annotation)
+    arrange_layout(fig, index_filter)
+    return fig
+
+## Character
+@app.callback(
+    Output("character", "figure"),
+    [Input("character-filter","value"),
       Input("index-filter", "value")],
    
 )
-def udpate_tone(filter, index_filter):
+def udpate_character(filter, index_filter):
     # fig_list = draw_character(df)
-    fig = draw_Tone(df)
-    arrange_layout(fig, index_filter)
+    fig = draw_character(df, filter, color=colormap_character)
+    arrange_layout(fig, index_filter, x_type="datetime")
+    fig.update_layout({"height": 500})
     return fig
 
 @app.callback(
@@ -342,7 +418,7 @@ def udpate_tone(filter, index_filter):
 )
 def udpate_event( index_filter):
     
-    fig = draw_event(df)
+    fig = draw_event(df, color=colormap["ERole"])
     arrange_layout(fig, index_filter)
     return fig
 
