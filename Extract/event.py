@@ -73,19 +73,21 @@ if __name__ == "__main__":
     import json
     import pandas as pd
 
-    file_path = "data/paragraph_alice.csv"
+    file_path = "data/alice_df.csv"
 
     df = pd.read_csv(file_path, index_col=0)
     df.assign(Event = "")
     df.assign(ESummary = "")
     df.assign(EImportance=0)
     df.assign(ERole= "")
+    result_list = []
     for i in range(1, 13):
       text = ""
       for index, row in df[df["Chapter"] == i].iterrows():
           text += str(row["Index"]) + " " + row["Content"] + "\n"
       result = extract_event(text, prompt)
       result = json.loads(result.replace("json", "").replace("```", ""))
+      result_list.append(result)
 
       for scene in result:
           name = scene["name"]
@@ -102,6 +104,10 @@ if __name__ == "__main__":
       
 
       df.to_csv(file_path)
+
+
+    with open("Extract/output/event.json", "w", encoding="utf-8") as file:
+        json.dump(result_list, file, ensure_ascii=False, indent=4)
 
 
 ## by chatGPT

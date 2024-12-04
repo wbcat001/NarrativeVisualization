@@ -97,12 +97,13 @@ def extract_character(text, prompt):
 if __name__ == "__main__":
     import json
     import pandas as pd
-    file_path = "data/paragraph_alice.csv"
+    file_path = "data/alice_df.csv"
     df = pd.read_csv(file_path, index_col=0)
     df.assign(CTag = "")
     df.assign(CText = "")
     df.assign(Character="") # rowが作られない: [[] for _ in range(len(df))]
 
+    result_list = []
     for i in range(1, 13):
       text = ""
       for index, row in df[df["Chapter"] == i].iterrows():
@@ -110,7 +111,7 @@ if __name__ == "__main__":
       result = extract_character(text, prompt)
 
       result = json.loads(result.replace("json", "").replace("```", ""))
-
+      result_list.append(result)
       for scene in result:
           name = scene["name"]
           attributes = scene["attributes"]
@@ -123,8 +124,10 @@ if __name__ == "__main__":
               df.loc[index, "CText"] = d["summary"]
           
               df.loc[index, "Character"] = name
-          
+  
 
     df.to_csv(file_path)
 
 
+    with open("Extract/output/character.json", "w", encoding="utf-8") as file:
+        json.dump(result_list, file, ensure_ascii=False, indent=4)

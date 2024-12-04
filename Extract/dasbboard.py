@@ -85,6 +85,7 @@ def draw_timeline(df, attribute_name = "Location", color={}):
     
 
     fig = px.timeline(_df, x_start="Start", x_end="Finish", y="Attribute", color="Attribute", color_discrete_map=color)
+    # fig.update_layout()
     
     return fig
 
