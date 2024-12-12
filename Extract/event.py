@@ -73,7 +73,7 @@ if __name__ == "__main__":
     import json
     import pandas as pd
 
-    file_path = "data/alice_df.csv"
+    file_path = "data/80dayss_df.csv"
 
     df = pd.read_csv(file_path, index_col=0)
     df.assign(Event = "")
@@ -106,8 +106,8 @@ if __name__ == "__main__":
       df.to_csv(file_path)
 
 
-    with open("Extract/output/event.json", "w", encoding="utf-8") as file:
-        json.dump(result_list, file, ensure_ascii=False, indent=4)
+    # with open("Extract/output/event.json", "w", encoding="utf-8") as file:
+    #     json.dump(result_list, file, ensure_ascii=False, indent=4)
 
 
 ## by chatGPT
