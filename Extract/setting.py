@@ -63,21 +63,25 @@ if __name__ == "__main__":
     import json
     import pandas as pd
 
-    file_path = "data/paragraph_alice.csv"
+    dir_path = "data/harrypotter/"
+    file_name = "harry1_df.csv"
     
-    df = pd.read_csv(file_path, index_col=0)
+    df = pd.read_csv(dir_path + file_name, index_col=0)
     df.assign(Location = "")
     df.assign(LocationType = "")
     df.assign(Time="")
-
-    for i in range(1, 13):
+    max_chapter = df["Chapter"].max()
+    min_chapter = df["Chapter"].min() 
+    print((min_chapter, max_chapter))
+    result_list = []
+    for i in range(min_chapter, max_chapter):
         text = ""
         for index, row in df[df["Chapter"] == i].iterrows():
             text += str(row["Index"]) + " " + row["Content"] + "\n"
         result = extract_event(text, prompt)
     
         result = json.loads(result.replace("json", "").replace("```", ""))
-
+        result_list.append(result)
         for scene in result:
             location = scene["location"]["general"]
             location_type = scene["locationtype"]
@@ -90,5 +94,9 @@ if __name__ == "__main__":
             df.loc[start:end, "LocationType"] = location_type
             df.loc[start:end, "Time"] = time        
 
-    df.to_csv(file_path)
+        df.to_csv(dir_path + file_name)
+
+    with open(dir_path + "setting.json", "w", encoding="utf-8") as file:
+        json.dump(result_list, file, ensure_ascii=False, indent=4)
+    
 

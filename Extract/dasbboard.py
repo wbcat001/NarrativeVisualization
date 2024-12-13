@@ -15,7 +15,7 @@ from sentiment import SentimentCalculator
 from labMTsimple.storyLab import emotionFileReader
 
 
-file_path = "data/paragraph_alice.csv"
+file_path = "data/harrypotter/harry1_df.csv"
 df = pd.read_csv(file_path, index_col=0)
 x_range = [0, len(df)-1]
 sentiment_calculator = SentimentCalculator()

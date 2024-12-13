@@ -73,15 +73,18 @@ if __name__ == "__main__":
     import json
     import pandas as pd
 
-    file_path = "data/80dayss_df.csv"
-
-    df = pd.read_csv(file_path, index_col=0)
+    dir_path = "data/harrypotter/"
+    file_name = "harry1_df.csv"
+    df = pd.read_csv(dir_path + file_name, index_col=0)
     df.assign(Event = "")
     df.assign(ESummary = "")
     df.assign(EImportance=0)
     df.assign(ERole= "")
     result_list = []
-    for i in range(1, 13):
+    max_chapter = df["Chapter"].max()
+    min_chapter = df["Chapter"].min() 
+    print((min_chapter, max_chapter))
+    for i in range(min_chapter, max_chapter+1):
       text = ""
       for index, row in df[df["Chapter"] == i].iterrows():
           text += str(row["Index"]) + " " + row["Content"] + "\n"
@@ -103,11 +106,11 @@ if __name__ == "__main__":
           df.loc[start:end, "ERole"] = role     
       
 
-      df.to_csv(file_path)
+      df.to_csv(dir_path + file_name)
 
 
-    # with open("Extract/output/event.json", "w", encoding="utf-8") as file:
-    #     json.dump(result_list, file, ensure_ascii=False, indent=4)
+    with open(dir_path + "event.json", "w", encoding="utf-8") as file:
+        json.dump(result_list, file, ensure_ascii=False, indent=4)
 
 
 ## by chatGPT
