@@ -19,9 +19,9 @@ def get_bert_embeddings(text):
 
 
 #### Main  
-dir_path = "data/harrypotter/"
+dir_path = "data/alice/"
 save_name = "paragraph_embedding.pkl"
-df = pd.read_csv("data/harrypotter/harry1_df.csv", index_col=0)
+df = pd.read_csv("data/alice/alice_df.csv", index_col=0)
 
 # extract embedding
 embeddings = [get_bert_embeddings(text) for text in tqdm(df['Content'])]

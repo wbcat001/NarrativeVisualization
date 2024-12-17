@@ -16,7 +16,7 @@ def concatenate_vectors(vector_list, window):
         # ウィンドウ幅に合わせてスライス
         concatenated = []
         for j in range(window):
-            index = (i + j) % num_vectors  # 循環インデックス
+            index = (i + j) % num_vectors #(i + j) % num_vectors  # 循環インデックス # min(i+j, len(df-1))
             concatenated.extend(vector_list[index])
         result.append(concatenated)
     return np.array(result)
@@ -50,6 +50,32 @@ with open("data/harrypotter/paragraph_embedding.pkl", "rb") as f:
 pca = PCA(n_components=2)
 embeddings = sliding_average(embeddings, 50) #  sliding_average
 reduced_embeddings = pca.fit_transform(embeddings)
+
+# 主成分のloadingsを取得
+loadings = pd.DataFrame(pca.components_.T, columns=['PC1', 'PC2'])
+
+loadings['Dimension'] = range(1, loadings.shape[0] + 1)
+
+# 主成分ごとの寄与度をプロット
+fig = px.scatter(loadings, 
+                 x='PC1', 
+                 y='PC2', 
+                 hover_name='Dimension',
+                 title="PCA主成分に対する次元の寄与度",
+                 labels={'PC1': '主成分1 (PC1)', 'PC2': '主成分2 (PC2)'},
+                 template='plotly_white')
+
+fig.show()
+
+# 重要な次元を上位10個表示
+important_dims_pc1 = loadings['PC1'].abs().sort_values(ascending=False).head(10)
+important_dims_pc2 = loadings['PC2'].abs().sort_values(ascending=False).head(10)
+
+print("重要な次元 (PC1):")
+print(important_dims_pc1)
+
+print("重要な次元 (PC2):")
+print(important_dims_pc2)
 
 # Add reduced dimensions back to the DataFrame
 df['PCA1'] = reduced_embeddings[:, 0]
@@ -87,8 +113,8 @@ f_x = interp1d(np.arange(len(df)), df["PCA1"], kind='linear', fill_value="extrap
 f_y = interp1d(np.arange(len(df)), df["PCA2"], kind='linear', fill_value="extrapolate")
 
 # 新しい点を補完（細かく補完する）
-new_x = np.linspace(0, len(df) - 1, 10000)
-new_y = np.linspace(0, len(df) - 1, 10000)
+new_x = np.linspace(0, len(df) - 1, 1000)
+new_y = np.linspace(0, len(df) - 1, 1000)
 
 # 補完された新しいデータを計算
 x_pca_new = f_x(new_x)
