@@ -7,8 +7,8 @@ from tqdm import tqdm
 import plotly.graph_objects as go
 import numpy as np
 
-df = pd.read_csv("data/harrypotter/harry1_df.csv", index_col=0)[:500]# [:30]
-def smooth_text(df, window=100):
+df = pd.read_csv("data/harrypotter/harry1_df.csv", index_col=0)# 
+def smooth_text(df, window=50):
     smoothed_texts = []
     
     for i in range(len(df)):
@@ -99,7 +99,7 @@ for category in colors.keys():
         y=filtered["PCA2"],
         mode="markers",
         marker=dict(color=colors[category], size=10),
-    ))
+))
 
 # レイアウト設定
 layout = go.Layout(

@@ -1,24 +1,31 @@
 from transformers import BertTokenizer, BertModel
 import torch
 from tqdm import tqdm
+import pandas as pd
+import pickle
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"device: {device}")
 # BERTの事前学習済みモデルとトークナイザーをロード
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased').to(device)
 
-# 入力文
-text = "This is an example sentence for BERT embedding."
-for i in tqdm(range(100)):
-    # トークン化（入力文をBERTに対応するトークンIDに変換）
-    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True)
-
-    # BERTモデルを通して埋め込みを取得
+def get_bert_embeddings(text):
+    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True).to(device)
     with torch.no_grad():
         outputs = model(**inputs)
-
-    # BERTの最後の層の埋め込み（[CLS]トークンを使用）
     last_hidden_states = outputs.last_hidden_state
-
-    # [CLS]トークンの埋め込みを取得（文全体を表すベクトル）
     cls_embedding = last_hidden_states[0][0]
+    return cls_embedding.cpu().numpy()
 
-    # print(cls_embedding)
+
+#### Main  
+dir_path = "data/harrypotter/"
+save_name = "paragraph_embedding.pkl"
+df = pd.read_csv("data/harrypotter/harry1_df.csv", index_col=0)
+
+# extract embedding
+embeddings = [get_bert_embeddings(text) for text in tqdm(df['Content'])]
+
+# save embedding
+with open(dir_path + save_name, "wb") as f:
+    pickle.dump(embeddings, f)
