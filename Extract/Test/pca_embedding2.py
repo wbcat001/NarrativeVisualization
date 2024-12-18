@@ -1,3 +1,10 @@
+"""
+ある物語のembeddingをPCAした結果の行列を下に
+
+別の物語のembeddingに対して2次元の投影を行う。
+
+"""
+
 import pandas as pd
 import pickle
 import numpy as np
@@ -41,19 +48,24 @@ def sliding_average(vector_list, window):
         result.append(window_mean)
 
     return np.array(result)
-df = pd.read_csv("data/harrypotter/harry1_df.csv")
 
-with open("data/harrypotter/paragraph_embedding.pkl", "rb") as f:
+
+df = pd.read_csv("data/alice/alice_df.csv")
+with open("data/alice/paragraph_embedding.pkl", "rb") as f:
     embeddings = np.array(pickle.load(f))
-
-
+with open("data/harrypotter/paragraph_embedding.pkl", "rb") as f:
+    embeddings_train = np.array(pickle.load(f))
 ##
 exclude_row_index = []
 for i in exclude_row_index:
     embeddings[:, i] = 0
 pca = PCA(n_components=2)
-embeddings = sliding_average(embeddings, 100) #  sliding_average
-reduced_embeddings = pca.fit_transform(embeddings)
+embeddings = sliding_average(embeddings, 50) #  sliding_average
+embeddings_train = sliding_average(embeddings_train, 50)
+reduced_embeddings_train = pca.fit_transform(embeddings_train)
+
+reduced_embeddings = pca.transform(embeddings)
+#########################################
 
 # 主成分のloadingsを取得
 loadings = pd.DataFrame(pca.components_.T, columns=['PC1', 'PC2'])
@@ -80,6 +92,8 @@ print(important_dims_pc1)
 
 print("重要な次元 (PC2):")
 print(important_dims_pc2)
+###################################################
+
 
 # Add reduced dimensions back to the DataFrame
 df['PCA1'] = reduced_embeddings[:, 0]
@@ -105,13 +119,7 @@ colormap_event =  {"Setup": "skyblue",
 colors = generate_colormap(df, "ERole", default_colormap=colormap_event)
 
 fig = go.Figure()
-# fig.add_trace(go.Scatter(
-#     x=df['PCA1'],
-#     y=df['PCA2'],
-#     mode="lines",
-#     line=dict(color="black"),
-#     text=df["Content"],
-# ))
+
 
 ###################################
 # from scipy.interpolate import interp1d
@@ -188,6 +196,7 @@ def generate_custom_colorscale2(n, mid_color=(0, 255, 0)):
     return colorscale
 
 custom_colorscale = generate_custom_colorscale(n)
+time_colors = np.linspace(0, 1, n)
 for i in range(n):
     start = i * split_size
     end = (i + 1) * split_size if i < n - 1 else num_points  # 最後のセグメント調整
