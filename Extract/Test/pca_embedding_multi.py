@@ -19,6 +19,10 @@ all_embeddings = []
 all_dataframes = []
 narrative_labels = []
 
+with open("data/dummy/paragraph_embedding.pkl", "rb") as f:
+    embeddings_train = np.array(pickle.load(f))[:4]
+
+
 def sliding_average(vector_list, window):
     vector_length = len(vector_list[0])  # 各ベクトルの長さ
     num_vectors = len(vector_list)
@@ -59,7 +63,9 @@ combined_embeddings = np.vstack(all_embeddings)
 
 # PCAを実行
 pca = PCA(n_components=2)
-reduced_embeddings = pca.fit_transform(combined_embeddings)
+reduced_embeddings_train = pca.fit_transform(embeddings_train)
+
+reduced_embeddings = pca.transform(combined_embeddings)
 
 # データフレームを結合
 combined_df = pd.concat(all_dataframes, ignore_index=True)

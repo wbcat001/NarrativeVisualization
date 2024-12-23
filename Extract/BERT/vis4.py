@@ -89,6 +89,18 @@ def draw_snapshot_line(vector_list, selected_index, window, filter=None):
         ))
 
     return fig
+def draw_line(vector_list, filter=None):
+    window_vectors = vector_list
+    if filter:
+        window_vectors = window_vectors[:, filter]
+    fig = go.Figure()
+    for i in range(len(window_vectors[1])):
+        fig.add_trace(go.Scatter(
+            y=window_vectors[:, i],
+            mode='lines',
+            # name=f'Dimension {adjusted_dimensions[i]}'
+        ))   
+    return fig
 
 # Text vis
 def prepare_colored_tokens(tokens, contributions, dimension):
@@ -200,11 +212,14 @@ for category in colors.keys():
       
     ))
 
-
+fig.update_layout(width=1000, height=1000)
 #### Dash
 app = Dash(__name__)
 
 app.layout = html.Div([
+    html.Div([
+        dcc.Graph(figure=draw_line(embeddings, list(important_dims_pca1.index)), id="pca-result")
+    ]),
     html.Div([
         dcc.Graph(figure=fig, id="pca-result")
     ]),

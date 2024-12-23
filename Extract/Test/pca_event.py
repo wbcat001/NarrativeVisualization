@@ -1,5 +1,6 @@
 """
-
+Exposition -> Rising -> Climax -> Falling -> Resolution
+にそって作られた複数の架空の物語のテキストについてPCAをする
 """
 import pandas as pd
 import numpy as np

@@ -41,9 +41,9 @@ def sliding_average(vector_list, window):
         result.append(window_mean)
 
     return np.array(result)
-df = pd.read_csv("data/harrypotter/harry1_df.csv")
+df = pd.read_csv("data/alice/alice_df.csv")
 
-with open("data/harrypotter/paragraph_embedding.pkl", "rb") as f:
+with open("data/alice/paragraph_embedding_gpt.pkl", "rb") as f:
     embeddings = np.array(pickle.load(f))
 
 
@@ -52,7 +52,7 @@ exclude_row_index = []
 for i in exclude_row_index:
     embeddings[:, i] = 0
 pca = PCA(n_components=2)
-embeddings = sliding_average(embeddings, 100) #  sliding_average
+embeddings = sliding_average(embeddings, 50) #  sliding_average
 reduced_embeddings = pca.fit_transform(embeddings)
 
 # 主成分のloadingsを取得

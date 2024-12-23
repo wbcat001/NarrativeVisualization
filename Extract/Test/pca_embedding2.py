@@ -51,17 +51,17 @@ def sliding_average(vector_list, window):
 
 
 df = pd.read_csv("data/alice/alice_df.csv")
-with open("data/alice/paragraph_embedding.pkl", "rb") as f:
+with open("data/alice/paragraph_embedding_gpt_window.pkl", "rb") as f:
     embeddings = np.array(pickle.load(f))
-with open("data/harrypotter/paragraph_embedding.pkl", "rb") as f:
-    embeddings_train = np.array(pickle.load(f))
+with open("data/dummy/paragraph_embedding_gpt.pkl", "rb") as f:
+    embeddings_train = np.array(pickle.load(f))[:4]
 ##
 exclude_row_index = []
 for i in exclude_row_index:
     embeddings[:, i] = 0
 pca = PCA(n_components=2)
-embeddings = sliding_average(embeddings, 50) #  sliding_average
-embeddings_train = sliding_average(embeddings_train, 50)
+# embeddings = sliding_average(embeddings, 50) #  sliding_average
+# embeddings_train = sliding_average(embeddings_train, 50)
 reduced_embeddings_train = pca.fit_transform(embeddings_train)
 
 reduced_embeddings = pca.transform(embeddings)
