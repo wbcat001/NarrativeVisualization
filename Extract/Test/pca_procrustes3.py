@@ -25,9 +25,7 @@ from scipy.spatial import procrustes
 import dash
 
 
-# Model
-tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
-model = BertModel.from_pretrained("bert-base-uncased")
+
 
 # window process 
 def sliding_average(vector_list, window):
@@ -338,13 +336,25 @@ def update_zoomed_pca(relayoutData):
         print(f"{reduced_embeddings[filtered_indices].shape}, {len(pca_result_aligned), len(pca_result_aligned[0])}")
         print(f"d: {d}")
 
-        pca_result_aligned = pca_result_new
+        # pca_result_aligned = pca_result_new
         x_min, x_max, y_min, y_max = graph_range([reduced_embeddings[filtered_indices],pca_result_aligned])
+
+        # Annotation
+        annotations = [
+        go.layout.Annotation(
+            x=pca_result_aligned[index][0],  # アノテーションのX位置
+            y=pca_result_aligned[index][1],  # アノテーションのY位置
+            text=filtered_df['Event'][k],  # ア showarrow=True,  # 矢印を表示するか
+            
+            font=dict(size=12, color='black'),
+            align='center'
+        ) for index, k in enumerate(filtered_indices) if index%10 == 0 
+]
         
         fig = go.Figure(data= [go.Scatter(
             x=filtered_df["PCA1"],
             y=filtered_df["PCA2"],
-            mode='markers',
+            mode='markers+lines',
             marker=dict(color='blue', size=8),
             name='Original PCA Result'
         )],
@@ -358,7 +368,8 @@ def update_zoomed_pca(relayoutData):
                             method="animate",
                              args=[None],
                              execute=True,
-                            )])]
+                            )])],
+            annotations=annotations
         ),
         frames = [go.Frame(data= [go.Scatter(
             x=filtered_df["PCA1"],
@@ -372,9 +383,10 @@ def update_zoomed_pca(relayoutData):
                     go.Scatter(
                         x=pca_result_aligned[:, 0],
                         y=pca_result_aligned[:, 1],
-                        mode='markers',
+                        mode='markers+lines',
                         marker=dict(color='green', size=8),
-                        name='Transition'
+                        name='Transition',
+                        text=filtered_df["Event"]
                     )
                 ]
         )])
@@ -386,22 +398,31 @@ def update_zoomed_pca(relayoutData):
         print("none")
         return fig_default
     
-# クライアントサイドのコールバック：アニメーションを自動で開始
 app.clientside_callback(
-        """
-        function (n_intervals) {
+    """
+    function (n_intervals, fig_data) {
+        // グローバルフラグ管理
+        if (window.lastFigData === undefined) {
+            window.lastFigData = null;
+        }
+        
+        // 新しいfig_dataが渡された場合のみ処理
+        if (JSON.stringify(window.lastFigData) !== JSON.stringify(fig_data)) {
+            window.lastFigData = fig_data;
+
             const btn = document.querySelector("#pca > div.js-plotly-plot > div > div > svg:nth-child(3) > g.menulayer > g.updatemenu-container > g.updatemenu-header-group > g.updatemenu-button");
             console.log("btn", btn);
-            console.log(n_intervals)
-            if (btn != null){
-            btn.dispatchEvent(new Event('click'));
+
+            if (btn != null) {
+                btn.dispatchEvent(new Event('click'));
             }
-            return []
         }
-        """,
-    Output('dummy-output', 'children'),
-    Input('interval', 'n_intervals'),
-    prevent_initial_call=True  # 初回のコールバックを防ぐ
+        return [];
+    }
+    """,
+    Output('dummy-output', 'children'),  # 必須ダミー
+    [Input('interval', 'n_intervals'),  # 定期的に監視
+     Input('pca', 'figure')]           # figの生成を監視
 )
 
     
