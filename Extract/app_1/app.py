@@ -1,7 +1,7 @@
 from dash import Dash, dcc, html, Input, Output, State
 import numpy as np
 import plotly.graph_objs as go
-
+import pandas as pd
 from core import DataManager, DimensionalityReducer, AlignmentHandler, AnimationManager, TransitionData, AnnotationManager
 # サンプルデータの生成
 raw_data = np.random.rand(100, 5)
@@ -13,6 +13,75 @@ aligner = AlignmentHandler()
 animator = AnimationManager()
 transition_data = TransitionData()
 annotation_manager = AnnotationManager()
+
+def generate_custom_colorscale(n):
+    blue = np.array([0, 0, 255])  # 青 (RGB)
+    orange = np.array([255, 165, 0])  # オレンジ (RGB)
+    colors = [tuple((1 - i / (n - 1)) * blue + (i / (n - 1)) * orange) for i in range(n)]
+    colorscale = [(i / (n - 1), f"rgb({int(c[0])}, {int(c[1])}, {int(c[2])})") for i, c in enumerate(colors)]
+    return colorscale
+
+def draw_line(df, positions, indices, n=20, colors=colors):
+    df = df.reset_index()
+
+    num_points = len(df)
+    split_size = num_points // n
+    custom_colorscale = generate_custom_colorscale(n)
+    plot_list = []
+
+    ## Draw
+    for i in range(n):
+        start = i * split_size
+        end = (i + 1) * split_size if i < n - 1 else num_points  # 最後のセグメント調整
+        segment = df.loc[start:end]
+        parts = []
+        
+        current_part = []
+        previous_index = None
+        for index, row in segment.iterrows():
+            if previous_index is not None and row["index"] != previous_index + 1:
+                parts.append(current_part)
+                current_part = []
+            current_part.append(row)
+            previous_index = row["index"]
+
+        if current_part:
+            parts.append(current_part)
+
+        # カラースケールからこのセグメントの色を取得
+        segment_color = custom_colorscale[i][1]
+
+        for part in parts:
+            part_df = pd.DataFrame(part)
+            # セグメントをプロット
+            
+            plot_list.append(go.Scatter(
+                x=part_df["x"],
+                y=part_df["y"],
+                mode='lines',
+                line=dict(
+                    color=segment_color,
+                    width=2  # ライン幅
+                ),
+                # merker=dict(
+                #     color=segment_color, size=3
+                # ),
+                showlegend=False
+            ))
+
+    for category in colors.keys():
+        filtered = df[df["ERole"] == category]
+
+        plot_list.append(go.Scatter(
+            x=filtered['PCA1'],
+            y=filtered['PCA2'],
+            mode="markers",
+            marker=dict(color=colors[category], size=8),
+            text=filtered["Event"],
+        
+        ))
+
+    return plot_list
 
 
 # Dashアプリケーションの作成
@@ -70,11 +139,41 @@ def zoom_figure(relayoutData):
         y_min, y_max = relayoutData['yaxis.range[0]'], relayoutData['yaxis.range[1]']
 
     fig = go.Figure()
+    # Todo 
+    # get list of go.Scatter, annotation
+    plot_from = draw_data(df)
+    plot_to = draw_data(df)
+
+    len_from, len_to = len(plot_from), len(plot_to)
+    fig.data = plot_from + plot_to
+    # Todo
+    # calc position, make go.Scatter
+    frames = get_frames()
+    fig.frames = frames
 
     # annotate
     annotation_manager.annotate(fig)
+
+    # Layout
+    
+    fig.layout = go.Layout(
+            xaxis=(dict(range=[x_min, x_max])),
+            yaxis=(dict(range=[y_min, y_max])),
+            title=dict(text="Start Title"),
+            # Todo: 
+            # アニメーションの始動、遷移後のプロットの表示
+            updatemenus=[dict(
+                type="buttons",
+                buttons=[dict(label="Replay",
+                            method="animate",
+                             args=[None],
+                             execute=True,
+                            )])],
+            
+        )
     
 
+    return fig
     # 
 
 
