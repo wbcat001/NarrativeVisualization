@@ -5,7 +5,7 @@
 
 """
 """
-import torch
+
 import pandas as pd
 from transformers import BertTokenizer, BertModel
 from dash import Dash, html, Input, Output, State
