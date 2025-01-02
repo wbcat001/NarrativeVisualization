@@ -1,0 +1,1016 @@
+[
+    [
+        {
+            "name": "Alice's boredom and curiosity",
+            "summary": "Alice is depicted as being tired of sitting idle by her sister and disinterested in a book without pictures. This sets the stage for her subsequent adventure by highlighting her longing for excitement and curiosity.",
+            "range": [
+                1,
+                1
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice sees the White Rabbit",
+            "summary": "Alice spots a White Rabbit with a pocket watch, showing signs of distress about being late. This sight sparks Alice's curiosity, leading her to follow it.",
+            "range": [
+                2,
+                3
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "Alice follows the White Rabbit down the rabbit-hole",
+            "summary": "Without hesitation, Alice follows the Rabbit as it disappears down a rabbit-hole, marking the beginning of her descent into the fantastical world.",
+            "range": [
+                4,
+                4
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice's fall down the rabbit-hole",
+            "summary": "Alice experiences a surreal and prolonged fall through the rabbit-hole, providing her time to reflect and wonder about her journey ahead. This scene emphasizes the whimsical nature of her adventure.",
+            "range": [
+                5,
+                10
+            ],
+            "role": "Setup",
+            "importance": 7
+        },
+        {
+            "name": "Alice discovers the long hall",
+            "summary": "After her fall, Alice arrives in a long hall with locked doors, where she faces immediate obstacles that hinder her escape, enhancing the sense of entrapment and the need for creativity to move forward.",
+            "range": [
+                11,
+                12
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "Finding the golden key",
+            "summary": "Alice discovers a tiny key on a glass table, realizing it might unlock the door to the garden. However, it does not fit the doors, deepening the challenge she must overcome.",
+            "range": [
+                13,
+                13
+            ],
+            "role": "Turning Point",
+            "importance": 5
+        },
+        {
+            "name": "Alice contemplates her size",
+            "summary": "Alice expresses her wish to be smaller to fit through the tiny door, showcasing her desire for freedom and her struggle with the constraints of her seemingly ordinary existence.",
+            "range": [
+                14,
+                14
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "Alice finds the 'Drink Me' bottle",
+            "summary": "Alice finds a bottle labeled 'Drink Me' and, after careful consideration, decides to drink it, leading to her shrinking in size. This act serves as a critical moment that propels her into the adventure.",
+            "range": [
+                15,
+                18
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice attempts to enter the garden",
+            "summary": "After shrinking, Alice excitedly approaches the little door to the garden but realizes she has forgotten the key. This moment highlights her frustration and sets up the next challenge she will face.",
+            "range": [
+                20,
+                20
+            ],
+            "role": "Climax",
+            "importance": 6
+        },
+        {
+            "name": "Alice discovers the 'Eat Me' cake",
+            "summary": "Alice finds a cake that promises to alter her size. This symbolizes her continued exploration of identity and agency as she bravely decides to eat it, regardless of the uncertainty it brings.",
+            "range": [
+                22,
+                24
+            ],
+            "role": "Resolution",
+            "importance": 6
+        }
+    ],
+    [
+        {
+            "name": "Alice's Transformation",
+            "summary": "Alice notices her body growing to an enormous height, leading her to express concern for her feet. This highlights her confusion and the absurdity of her situation.",
+            "range": [
+                25,
+                30
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice's Tears Create a Pool",
+            "summary": "Overwhelmed with emotions, Alice begins to cry and creates a large pool of tears around her. This event symbolizes her loneliness and frustration in this strange world.",
+            "range": [
+                31,
+                32
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "The White Rabbit's Return",
+            "summary": "The White Rabbit reappears, hurriedly muttering about the Duchess, causing Alice to desire assistance. When she tries to speak to him, he panics and runs away, emphasizing her isolation.",
+            "range": [
+                33,
+                33
+            ],
+            "role": "Turning Point",
+            "importance": 5
+        },
+        {
+            "name": "Self-Identity Crisis",
+            "summary": "Alice reflects on her identity, questioning if she has changed since her morning. This moment illustrates her confusion and quest for self-discovery amid the bizarre happenings.",
+            "range": [
+                34,
+                38
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Alice in the Pool of Tears",
+            "summary": "Alice finds herself swimming in the pool of her own tears, which she regrets. This represents the consequences of her overwhelming emotions and her feeling of being trapped.",
+            "range": [
+                41,
+                42
+            ],
+            "role": "Resolution",
+            "importance": 6
+        },
+        {
+            "name": "Meeting the Mouse",
+            "summary": "Alice encounters a Mouse in the pool and attempts to communicate. Her dialogues with the Mouse begin a new interaction that showcases her attempts to connect with others.",
+            "range": [
+                43,
+                44
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "Conversation about Cats",
+            "summary": "Alice inadvertently offends the Mouse by mentioning cats, illustrating the theme of misunderstanding and mistaken perceptions in her interactions within Wonderland.",
+            "range": [
+                47,
+                49
+            ],
+            "role": "Turning Point",
+            "importance": 5
+        },
+        {
+            "name": "The Mouse proposes to tell his story",
+            "summary": "The Mouse suggests they reach the shore before sharing his history, confirming the need for a deeper connection and understanding amidst the chaotic swimming party.",
+            "range": [
+                50,
+                51
+            ],
+            "role": "Resolution",
+            "importance": 6
+        }
+    ],
+    [
+        {
+            "name": "The Wet Gathering",
+            "summary": "A motley group of birds and animals assembles on the bank, all wet and uncomfortable after a recent event. They begin discussing how to get dry, which leads to Alice engaging with them as if she has known them for ages.",
+            "range": [
+                53,
+                54
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice's Familiarity with the Group",
+            "summary": "Alice finds herself conversing confidently with the group, leading to a humorous argument with the Lory about age and knowledge, showcasing her growing comfort in this strange environment.",
+            "range": [
+                54,
+                54
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "The Mouse's Leadership",
+            "summary": "The Mouse, perceived as an authority figure, suggests a way to dry off by telling a story. This brings the group together in anticipation, indicating a shift from discomfort to engagement.",
+            "range": [
+                55,
+                56
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "The Dodo's Caucus-Race Proposal",
+            "summary": "The Dodo suggests a Caucus-race as a remedy to dry off. This introduces a whimsical take on competition that reflects the absurdity of Wonderland and establishes the tone for the chapter.",
+            "range": [
+                66,
+                68
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "The Caucus-Race",
+            "summary": "A peculiar race ensues where participants can start and stop at will, resulting in confusion over who the winner is. This reflects the nonsensical qualities of Wonderland and emphasizes a theme of equality, as everyone is declared a winner.",
+            "range": [
+                70,
+                72
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Distribution of Prizes",
+            "summary": "Alice is unexpectedly tasked with handing out 'prizes' for the race, which leads to humor and chaos as she gives out comfits and receives a thimble in return. This highlights her central role in the group dynamic.",
+            "range": [
+                75,
+                80
+            ],
+            "role": "Resolution",
+            "importance": 5
+        },
+        {
+            "name": "The Mouse's Sad Tale",
+            "summary": "The Mouse prepares to share its sad story but becomes offended by Alice's distraction. This interaction emphasizes the fragile nature of communication and relationships in Wonderland.",
+            "range": [
+                83,
+                89
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice's Mention of Dinah",
+            "summary": "Alice speaks of her pet cat, Dinah, which causes distress among the birds. This inadvertently leads to their departure and leaves Alice feeling isolated, illustrating how her connection to her home life contrasts with the absurdity around her.",
+            "range": [
+                96,
+                100
+            ],
+            "role": "Turning Point",
+            "importance": 6
+        }
+    ],
+    [
+        {
+            "name": "The White Rabbit's panic",
+            "summary": "The White Rabbit frantically searches for his lost fan and gloves, indicating his worry about the Duchess and his potential execution. This scene introduces Alice’s curiosity about the Rabbit's distress.",
+            "range": [
+                102,
+                102
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice mistaken for Mary Ann",
+            "summary": "Alice is mistaken for the Rabbit's housemaid, Mary Ann, and is ordered to fetch gloves and a fan. This misunderstanding pushes Alice into action and deepens her involvement in the Rabbit's world.",
+            "range": [
+                103,
+                103
+            ],
+            "role": "Inciting Incident",
+            "importance": 7
+        },
+        {
+            "name": "Alice discovers the Rabbit's house",
+            "summary": "Alice finds the neat little house of the Rabbit, contributing to the whimsical and chaotic world she has entered. This marks a significant step in her interaction with the characters of Wonderland.",
+            "range": [
+                104,
+                104
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "Alice drinks from the mysterious bottle",
+            "summary": "Alice uncorks a little bottle that lacks a label and decides to drink it, hoping for an interesting change. This action sets off a chain reaction that greatly impacts her size.",
+            "range": [
+                106,
+                106
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice grows unexpectedly large",
+            "summary": "After drinking from the bottle, Alice grows rapidly until she fills the room, creating a predicament and increasing her sense of helplessness. This adds to the tension of her situation.",
+            "range": [
+                107,
+                109
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "The Rabbit's frantic attempts to enter",
+            "summary": "The White Rabbit tries to confront Alice at the door, failing to enter due to her size, which heightens the comedic element of the scene and Alice's predicament.",
+            "range": [
+                115,
+                115
+            ],
+            "role": "Turning Point",
+            "importance": 5
+        },
+        {
+            "name": "Alice shrinks by eating a cake",
+            "summary": "Alice eats a cake that causes her to shrink, allowing her to exit the Rabbit's house. This presents a resolution of her prior predicament and illustrates the unpredictability of Wonderland.",
+            "range": [
+                134,
+                135
+            ],
+            "role": "Resolution",
+            "importance": 7
+        },
+        {
+            "name": "Encounter with the gigantic puppy",
+            "summary": "Alice meets a large puppy, which introduces a new layer of chaos. Although frightened, she also experiences a playful interaction, emphasizing her vulnerability.",
+            "range": [
+                138,
+                140
+            ],
+            "role": "Setup",
+            "importance": 4
+        },
+        {
+            "name": "Alice's determination to grow again",
+            "summary": "After running from the puppy, Alice contemplates how to grow back to her original size and continues searching for a solution, highlighting her ongoing struggle in Wonderland.",
+            "range": [
+                141,
+                141
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice discovers the caterpillar",
+            "summary": "Alice finds a large blue caterpillar sitting on a mushroom, adding to the bizarre characters she encounters. This meeting hints at potential guidance for her predicament.",
+            "range": [
+                143,
+                143
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        }
+    ],
+    [
+        {
+            "name": "Alice meets the Caterpillar",
+            "summary": "Alice engages in a conversation with the Caterpillar, who questions her identity and expresses a lack of understanding about her current state of being.",
+            "range": [
+                145,
+                156
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "Caterpillar's advice on size",
+            "summary": "The Caterpillar asks Alice what size she wants to be, introducing the thematic element of identity and change. Alice expresses her frustration with changing sizes.",
+            "range": [
+                183,
+                188
+            ],
+            "role": "Inciting Incident",
+            "importance": 7
+        },
+        {
+            "name": "Alice's transformation attempts",
+            "summary": "Alice experiments with pieces of a mushroom given by the Caterpillar, which have the power to change her size. She grows and shrinks multiple times, leading to confusion and a new perspective on her identity.",
+            "range": [
+                196,
+                218
+            ],
+            "role": "Turning Point",
+            "importance": 8
+        },
+        {
+            "name": "Encounter with the Pigeon",
+            "summary": "Alice meets a Pigeon who accuses her of being a serpent, highlighting her confusion about her own identity and appearance as she navigates Wonderland.",
+            "range": [
+                201,
+                218
+            ],
+            "role": "Climax",
+            "importance": 5
+        },
+        {
+            "name": "Alice restores her size",
+            "summary": "After several transformations, Alice successfully manages to return to her usual height, gaining some control over her identity as well as a newfound understanding of her situation.",
+            "range": [
+                218,
+                219
+            ],
+            "role": "Resolution",
+            "importance": 7
+        }
+    ],
+    [
+        {
+            "name": "Alice observes the footmen",
+            "summary": "Alice sees two footmen in livery, one resembling a fish and the other resembling a frog. They engage in a strange conversation about delivering an invitation from the Queen to the Duchess to play croquet.",
+            "range": [
+                221,
+                224
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice attempts to enter the house",
+            "summary": "After laughing at the footmen, Alice approaches the door but is met with confusion. The footman tells her there's no use in knocking, as no one inside could hear her due to the noise.",
+            "range": [
+                225,
+                230
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "The chaotic kitchen scene",
+            "summary": "Alice enters the kitchen filled with smoke and chaos. The Duchess is nursing a howling baby at the same time the cook throws utensils at them.",
+            "range": [
+                239,
+                250
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice converses with the Duchess",
+            "summary": "Alice engages in conversation with the Duchess, who tells her that all cats can grin. Their dialogue is interrupted by the cook's antics.",
+            "range": [
+                242,
+                249
+            ],
+            "role": "Character Development",
+            "importance": 5
+        },
+        {
+            "name": "Alice is given the baby",
+            "summary": "The Duchess carelessly tosses the baby to Alice, who struggles to hold the peculiar child. Alice begins to feel a sense of urgency to save the baby from its chaotic surroundings.",
+            "range": [
+                263,
+                265
+            ],
+            "role": "Character Development",
+            "importance": 6
+        },
+        {
+            "name": "The baby turns into a pig",
+            "summary": "After a strange interaction, the baby grunts and suddenly transforms into a pig, which Alice then releases into the wood, reflecting on the absurdity of the situation.",
+            "range": [
+                268,
+                270
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Encounter with the Cheshire Cat",
+            "summary": "Alice meets the Cheshire Cat, who offers cryptic advice about which way to go, emphasizing the madness of the world around her.",
+            "range": [
+                270,
+                279
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice's contemplation of her journey",
+            "summary": "Alice reflects on her encounters and the peculiar nature of the characters she has met, deciding to visit the March Hare next.",
+            "range": [
+                290,
+                300
+            ],
+            "role": "Resolution",
+            "importance": 5
+        }
+    ],
+    [
+        {
+            "name": "Alice encounters the Mad Tea-Party",
+            "summary": "Alice stumbles upon a tea party with the March Hare, the Hatter, and the Dormouse, who are having a chaotic gathering filled with nonsensical conversation.",
+            "range": [
+                302,
+                303
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "The March Hare offers wine that doesn’t exist",
+            "summary": "The March Hare invites Alice to have wine, but she finds only tea on the table, which leads to a disagreement about civility and the nature of invitations.",
+            "range": [
+                304,
+                308
+            ],
+            "role": "Inciting Incident",
+            "importance": 5
+        },
+        {
+            "name": "Riddle about the raven and the writing-desk",
+            "summary": "The Hatter poses a riddle to Alice that has no answer, illustrating the nonsensical logic of the characters and deepening Alice's confusion.",
+            "range": [
+                312,
+                337
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Discussion about Time",
+            "summary": "Alice learns from the Hatter that Time has gone mad, resulting in their perpetual tea-time. This further emphasizes the chaotic and illogical nature of Wonderland.",
+            "range": [
+                340,
+                359
+            ],
+            "role": "Climax",
+            "importance": 6
+        },
+        {
+            "name": "Dormouse's confusing story",
+            "summary": "The Dormouse begins to tell a story about three sisters who lived at the bottom of a well, but it becomes increasingly nonsensical, frustrating Alice.",
+            "range": [
+                371,
+                400
+            ],
+            "role": "Resolution",
+            "importance": 5
+        },
+        {
+            "name": "Alice leaves the tea-party",
+            "summary": "Frustrated with the absurdity and rudeness of the tea-party, Alice decides to leave, marking her decision to step away from the madness.",
+            "range": [
+                403,
+                404
+            ],
+            "role": "Resolution",
+            "importance": 6
+        },
+        {
+            "name": "Alice enters the garden",
+            "summary": "After leaving the tea-party, Alice finds a door in a tree that leads into a beautiful garden, symbolizing a new and more pleasant adventure.",
+            "range": [
+                405,
+                406
+            ],
+            "role": "Setup",
+            "importance": 7
+        }
+    ],
+    [
+        {
+            "name": "Alice encounters the gardeners painting roses",
+            "summary": "Alice notices three gardeners painting white roses red to avoid the Queen's wrath for planting the wrong color. This sparks her curiosity and leads to her first interactions with Wonderland’s characters.",
+            "range": [
+                408,
+                417
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "The Queen's procession arrives",
+            "summary": "The Queen makes a grand entrance alongside various royal figures, catching Alice's attention as they stop to examine her. The Queen's authoritarian nature is showcased as she demands to know who Alice is.",
+            "range": [
+                418,
+                420
+            ],
+            "role": "Inciting Incident",
+            "importance": 7
+        },
+        {
+            "name": "The Queen threatens Alice",
+            "summary": "Alice’s boldness surprises her when she responds to the Queen’s question about the gardeners. The Queen, furious, calls for Alice’s beheading, establishing the dangerous nature of the Queen in Wonderland.",
+            "range": [
+                421,
+                425
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice protects the gardeners",
+            "summary": "Alice intervenes to save the gardeners from execution, demonstrating her courage and willingness to defy the Queen, which begins to show her growth as a character.",
+            "range": [
+                433,
+                434
+            ],
+            "role": "Turning Point",
+            "importance": 6
+        },
+        {
+            "name": "Alice joins the croquet game",
+            "summary": "The Queen invites Alice to play croquet, introducing her to the absurdity of the games in Wonderland, which heightens the chaotic atmosphere and Alice's unease.",
+            "range": [
+                437,
+                440
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice converses with the White Rabbit",
+            "summary": "Alice engages in a conversation with the White Rabbit, learning that the Duchess is under sentence of execution, which adds suspense to the narrative and reveals the Queen's unpredictability.",
+            "range": [
+                441,
+                444
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "The chaotic croquet game",
+            "summary": "Alice participates in a confusing croquet game characterized by a lack of order and fairness, reflecting the chaotic nature of Wonderland and the Queen's tyrannical rule.",
+            "range": [
+                448,
+                450
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Alice interacts with the Cheshire Cat",
+            "summary": "Alice encounters the Cheshire Cat, who offers her advice and insight about the confusing game and its players, deepening her understanding of the strange world she is in.",
+            "range": [
+                452,
+                454
+            ],
+            "role": "Turning Point",
+            "importance": 5
+        },
+        {
+            "name": "Debate over the Cheshire Cat",
+            "summary": "A debate arises regarding the Cheshire Cat's presence and potential execution, exemplifying the absurdity of the authority figures in Wonderland and further emphasizing Alice's discomfort.",
+            "range": [
+                471,
+                478
+            ],
+            "role": "Climax",
+            "importance": 6
+        }
+    ],
+    [
+        {
+            "name": "Alice reunites with the Duchess",
+            "summary": "Alice is happy to see the Duchess again, who is in a much better mood than during their previous encounter. This moment highlights Alice's hopes about human behavior and her reflections on temperamental influences like pepper and vinegar.",
+            "range": [
+                480,
+                482
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Duchess and Alice discuss morals",
+            "summary": "The Duchess and Alice engage in a whimsical conversation about the supposed morals behind everyday actions and characters, demonstrating the absurdity of their world and the Duchess's fondness for moral lessons.",
+            "range": [
+                483,
+                490
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "The Queen threatens the Duchess",
+            "summary": "The scene escalates as the Queen arrives and threatens the Duchess with execution. This moment serves as a sudden shift in power dynamics and reinforces the Queen's tyrannical nature.",
+            "range": [
+                509,
+                512
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "The Queen invites Alice to meet the Mock Turtle",
+            "summary": "Following the Duchess's sudden removal, the Queen directs Alice to meet the Mock Turtle, setting the stage for the next encounter and suggesting that Alice's adventure will continue.",
+            "range": [
+                516,
+                520
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "Alice meets the Gryphon",
+            "summary": "Alice meets the Gryphon, who is tasked with taking her to see the Mock Turtle. The Gryphon's initial behavior contrasts with the Queen's, hinting at the varying nature of characters in Wonderland.",
+            "range": [
+                522,
+                524
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "The Mock Turtle appears",
+            "summary": "Upon reaching the Mock Turtle, Alice notices his sorrowful demeanor, which prompts curiosity about his story, thereby adding depth to her quest for understanding the eccentricities of Wonderland.",
+            "range": [
+                527,
+                528
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "The Mock Turtle begins his story",
+            "summary": "The Mock Turtle starts to recount his history, providing a contrast between his melancholic presence and Alice's eagerness for the narrative. This introduces themes of nostalgia and whimsy.",
+            "range": [
+                530,
+                533
+            ],
+            "role": "Climax",
+            "importance": 5
+        },
+        {
+            "name": "Mock Turtle's education",
+            "summary": "In discussing his schooling in the sea, the Mock Turtle illustrates the absurdities of his education system, touching on whimsical subjects and highlighting the nonsensical nature of Wonderland.",
+            "range": [
+                534,
+                552
+            ],
+            "role": "Resolution",
+            "importance": 6
+        },
+        {
+            "name": "Discussion of lessons",
+            "summary": "Alice learns about the peculiar structure of lessons that decrease in number each day, which critiques traditional education and enhances her character development as she contemplates the nature of learning.",
+            "range": [
+                564,
+                570
+            ],
+            "role": "Resolution",
+            "importance": 5
+        }
+    ],
+    [
+        {
+            "name": "Mock Turtle's Emotional Outburst",
+            "summary": "The Mock Turtle expresses his sorrow, struggling to speak due to sobbing. This moment illustrates the emotional state of the characters and sets a whimsical tone.",
+            "range": [
+                573,
+                573
+            ],
+            "role": "Setup",
+            "importance": 4
+        },
+        {
+            "name": "Introduction to the Lobster Quadrille",
+            "summary": "The Mock Turtle begins to explain the Lobster Quadrille, a dance that involves lines along the shore and the throwing of lobsters into the sea, introducing the absurdity of the concept.",
+            "range": [
+                574,
+                588
+            ],
+            "role": "Inciting Incident",
+            "importance": 5
+        },
+        {
+            "name": "Mock Turtle and Gryphon Dance Around Alice",
+            "summary": "The Mock Turtle and the Gryphon dance around Alice while singing a peculiar song. This act enhances the playful, nonsensical atmosphere of the chapter.",
+            "range": [
+                595,
+                597
+            ],
+            "role": "Climax",
+            "importance": 6
+        },
+        {
+            "name": "Discussion about Whiting",
+            "summary": "Alice converses with the Gryphon and Mock Turtle about the nature of whiting and its use in making boots and shoes, showcasing the whimsical logic of their world.",
+            "range": [
+                600,
+                613
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "Alice's Recitation",
+            "summary": "Alice is prompted to recite a poem but struggles due to the distracting Lobster Quadrille, leading to humorous and nonsensical results.",
+            "range": [
+                628,
+                630
+            ],
+            "role": "Turning Point",
+            "importance": 6
+        },
+        {
+            "name": "Mock Turtle's Song Request",
+            "summary": "The Mock Turtle begins to sing 'Beautiful Soup,' emphasizing the whimsical and absurd themes that run throughout the chapter.",
+            "range": [
+                646,
+                649
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Interruption by the Trial Announcement",
+            "summary": "A cry is heard announcing the beginning of a trial, prompting the Gryphon to hurry Alice away, creating a sense of urgency and anticipation for the next chapter.",
+            "range": [
+                650,
+                652
+            ],
+            "role": "Resolution",
+            "importance": 5
+        }
+    ],
+    [
+        {
+            "name": "The Opening of the Court",
+            "summary": "The King and Queen of Hearts are seated on their throne with a crowd of creatures gathered around. The Knave is in chains, accused of stealing tarts, while the White Rabbit is ready to begin the trial by reading the accusation.",
+            "range": [
+                655,
+                666
+            ],
+            "role": "Setup",
+            "importance": 7
+        },
+        {
+            "name": "Alice Observes the Court",
+            "summary": "Alice, unfamiliar with court proceedings, identifies key figures such as the judge (the King) and the jury, demonstrating her curiosity and intelligence. This sets the stage for her observations and involvement in the trial.",
+            "range": [
+                656,
+                658
+            ],
+            "role": "Setup",
+            "importance": 6
+        },
+        {
+            "name": "Jurors Writing 'Stupid Things'",
+            "summary": "Alice is irritated by the jurors scribbling 'stupid things' on their slates, highlighting the absurdity of the court's proceedings and her growing impatience for the trial to commence.",
+            "range": [
+                659,
+                662
+            ],
+            "role": "Inciting Incident",
+            "importance": 5
+        },
+        {
+            "name": "The Accusation is Read",
+            "summary": "The White Rabbit reads the accusation against the Knave of Hearts, who is claimed to have stolen tarts made by the Queen. This acts as a crucial narrative turn leading directly to the trial.",
+            "range": [
+                665,
+                667
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "The Hatter is Called as a Witness",
+            "summary": "The Hatter enters the court with a teacup and a piece of bread-and-butter, and is questioned by the King. His nervousness and nonsensical responses illustrate the chaotic nature of the trial.",
+            "range": [
+                670,
+                683
+            ],
+            "role": "Turning Point",
+            "importance": 7
+        },
+        {
+            "name": "Alice Begins to Grow",
+            "summary": "Alice experiences growth during the trial, encountering confusion and annoyance both from her own situation and the chaotic proceedings. This represents a pivotal moment of her physical transformation.",
+            "range": [
+                683,
+                690
+            ],
+            "role": "Turning Point",
+            "importance": 6
+        },
+        {
+            "name": "The Cook's Testimony",
+            "summary": "The Duchess's cook is called as the next witness and refuses to answer questions. Chaos ensues as the Queen demands the Dormouse be punished, showcasing the arbitrary cruelty within the court.",
+            "range": [
+                718,
+                726
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Alice is Called as a Witness",
+            "summary": "To Alice's surprise, her name is read as the next witness. This event marks a significant shift in the narrative as she is drawn directly into the absurdity of the trial.",
+            "range": [
+                728,
+                728
+            ],
+            "role": "Turning Point",
+            "importance": 6
+        }
+    ],
+    [
+        {
+            "name": "Alice tips over the jury-box",
+            "summary": "In a hurry, Alice accidentally knocks over the jury-box, causing the jurymen to fall out and creating chaos in the courtroom, which sets a humorous tone for the trial.",
+            "range": [
+                730,
+                730
+            ],
+            "role": "Inciting Incident",
+            "importance": 6
+        },
+        {
+            "name": "Alice apologizes and attempts to fix the jury",
+            "summary": "Feeling responsible, Alice tries to pick the jurymen up and put them back in order, reflecting her concern and introducing her growing sense of responsibility despite her confusion.",
+            "range": [
+                731,
+                731
+            ],
+            "role": "Setup",
+            "importance": 5
+        },
+        {
+            "name": "The King's declaration of rule",
+            "summary": "The King announces a seemingly absurd rule that everyone more than a mile high must leave the court, which introduces the theme of nonsensical authority in Wonderland.",
+            "range": [
+                743,
+                743
+            ],
+            "role": "Turning Point",
+            "importance": 5
+        },
+        {
+            "name": "The introduction of the letter",
+            "summary": "The White Rabbit brings forth a letter that was found, which adds a layer of mystery and curiosity as the contents are unknown.",
+            "range": [
+                752,
+                754
+            ],
+            "role": "Inciting Incident",
+            "importance": 5
+        },
+        {
+            "name": "The reading of the verses",
+            "summary": "The White Rabbit reads a set of verses which complicates the trial further and showcases the absurdity of the court proceedings, highlighting the lack of logical reasoning.",
+            "range": [
+                769,
+                775
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Alice challenges the meaning of the verses",
+            "summary": "Alice boldly declares that she does not see any meaning in the verses, directly confronting the absurdity of the trial and asserting her confidence and emerging authority.",
+            "range": [
+                777,
+                779
+            ],
+            "role": "Turning Point",
+            "importance": 6
+        },
+        {
+            "name": "The King's ridiculous deductions",
+            "summary": "The King attempts to make sense of the nonsensical verses, revealing his incompetence and confusing the jury further, which emphasizes the absurdity of the court.",
+            "range": [
+                781,
+                785
+            ],
+            "role": "Climax",
+            "importance": 6
+        },
+        {
+            "name": "Alice stands up to the Queen",
+            "summary": "Alice grows to her full size and asserts her independence, standing up against the Queen's threats and the nonsensical court, marking her transformation and empowerment.",
+            "range": [
+                791,
+                792
+            ],
+            "role": "Climax",
+            "importance": 7
+        },
+        {
+            "name": "Alice wakes up from her dream",
+            "summary": "Alice wakes up to find that her adventures were all a dream, transitioning from the whimsical chaos of Wonderland back to reality, and introduces the concept of dreams vs. reality.",
+            "range": [
+                793,
+                795
+            ],
+            "role": "Resolution",
+            "importance": 7
+        },
+        {
+            "name": "Alice's sister reflects on Alice's dream",
+            "summary": "The sister imagines Alice's childhood and the impact of her imaginative dreams, suggesting a cycle of innocence and wonder even as they grow up.",
+            "range": [
+                796,
+                801
+            ],
+            "role": "Resolution",
+            "importance": 6
+        }
+    ]
+]

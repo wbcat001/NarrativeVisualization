@@ -97,20 +97,25 @@ def extract_character(text, prompt):
 if __name__ == "__main__":
     import json
     import pandas as pd
-    file_path = "data/paragraph_alice.csv"
-    df = pd.read_csv(file_path, index_col=0)
+    dir_path = "data/harrypotter/"
+    file_name = "harry1_df.csv"
+    df = pd.read_csv(dir_path + file_name, index_col=0)
     df.assign(CTag = "")
     df.assign(CText = "")
     df.assign(Character="") # rowが作られない: [[] for _ in range(len(df))]
 
-    for i in range(1, 13):
+    result_list = []
+    max_chapter = df["Chapter"].max()
+    min_chapter = df["Chapter"].min() 
+    print((min_chapter, max_chapter))
+    for i in range(min_chapter, max_chapter):
       text = ""
       for index, row in df[df["Chapter"] == i].iterrows():
           text += str(row["Index"]) + " " + row["Content"] + "\n"
       result = extract_character(text, prompt)
 
       result = json.loads(result.replace("json", "").replace("```", ""))
-
+      result_list.append(result)
       for scene in result:
           name = scene["name"]
           attributes = scene["attributes"]
@@ -123,8 +128,10 @@ if __name__ == "__main__":
               df.loc[index, "CText"] = d["summary"]
           
               df.loc[index, "Character"] = name
-          
+  
 
-    df.to_csv(file_path)
+      df.to_csv(dir_path + file_name)
 
 
+      with open(dir_path + "character.json", "w", encoding="utf-8") as file:
+          json.dump(result_list, file, ensure_ascii=False, indent=4)
