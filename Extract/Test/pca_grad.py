@@ -12,38 +12,11 @@ n = 5
 split_size = num_points // n
 
 # 青からオレンジへのカラースケールを生成
-def generate_custom_colorscale(n, mid_color=(0, 255, 0)):
-    """
-    カスタムカラースケールを生成。
-    青 → 緑 → オレンジ のグラデーション。
-
-    Parameters:
-        n (int): グラデーションのステップ数。
-        mid_color (tuple): 中間色 (デフォルトは緑 RGB (0, 255, 0))。
-
-    Returns:
-        list: Plotlyで使えるカラースケール [(比率, 色)] のリスト。
-    """
+def generate_custom_colorscale(n):
     blue = np.array([0, 0, 255])  # 青 (RGB)
     orange = np.array([255, 165, 0])  # オレンジ (RGB)
-    mid = np.array(mid_color)  # 中間色 (RGB)
-
-    # 青→緑部分
-    first_half = [
-        tuple((1 - i / (n // 2)) * blue + (i / (n // 2)) * mid)
-        for i in range(n // 2)
-    ]
-    # 緑→オレンジ部分
-    second_half = [
-        tuple((1 - i / (n // 2)) * mid + (i / (n // 2)) * orange)
-        for i in range(n // 2, n)
-    ]
-
-    colors = first_half + second_half
-    colorscale = [
-        (i / (n - 1), f"rgb({int(c[0])}, {int(c[1])}, {int(c[2])})")
-        for i, c in enumerate(colors)
-    ]
+    colors = [tuple((1 - i / (n - 1)) * blue + (i / (n - 1)) * orange) for i in range(n)]
+    colorscale = [(i / (n - 1), f"rgb({int(c[0])}, {int(c[1])}, {int(c[2])})") for i, c in enumerate(colors)]
     return colorscale
 
 custom_colorscale = generate_custom_colorscale(n)
