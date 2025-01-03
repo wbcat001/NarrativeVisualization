@@ -23,7 +23,7 @@ class DataManager:
         ## Todo 
         # choose file name
         self.file_names = {"df": "df.csv",
-                           "embedding": "paragraph_embedding.pkl"}
+                           "embedding": "paragraph_embedding_gpt_window.pkl"}
         self.data = Data(self.load_df(os.path.join(self.dir_path, self.directories[0], self.file_names.get("df"))), self.load_embeddings(os.path.join(self.dir_path, self.directories[0], self.file_names.get("embedding"))))
  
     def get_directories(self, dir_path):
@@ -64,7 +64,7 @@ class Data:
         self.slided_embeddings = self.calc_slided_embeddings()
         self.indices = self.df["_Index"]
 
-    def calc_slided_embeddings(self, window: int = 50):
+    def calc_slided_embeddings(self, window: int = 1):
         vector_length = len(self.embeddings[0])
         num_vectors = len(self.embeddings)
 

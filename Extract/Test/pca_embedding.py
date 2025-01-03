@@ -4,6 +4,11 @@ import numpy as np
 from sklearn.decomposition import PCA
 import plotly.express as px
 import plotly.graph_objects as go
+import os
+import random
+dir_path = "data/books/harrypotter1"
+df_file_path = os.path.join(dir_path, "df.csv")
+emb_file_path = os.path.join(dir_path, "paragraph_embedding.pkl")
 
 def concatenate_vectors(vector_list, window):
     vector_length = len(vector_list[0])  # 元のベクトルの長さ
@@ -20,7 +25,71 @@ def concatenate_vectors(vector_list, window):
             concatenated.extend(vector_list[index])
         result.append(concatenated)
     return np.array(result)
+def shuffle_embeddings_and_dataframe(embeddings, dataframe):
+    """
+    Shuffle the rows of embeddings and dataframe in unison.
 
+    Args:
+        embeddings (np.ndarray): 2D numpy array of shape (n, d).
+        dataframe (pd.DataFrame): DataFrame with the same number of rows as embeddings.
+
+    Returns:
+        np.ndarray: Shuffled embeddings.
+        pd.DataFrame: Shuffled DataFrame.
+    """
+    if embeddings.shape[0] != len(dataframe):
+        raise ValueError("The number of rows in embeddings and dataframe must match.")
+
+    indices = list(range(len(dataframe)))
+    random.shuffle(indices)
+
+    shuffled_embeddings = embeddings[indices]
+    shuffled_dataframe = dataframe.iloc[indices].reset_index(drop=True)
+
+    return shuffled_embeddings, shuffled_dataframe
+
+def process_embeddings_and_dataframe(embeddings, dataframe, window_size, stride):
+    """
+    Process embeddings with a sliding window, averaging vectors within each window,
+    and align the DataFrame rows accordingly.
+
+    Args:
+        embeddings (np.ndarray): 2D numpy array of shape (n, d), where n is the number of rows.
+        dataframe (pd.DataFrame): DataFrame with the same number of rows as embeddings.
+        window_size (int): The size of the sliding window.
+        stride (int): The step size for the sliding window.
+
+    Returns:
+        np.ndarray: Averaged embeddings of shape (m, d), where m is the number of windows.
+        pd.DataFrame: Adjusted DataFrame with m rows.
+    """
+    num_rows, embedding_dim = embeddings.shape
+
+    # Validate inputs
+    if num_rows != len(dataframe):
+        raise ValueError("The number of rows in embeddings and dataframe must match.")
+    if window_size <= 0 or stride <= 0:
+        raise ValueError("Window size and stride must be positive integers.")
+
+    averaged_embeddings = []
+    adjusted_dataframe = []
+
+    for start_idx in range(0, num_rows - window_size + 1, stride):
+        end_idx = start_idx + window_size
+
+        # Average the embeddings within the window
+        window_embeddings = embeddings[start_idx:end_idx]
+        averaged_embeddings.append(np.mean(window_embeddings, axis=0))
+
+        # Collect the corresponding rows from the DataFrame
+        window_dataframe = dataframe.iloc[start_idx]
+        adjusted_dataframe.append(window_dataframe)
+
+    # Convert results to appropriate formats
+    averaged_embeddings = np.array(averaged_embeddings)
+    adjusted_dataframe = pd.DataFrame(adjusted_dataframe).reset_index(drop=True)
+
+    return averaged_embeddings, adjusted_dataframe
 
 def sliding_average(vector_list, window):
     vector_length = len(vector_list[0])  # 各ベクトルの長さ
@@ -41,18 +110,22 @@ def sliding_average(vector_list, window):
         result.append(window_mean)
 
     return np.array(result)
-df = pd.read_csv("data/alice/alice_df.csv")
 
-with open("data/alice/paragraph_embedding_gpt.pkl", "rb") as f:
+
+df = pd.read_csv(df_file_path)
+
+with open(emb_file_path, "rb") as f:
     embeddings = np.array(pickle.load(f))
-
+embeddings, df = shuffle_embeddings_and_dataframe(embeddings, df)
+embeddings, df = process_embeddings_and_dataframe(embeddings, df, 50, 1)
+print((len(df), len(embeddings)))
 
 ##
 exclude_row_index = []
 for i in exclude_row_index:
     embeddings[:, i] = 0
 pca = PCA(n_components=2)
-embeddings = sliding_average(embeddings, 50) #  sliding_average
+# embeddings = sliding_average(embeddings, 50) #  sliding_average
 reduced_embeddings = pca.fit_transform(embeddings)
 
 # 主成分のloadingsを取得
@@ -69,7 +142,7 @@ fig = px.scatter(loadings,
                  labels={'PC1': '主成分1 (PC1)', 'PC2': '主成分2 (PC2)'},
                  template='plotly_white')
 
-fig.show()
+# fig.show()
 
 # 重要な次元を上位10個表示
 important_dims_pc1 = loadings['PC1'].abs().sort_values(ascending=False).head(10)

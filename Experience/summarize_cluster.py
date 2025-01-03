@@ -9,17 +9,18 @@ def get_scene_evaluation(scene_text):
     LLMにシーンテキストを渡し、要約、シーン題名、適切に区切られているか、情報が足りているかを評価する
     """
     # 質問のテンプレート
-    prompt = f"""
-    次のシーンについて要約してください。シーンの題名をつけ、適切に区切られているか、情報が足りているかを評価してください。
+    prompt = """
+    次のシーンについて要約し、JSON形式で返答してください。以下のキーを持つJSON形式に従ってください。このテキストは、あるメトリクスを用いて機械的に分割したものです。evaluationではそれが、舞台や話題の転換点で適切に区切られているか評価してください:
+    {
+        "summary": "シーンの要約",
+        "title": "シーンの題名",
+        "evaluation": "シーンが適切に区切られているか、情報が足りているかについての評価"
+    }
 
     シーンのテキスト:
-    {scene_text}
-
-    要約:
-    1. シーンの要約
-    2. シーンの題名
-    3. シーンは適切に区切られているか、情報は足りているか？
+    
     """
+    prompt += "\n" + scene_text
 
     # LLMにリクエスト
     response = client.chat.completions.create(
@@ -33,19 +34,20 @@ def get_scene_evaluation(scene_text):
     )
 
     # レスポンスから結果を抽出
-    response_text = response['choices'][0]['message']['content'].strip()
-
+    response_text = response.choices[0].message.content.replace("```", "").replace("json","")# .strip() #  response['choices'][0]
+    print(response_text)
     # 結果を辞書形式で整理
     result = {}
     try:
-        summary, title, evaluation = response_text.split("\n")
+        # JSONをパース
+        response_data = json.loads(response_text)
         result = {
-            "summary": summary.split(":")[1].strip(),
-            "title": title.split(":")[1].strip(),
-            "evaluation": evaluation.split(":")[1].strip()
+            "summary": response_data["summary"],
+            "title": response_data["title"],
+            "evaluation": response_data["evaluation"]
         }
-    except Exception as e:
-        print("Error parsing LLM response:", e)
+    except json.JSONDecodeError as e:
+        print(f"JSON Decode Error: {e}")
 
     return result
 
@@ -57,20 +59,23 @@ def process_clusters_and_evaluate(df, text_column, cluster_column):
     # 各クラスタのテキストを集約
     cluster_texts = {}
     for cluster_id in df[cluster_column].unique():
+        print(cluster_id)
         cluster_data = df[df[cluster_column] == cluster_id]
-        cluster_text = " ".join(cluster_data[text_column].values)
-        cluster_texts[cluster_id] = cluster_text
+        if (len(cluster_data) > 1) & cluster_id != "-1": 
+
+            cluster_text = " ".join(cluster_data[text_column].values)
+            cluster_texts[cluster_id] = cluster_text
 
     # 各クラスタに対してLLMで評価
     cluster_results = {}
     for cluster_id, scene_text in cluster_texts.items():
         evaluation = get_scene_evaluation(scene_text)
-        cluster_results[cluster_id] = evaluation
+        cluster_results[int(cluster_id)] = evaluation
 
     # 結果をJSON形式で保存
-    output_file = "scene_evaluations.json"
-    with open(output_file, "w") as f:
-        json.dump(cluster_results, f, indent=4)
+    output_file = "Experience/scene_evaluations.json"
+    with open(output_file, "w",encoding="utf-8") as f:
+        json.dump(cluster_results, f, ensure_ascii=False, indent=4) # json.dump(cluster_results, f, indent=4) # 
 
     print(f"Evaluation results saved to {output_file}")
 
@@ -87,7 +92,7 @@ data = {
     ],
     'cluster': [0, 0, 1, 1, 2]  # 仮のクラスタID
 }
-df = pd.DataFrame(data)
+df = pd.read_csv("Experience/df.csv")
 
 # シーンごとに評価を行い、結果をJSONファイルとして保存
 process_clusters_and_evaluate(df, text_column="Content", cluster_column="cluster")
