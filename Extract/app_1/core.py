@@ -136,3 +136,4 @@ class AnnotationManager:
         self.fig = fig
 
     def add_text():
+        pass

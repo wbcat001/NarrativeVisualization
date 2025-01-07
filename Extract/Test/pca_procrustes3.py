@@ -336,7 +336,7 @@ def update_zoomed_pca(relayoutData):
         print(f"{reduced_embeddings[filtered_indices].shape}, {len(pca_result_aligned), len(pca_result_aligned[0])}")
         print(f"d: {d}")
 
-        # pca_result_aligned = pca_result_new
+        pca_result_aligned = pca_result_new
         x_min, x_max, y_min, y_max = graph_range([reduced_embeddings[filtered_indices],pca_result_aligned])
 
         # Annotation
