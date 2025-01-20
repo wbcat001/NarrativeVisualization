@@ -148,11 +148,13 @@ class AlignmentHandler:
     """
     def __init__(self, method: str = "Procrustes"):
         self.methods = {
-            "Procrustes": self._procrustes
+            "Procrustes": self._procrustes,
+            "No": self._no_alignment
         }
         self.method = method
     
     def _procrustes(self, data1:np.ndarray, data2: np.ndarray):
+        print("use procrustes")
         center_data1 = np.mean(data1, axis=0)
         print(f"center of data2 : {center_data1}")
         normalize_data1, aligned_data2, d = procrustes(data1, data2)
@@ -164,6 +166,15 @@ class AlignmentHandler:
 
         aligned_data2 += center_data1
         return aligned_data2
+    
+    def _no_alignment(self, data1: np.ndarray, data2: np.ndarray):
+        print("use no alignment")
+        
+        # _, aligned_data2, d = procrustes(data1, data2)
+        # print((len(aligned_data2), len(data2)))
+        center_data1 = np.mean(data1, axis=0)
+        data2 += center_data1
+        return data2
 
 
     def align(self, before: np.ndarray, after: np.ndarray) -> np.ndarray:

@@ -159,6 +159,7 @@ class AlignmentHandler:
         self.method = method
     
     def _procrustes(self, data1:np.ndarray, data2: np.ndarray):
+        print("use procrustes")
         normalize_data1, aligned_data2, d = procrustes(data1, data2)
 
         scale_factor = np.linalg.norm(data2 - np.mean(data2, axis=0))
@@ -166,8 +167,8 @@ class AlignmentHandler:
         aligned_data2 *= scale_factor
         return aligned_data2
     def _no_alignment(self, data1: np.ndarray, data2: np.ndarray):
-        print("!!!!!!!!!")
-        _, aligned_data2, d = procrustes(data1, data2)
+        print("use no alignment")
+        # _, aligned_data2, d = procrustes(data1, data2)
         # print((len(aligned_data2), len(data2)))
         return data2
 
