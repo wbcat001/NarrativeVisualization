@@ -10,9 +10,10 @@ raw_data = np.random.rand(100, 5)
 # クラスの初期化
 data_manager = DataManager("data/books")
 reducer = DimensionalityReducer()
-aligner = AlignmentHandler(method="Procrustes")
+aligner = AlignmentHandler(method="No")
 animator = AnimationManager(data_manager, aligner, reducer)
 transition_data = TransitionData(data_manager.data, reducer)
+
 # annotation_manager = AnnotationManager(data_manager, aligner, reducer)
 colors = data_manager.get_colors()
 def generate_custom_colorscale(n):
