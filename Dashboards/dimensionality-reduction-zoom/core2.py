@@ -7,13 +7,61 @@ import pickle
 from scipy.spatial import procrustes
 from typing import Tuple
 import random
-def generate_colormap(df, attribute_name, default_colormap=None):
-    if default_colormap:
 
-        colormap = {value: default_colormap[value] if value in default_colormap else f"#{random.randint(0, 0xFFFFFF):06x}" for value in df[attribute_name].unique() }
-    else:
-        colormap = {value: f"#{random.randint(0, 0xFFFFFF):06x}" for value in df[attribute_name].unique()}
-    return colormap
+from core_color import generate_colormap
+
+# df, embeddigngsのうち、dfはなくても良い用にする
+
+class Data:
+    def __init__(self, df:pd.DataFrame, embeddings: np.ndarray):
+        
+        self.df = df
+        self.embeddings = embeddings
+        self.slided_embeddings = self.calc_slided_embeddings()
+        # self.slided_df = self.calc_slided_df()
+        self.indices = self.df["_Index"]
+
+    def calc_slided_embeddings(self, window: int = 50,stride:int = 1): 
+        
+        num_vectors = len(self.embeddings)
+        result = []
+        for i in range(num_vectors):
+            # ウィンドウ内のベクトルを収集
+            window_vectors = []
+            for j in range(window):
+                index = (i + j) % num_vectors  # 循環インデックス
+                window_vectors.append(self.embeddings[index])
+
+            # ウィンドウ内の平均を計算
+            window_mean = np.mean(window_vectors, axis=0)
+            result.append(window_mean)
+        return np.array(result)
+    
+    def calc_slided_embeddings2(self, window: int = 50,stride:int = 1):
+        num_vectors = len(self.embeddings)
+        result = []
+        for i in range(0, num_vectors, stride):
+            # ウィンドウ内のベクトルを収集
+            window_vectors = self.embeddings[i:i+window]
+            window_mean = np.mean(window_vectors, axis=0)
+            result.append(window_mean)
+
+        return np.array(result)
+
+    def calc_slided_df(self, window:int = 50, stride:int = 1):
+        
+        num_vectors = len(self.df)
+        result = []
+        for i in range(0, num_vectors, stride):
+            # ウィンドウ内のベクトルを収集
+            window_df = self.df.iloc[i:i+window]
+            window_mean = window_df.mean()
+            result.append(window_mean)
+        return pd.DataFrame(result)
+
+    def set_slided_embeddings(self):
+        pass
+
 
 class DataManager:
     def __init__(self, dir_path):
@@ -24,10 +72,13 @@ class DataManager:
         # choose file name
         self.file_names = {"df": "df.csv",
                            "embedding": "paragraph_embedding.pkl"}
+        
+        # read first directory: alice
         self.data = Data(self.load_df(os.path.join(self.dir_path, self.directories[1], self.file_names.get("df"))), self.load_embeddings(os.path.join(self.dir_path, self.directories[1], self.file_names.get("embedding"))))
  
     def get_directories(self, dir_path):
         return [name for name in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, name))]
+    
     def load_df(self, file_path):
         return pd.read_csv(file_path, index_col=0)
 
@@ -57,47 +108,8 @@ class DataManager:
 
         return colors
 
-class Data:
-    def __init__(self, df:pd.DataFrame, embeddings: np.ndarray, ):
-        self.df = df
-        self.embeddings = embeddings
-        self.slided_embeddings = self.calc_slided_embeddings()
-        self.indices = self.df["_Index"]
 
-    def calc_slided_embeddings(self, window: int = 50):
-        vector_length = len(self.embeddings[0])
-        num_vectors = len(self.embeddings)
-
-        result = []
-        for i in range(num_vectors):
-            # ウィンドウ内のベクトルを収集
-            window_vectors = []
-            for j in range(window):
-                index = (i + j) % num_vectors  # 循環インデックス
-                window_vectors.append(self.embeddings[index])
-
-            # ウィンドウ内の平均を計算
-            window_mean = np.mean(window_vectors, axis=0)
-            result.append(window_mean)
-        return np.array(result)
-
-
-    def set_slided_embeddings(self):
-        pass
-
-
-
-
-
-
-
-
-        
-        
-
-class AnimationManager:
-    pass  
-
+#### Dimensionality Reduction
 
 class DimensionalityReducer:
     def __init__(self, method: str = "PCA"):
@@ -124,7 +136,11 @@ class DimensionalityReducer:
     def _tsne(self, data: np.ndarray) -> np.ndarray:
         tsne = TSNE(n_components=2, random_state=42)
         return tsne.fit_transform(data)
+    
 
+
+
+#### Alignment
 
 class AlignmentHandler:
     """
@@ -137,11 +153,16 @@ class AlignmentHandler:
         self.method = method
     
     def _procrustes(self, data1:np.ndarray, data2: np.ndarray):
-        _, aligned_data2, d = procrustes(data1, data2)
+        center_data1 = np.mean(data1, axis=0)
+        print(f"center of data2 : {center_data1}")
+        normalize_data1, aligned_data2, d = procrustes(data1, data2)
 
-        scale_factor = np.std(data1) / np.std(data2)
-        # print(f"scale: {scale_factor:4f}")
-        # aligned_data2 *= scale_factor
+        scale_factor = np.linalg.norm(data2 - np.mean(data2, axis=0))
+        print(f"scale: {scale_factor:4f}")
+        aligned_data2 *= scale_factor
+        print(f"center of aligned data2{np.mean(aligned_data2, axis=0)}")
+
+        aligned_data2 += center_data1
         return aligned_data2
 
 
@@ -151,6 +172,9 @@ class AlignmentHandler:
             current_method = self.methods.get(self.method, self._procrustes)
             return current_method(before, after)
         raise ValueError(f"Unknown alignment method: ")
+    
+
+
 
 class TransitionData:
     
@@ -177,6 +201,10 @@ class TransitionData:
         self.to_data = to_data
 
     def get_position_range(self):
+        """
+        Get the range of x and y coordinates in the data.
+        for x and y range in the plot.
+        """
         x_min, x_max, y_min, y_max = 100, -100, 100, -100
 
         
@@ -191,10 +219,13 @@ class TransitionData:
             print(y_min, y_max)
 
         return x_min, x_max, y_min, y_max
+    
+
 
 class AnimationManager:
 
-    def __init__(self, data_manager: DataManager ,alignment_handler: AlignmentHandler, dimensionality_reducer: DimensionalityReducer):
+    def __init__(self, 
+                 data_manager: DataManager,alignment_handler: AlignmentHandler, dimensionality_reducer: DimensionalityReducer):
 
         self.alignment_handler = alignment_handler
         self.dimensionality_reducer = dimensionality_reducer
@@ -210,28 +241,43 @@ class AnimationManager:
 
 
     def create_frames(self, x_min, x_max, y_min, y_max, transition_data:TransitionData, steps: int = 1) -> Tuple[list, TransitionData]:
+        """
+        create frames for animation
+
+
+        """
+        ## Todo 
+        # 多段階のアニメーション
+
+
         frames = []
-        # update data
+
+        # エリアを下にデータをフィルタする
         new_data, mask = self.filter(transition_data.to_data, x_min, x_max, y_min, y_max)
+
         transition_data.next(new_data)
 
-        # calc each frame
+        # フレームを作成(from)
         # frame1 = self.dimensionality_reducer.reduce(transition_data.from_data.slided_embeddings)
         print(f'same shape?{transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy().shape} {self.dimensionality_reducer.reduce(transition_data.to_data.slided_embeddings).shape}')
 
-        frame2 = self.alignment_handler.align(transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy(), self.dimensionality_reducer.reduce(transition_data.to_data.slided_embeddings))
+        
+        # フレームを作成(to)
+        frame2 = self.alignment_handler.align(transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy(), 
+        self.dimensionality_reducer.reduce(transition_data.to_data.slided_embeddings))
+        
         
         frames.append(transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy())
         frames.append(frame2)
-        # transition_data.from_data.df["x"] = frame1[:, 0]
-        # transition_data.from_data.df["y"] = frame1[:, 1]
+
+        # TransitionData の更新
         transition_data.to_data.df["x"] = frame2[:, 0]
         transition_data.to_data.df["y"] = frame2[:, 1]
 
 
         return frames, transition_data
     
-    def filter(self,  data:Data, x_min, x_max, y_min, y_max):
+    def filter(self, data:Data, x_min, x_max, y_min, y_max):
         
         df = data.df.copy()
         # emb = data.slided_embeddings
@@ -246,9 +292,3 @@ class AnimationManager:
         return Data(filtered_df, filtered_embeddings), filtered_indices
 
 
-class AnnotationManager:
-    def __init__(self, fig):
-        self.fig = fig
-
-    def add_text():
-        pass
