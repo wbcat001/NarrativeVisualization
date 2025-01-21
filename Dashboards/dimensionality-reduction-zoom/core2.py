@@ -13,13 +13,15 @@ from core_color import generate_colormap
 # df, embeddigngsのうち、dfはなくても良い用にする
 
 class Data:
-    def __init__(self, df:pd.DataFrame, embeddings: np.ndarray):
+    def __init__(self, df:pd.DataFrame, embeddings: np.ndarray, window: int = 1, stride:int = 1):
         
         self.df = df
         self.embeddings = embeddings
-        self.slided_embeddings = self.calc_slided_embeddings()
+        self.slided_embeddings = self.calc_slided_embeddings(window=window, stride=stride)
         # self.slided_df = self.calc_slided_df()
         self.indices = self.df["_Index"]
+        self.window = window
+        self.stride = stride
 
     def calc_slided_embeddings(self, window: int = 50,stride:int = 1): 
         
@@ -74,7 +76,7 @@ class DataManager:
                            "embedding": "paragraph_embedding.pkl"}
         
         # read first directory: alice
-        self.data = Data(self.load_df(os.path.join(self.dir_path, self.directories[1], self.file_names.get("df"))), self.load_embeddings(os.path.join(self.dir_path, self.directories[1], self.file_names.get("embedding"))))
+        self.data = Data(self.load_df(os.path.join(self.dir_path, self.directories[0], self.file_names.get("df"))), self.load_embeddings(os.path.join(self.dir_path, self.directories[0], self.file_names.get("embedding"))))
  
     def get_directories(self, dir_path):
         return [name for name in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, name))]
@@ -269,8 +271,13 @@ class AnimationManager:
         transition_data.next(new_data)
 
         # フレームを作成(from)
-        # frame1 = self.dimensionality_reducer.reduce(transition_data.from_data.slided_embeddings)
-        print(f'same shape?{transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy().shape} {self.dimensionality_reducer.reduce(transition_data.to_data.slided_embeddings).shape}')
+        # from_dataの確認
+        print(f"from_data: {transition_data.from_data.df.columns}")
+        print(f"to_data: {transition_data.to_data.df.columns}")
+
+        print(f'{transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy().shape}')
+
+        print(f'same shape? {transition_data.from_data.df[transition_data.from_data.df["_Index"].isin(transition_data.to_data.indices)][["x", "y"]].to_numpy().shape} {self.dimensionality_reducer.reduce(transition_data.to_data.slided_embeddings).shape}')
 
         
         # フレームを作成(to)
