@@ -13,14 +13,19 @@ from core_color import generate_colormap
 # df, embeddigngsのうち、dfはなくても良い用にする
 
 class Data:
+
     def __init__(self, df:pd.DataFrame, embeddings: np.ndarray, window: int = 80, stride:int = 1):
-        
+
         self.df = df
         self.embeddings = embeddings
         self.slided_embeddings = self.calc_slided_embeddings(window=window, stride=stride)
+
         # self.df = self.calc_slided_df( window=window, stride=stride)
         print(f"data length: {len(self.df)}, {len(self.slided_embeddings)}")
         # self.df["_Index"] = self.df.reset_index().index
+
+        # self.slided_df = self.calc_slided_df()
+
         self.indices = self.df["_Index"]
         self.window = window
         self.stride = stride
@@ -82,7 +87,7 @@ class DataManager:
                            "embedding": "paragraph_embedding.pkl"}
         
         # read first directory: alice
-        self.data = Data(self.load_df(os.path.join(self.dir_path, self.directories[1], self.file_names.get("df"))), self.load_embeddings(os.path.join(self.dir_path, self.directories[1], self.file_names.get("embedding"))))
+        self.data = Data(self.load_df(os.path.join(self.dir_path, self.directories[0], self.file_names.get("df"))), self.load_embeddings(os.path.join(self.dir_path, self.directories[0], self.file_names.get("embedding"))))
  
     def get_directories(self, dir_path):
         return [name for name in os.listdir(dir_path) if os.path.isdir(os.path.join(dir_path, name))]
@@ -277,6 +282,7 @@ class AnimationManager:
 
         # フレームを作成(from)
         # from_dataの確認
+
         # print(f"from_data: {transition_data.from_data.df.columns}")
         # print(f"to_data: {transition_data.to_data.df.columns}")
 
@@ -287,6 +293,7 @@ class AnimationManager:
         before_array = transition_data.from_data.df[mask][["x", "y"]].to_numpy()
 
         reduced_array = self.dimensionality_reducer.reduce(transition_data.to_data.slided_embeddings)
+
 
         
         # フレームを作成(to)
