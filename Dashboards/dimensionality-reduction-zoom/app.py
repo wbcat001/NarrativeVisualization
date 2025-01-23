@@ -3,14 +3,14 @@ import numpy as np
 import plotly.graph_objs as go
 import pandas as pd
 from evaluate import *
-from core2 import *
+from core3 import *
 # サンプルデータの生成
 raw_data = np.random.rand(100, 5)
 
 # クラスの初期化
 data_manager = DataManager("data/books")
 reducer = DimensionalityReducer()
-aligner = AlignmentHandler(method="No")
+aligner = AlignmentHandler(method="Procrustes")
 animator = AnimationManager(data_manager, aligner, reducer)
 transition_data = TransitionData(data_manager.data, reducer)
 
@@ -89,9 +89,23 @@ def get_plots(data:Data, n=20, colors=colors, from_to="from"):
             visible=visible
         
         ))
+        unique_df = df.drop_duplicates(subset="Event", keep="first")
+
+        plot_list.append(go.Scatter(
+            x=unique_df['x'],
+            y=unique_df['y'],
+            mode="markers+text",
+            marker=dict(color=colors[category], size=1),
+            text=unique_df["Event"],
+            textfont=dict(size=8),
+            name=from_to,
+            visible=visible
+        
+        ))
+        
 
     return plot_list
-def generate_fig(transition_data: TransitionData, x_min=-3, x_max=3,        y_min=-3, y_max=3):
+def generate_fig(transition_data: TransitionData, x_min=-2, x_max=2, y_min=-2, y_max=2):
     fig = go.Figure()
     # Todo
     # calc position, make go.Scatter
@@ -116,7 +130,8 @@ def generate_fig(transition_data: TransitionData, x_min=-3, x_max=3,        y_mi
             x=frame[:, 0],
             y=frame[:, 1],
             mode='markers+lines',
-            marker=dict(color='blue', size=8),
+            marker=dict(color='blue', size=2),
+            line=dict(color='blue', width=1),
             name='frames',
             # duration= 0 if index == 0 else 3000
         )])
@@ -222,6 +237,7 @@ def zoom_figure(relayoutData):
 @app.callback(
     Output("main", "figure"),
     Input("reset-button", "n_clicks"),
+    prevent_initial_call=True
 )
 def reset_animation(n_clicks):
     transition_data.reset()

@@ -1,21 +1,27 @@
-from sklearn.decomposition import PCA
+import pandas as pd
 
-import pickle
-import numpy as np
-import plotly.express as px
-file_path = "data/network/0/paragraph_embedding.pkl"
+# サンプルデータフレームの作成
+data = {
+    "text": ["A", "B", "C", "D", "E", "F", "G"],
+    "value": [10, 20, 30, 40, 50, 60, 70],
+}
+df = pd.DataFrame(data)
 
-with open(file_path, "rb") as f:
-    data = pickle.load(f)
+# ウィンドウ幅とストライド幅を指定
+window = 3
+stride = 2
 
-print(len(data[0]))
+# 畳み込み処理
+result = []
+for start in range(0, len(df), stride):
+    end = start + window
+    if end <= len(df):
+        # 各ウィンドウの最初の行を参照
+        first_row = df.iloc[start]
+        result.append(first_row)
 
+# 結果を新しいデータフレームとして構築
+result_df = pd.DataFrame(result)
 
-# pca
-pca = PCA(n_components=2)
-pca_data = pca.fit_transform(data)
-
-print(pca_data.shape)
-
-fig = px.scatter(x=pca_data[:, 0], y=pca_data[:, 1])
-fig.show()
+# 結果を表示
+print(result_df)

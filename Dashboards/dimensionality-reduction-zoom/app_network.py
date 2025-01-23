@@ -22,7 +22,7 @@ animator = AnimationManager(data_manager, aligner, reducer)
 transition_data = TransitionData(data_manager.data, reducer)
 # annotation_manager = AnnotationManager(data_manager, aligner, reducer)
 # colors = data_manager.get_colors()
-
+annotation_category = None
 
 
 
@@ -73,37 +73,38 @@ def get_plots(data:Data, n=20, from_to="from"):
             plot_list.append(go.Scatter(
                 x=part_df["x"],
                 y=part_df["y"],
-                mode='lines',
+                mode='markers+lines',
                 line=dict(
                     color=segment_color,
                     width=2  # ライン幅
                 ),
-                # merker=dict(
-                #     color=segment_color, size=3
-                # ),
+                marker=dict(
+                    color=segment_color, size=3
+                ),
                 showlegend=False,
                 name=from_to,
                 visible=visible
             ))
-
-    # for category in colors.keys():
-    #     filtered = df[df["ERole"] == category]
-
-    #     plot_list.append(go.Scatter(
-    #         x=filtered['x'],
-    #         y=filtered['y'],
-    #         mode="markers",
-    #         marker=dict(color=colors[category], size=4),
-    #         text=filtered["Event"],
-    #         name=from_to,
-    #         visible=visible
+    # if annotation_category:
         
-    #     ))
+    #     for category in colors.keys():
+    #         filtered = df[df["ERole"] == category]
 
-    return plot_list
+    #         plot_list.append(go.Scatter(
+    #             x=filtered['x'],
+    #             y=filtered['y'],
+    #             mode="markers",
+    #             marker=dict(color=colors[category], size=4),
+    #             text=filtered["Event"],
+    #             name=from_to,
+    #             visible=visible
+            
+    #         ))
+
+    #     return plot_list
 
 
-def generate_fig(transition_data: TransitionData, x_min=-100, x_max=100, y_min=-100, y_max=100):
+def generate_fig(transition_data: TransitionData, x_min=-3, x_max=3, y_min=-3, y_max=3):
     fig = go.Figure()
     
     frames, transition_data = animator.create_frames(x_min, x_max, y_min, y_max, transition_data)
