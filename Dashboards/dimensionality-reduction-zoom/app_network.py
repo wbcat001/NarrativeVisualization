@@ -8,7 +8,7 @@ import numpy as np
 import plotly.graph_objs as go
 import pandas as pd
 from evaluate import *
-from core2 import *
+from core3 import *
 
 
 
@@ -24,6 +24,8 @@ transition_data = TransitionData(data_manager.data, reducer)
 # colors = data_manager.get_colors()
 annotation_category = None
 
+frame_duration = 1000   
+transition_duration = 1000
 
 def generate_custom_colorscale(n):
     blue = np.array([0, 0, 255])  # 青 (RGB)
@@ -35,6 +37,7 @@ def generate_custom_colorscale(n):
 ## from or to 
 def get_plots(data:Data, n=20, from_to="from"):
     visible = True if from_to == "from" else False
+    print(f"length: {from_to} {len(data.df)}")
 
     df = data.df.copy()
     df = df.reset_index()
@@ -77,17 +80,19 @@ def get_plots(data:Data, n=20, from_to="from"):
 
                 line=dict(
                     color=segment_color,
-                    width=2  # ライン幅
+                    width=4  # ライン幅
                 ),
 
                 marker=dict(
-                    color=segment_color, size=3
+                    color=segment_color, size=5
                 ),
 
                 showlegend=False,
                 name=from_to,
                 visible=visible
             ))
+
+          
 
     # if annotation_category:
         
@@ -105,10 +110,10 @@ def get_plots(data:Data, n=20, from_to="from"):
             
     #         ))
 
-        return plot_list
+    return plot_list
 
 
-def generate_fig(transition_data: TransitionData, x_min=-100, x_max=100, y_min=-100, y_max=100):
+def generate_fig(transition_data: TransitionData, x_min=-1, x_max=1, y_min=-1, y_max=1):
 
     fig = go.Figure()
     
@@ -128,7 +133,8 @@ def generate_fig(transition_data: TransitionData, x_min=-100, x_max=100, y_min=-
             x=frame[:, 0],
             y=frame[:, 1],
             mode='markers+lines',
-            marker=dict(color='blue', size=8),
+            marker=dict(color='green', size=3),
+            line=dict(color='green', width=2),
             name='frames',
         )])
         for index, frame in enumerate(frames)
@@ -147,7 +153,7 @@ def generate_fig(transition_data: TransitionData, x_min=-100, x_max=100, y_min=-
                 type="buttons",
                 buttons=[dict(label="Replay",
                             method="animate",
-                             args=[None, {"frame": {"duration": 3000, "redraw": False}, "transition": {"duration": 2500, "easing": "linear"}}, ],
+                             args=[None, {"frame": {"duration": frame_duration, "redraw": False}, "transition": {"duration": transition_duration, "easing": "linear"}}, ],
                              execute=True,
                             ),
                         dict(

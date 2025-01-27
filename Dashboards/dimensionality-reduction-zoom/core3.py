@@ -13,11 +13,11 @@ from core_color import generate_colormap
 # df, embeddigngsのうち、dfはなくても良い用にする
 
 class Data:
-    def __init__(self, df:pd.DataFrame, embeddings: np.ndarray, window: int = 80, stride:int = 1):
+    def __init__(self, df:pd.DataFrame, embeddings: np.ndarray, window: int = 1, stride:int = 1):
         
         self.df = df
         self.embeddings = embeddings
-        self.slided_embeddings = self.calc_slided_embeddings(window=window, stride=stride)
+        self.slided_embeddings = self.calc_slided_embeddings2(window=window, stride=stride)
         # self.df = self.calc_slided_df( window=window, stride=stride)
         print(f"data length: {len(self.df)}, {len(self.slided_embeddings)}")
         # self.df["_Index"] = self.df.reset_index().index

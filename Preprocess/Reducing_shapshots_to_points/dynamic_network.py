@@ -55,20 +55,19 @@ def add_line_matrix(data: np.ndarray) -> np.ndarray:
     """
 
     add_data = np.zeros_like(data)
-    add_data[:,:5000] = data[:,:5000]
-    add_data2 = np.zeros_like(data)
-    add_data2[:,:3000] = data[:,:3000]
+    add_data[:,:9000] = data[:,:9000]
+   
     # add_data[:, 2] = data
     # add_data[:, :5000] = 0
     # 結合
     add_data = np.concatenate([data, add_data], axis=0)
-    add_data = np.concatenate([add_data, add_data2], axis=0)
+    # add_data = np.concatenate([add_data, add_data2], axis=0)
     print("added", add_data.shape)
 
     return add_data
 
 if __name__ == "__main__":
-    file_path = "data/dynamic_network/evolution-graph-100-1725-teaser.csv"
+    file_path = "data/dynamic_network/evolution-graph-100-900-recurr.csv"
 
     data = load_data(file_path)
     print(data.shape)
