@@ -1,2 +1,2 @@
 data/network/1/paragraph_embedding.pkl
-data/network/*.pkl
+data/network/*
